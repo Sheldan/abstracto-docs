@@ -442,8 +442,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Abstracto Discord Bot Documentation</h1>
 <div class="details">
 <span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
-<span id="revnumber">version 1.2.4,</span>
-<span id="revdate">2021/03/24 21:15</span>
+<span id="revnumber">version 1.2.5,</span>
+<span id="revdate">2021/03/28 23:40</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -575,6 +575,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_entertainment_commands">4.20. Entertainment commands</a>
 <ul class="sectlevel3">
 <li><a href="#_relevant_system_configuration_5">4.20.1. Relevant system configuration</a></li>
+</ul>
+</li>
+<li><a href="#_webservices">4.21. Webservices</a></li>
+<li><a href="#_youtube">4.22. Youtube</a>
+<ul class="sectlevel3">
+<li><a href="#_command">4.22.1. Command</a></li>
+</ul>
+</li>
+<li><a href="#_urban_dictionary">4.23. Urban dictionary</a>
+<ul class="sectlevel3">
+<li><a href="#_command_2">4.23.1. Command</a></li>
 </ul>
 </li>
 </ul>
@@ -1213,6 +1224,32 @@ This change takes immediate effect and is only for the current server. Per defau
 </li>
 <li>
 <p>Description: Shows links to access the documentation.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Create a server specific alias</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>createAlias &lt;commandName&gt; &lt;alias&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates the server specific alias for command <code>commandName</code> identified by <code>alias</code>. This means that from now on, users can use the command identified by <code>commandName</code> by using <code>alias</code> in its place, when executing the command or when using the help command. This alias is only available in this server, and it is not allowed to use the names of existing commands or pre-defined aliases. In case such an alias is used as <code>alias</code>, an error message is shown.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Delete a server specific alias</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteAlias &lt;alias&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes the server specific alias identified by <code>alias</code>. It is not possible to delete pre-defined aliases. If <code>alias</code> does not exist, an error message is shown.</p>
 </li>
 </ul>
 </div>
@@ -3272,13 +3309,77 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_webservices">4.21. Webservices</h3>
+<div class="paragraph">
+<p>Integrates different web APIs to be used via the bot.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_youtube">4.22. Youtube</h3>
+<div class="paragraph">
+<p>Feature key: <code>youtube</code></p>
+</div>
+<div class="sect3">
+<h4 id="_command">4.22.1. Command</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Search for a youtube video</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>youtubeSearch &lt;query&gt;</code></p>
+</li>
+<li>
+<p>Aliases: <code>yt</code></p>
+</li>
+<li>
+<p>Description: Searches youtube for a video with this query, and returns the link with additional information.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_urban_dictionary">4.23. Urban dictionary</h3>
+<div class="paragraph">
+<p>Feature key: <code>urban</code></p>
+</div>
+<div class="sect3">
+<h4 id="_command_2">4.23.1. Command</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Search for an urban dictionary definition</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>urbanDefine &lt;query&gt;</code></p>
+</li>
+<li>
+<p>Aliases: <code>ud</code></p>
+</li>
+<li>
+<p>Description: Searches an urban dictionary definition, and returns the definition, with an example and meta information.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.2.4<br>
-Last updated 2021-03-24 21:15:03 UTC
+Version 1.2.5<br>
+Last updated 2021-03-28 23:40:36 UTC
 </div>
 </div>
 </body>
