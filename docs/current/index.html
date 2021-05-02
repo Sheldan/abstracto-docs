@@ -442,8 +442,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Abstracto Discord Bot Documentation</h1>
 <div class="details">
 <span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
-<span id="revnumber">version 1.2.9,</span>
-<span id="revdate">2021/04/24 20:17</span>
+<span id="revnumber">version 1.2.10,</span>
+<span id="revdate">2021/05/02 21:30</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -2975,8 +2975,7 @@ If the resulting file size is over the upload limit of the server, this command 
 <p>Usage: <code>remind &lt;duration&gt; &lt;text&gt;</code></p>
 </li>
 <li>
-<p>Description: Creates a reminder with <code>text</code> which will be triggered after <code>duration</code>. This command uses duration parsing. The reminder will ping when the duration has passed and provide
-the context of the reminder.</p>
+<p>Description: Creates a reminder with <code>text</code> which will be triggered after <code>duration</code>. This command uses duration parsing. The reminder will ping when the duration has passed and provide the context of the reminder.</p>
 </li>
 <li>
 <p>Example: <code>remind 1h2m3s text</code> in order to be reminded in 1 hour 2 minutes and 3 seconds with the reason <code>text</code></p>
@@ -2992,7 +2991,7 @@ the context of the reminder.</p>
 <p>Usage <code>unRemind &lt;reminderId&gt;</code></p>
 </li>
 <li>
-<p>Description: Cancels this reminder reminder and will cause this reminder to not be executed.</p>
+<p>Description: Cancels this reminder and will cause this reminder to not be executed. Only possible for reminders started by you.</p>
 </li>
 </ul>
 </div>
@@ -3006,6 +3005,19 @@ the context of the reminder.</p>
 </li>
 <li>
 <p>Description: Lists all the currently not yet executed reminders and information about each of them.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Re-schedule a past reminder</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>snooze &lt;reminderId&gt; &lt;duration&gt;</code></p>
+</li>
+<li>
+<p>Description: Schedules the reminder identified by <code>reminderId</code> to be triggered after <code>duration</code> again. It is only possible to do this for reminders which have already been executed. Only possible for reminders started by you.</p>
 </li>
 </ul>
 </div>
@@ -3158,10 +3170,10 @@ When the poster of the message reacts to the message with a star, this is not co
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>accept &lt;suggestionId&gt; [note]</code></p>
+<p>Usage: <code>accept &lt;suggestionId&gt; [reason]</code></p>
 </li>
 <li>
-<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as accepted. The optional <code>note</code> will be used in this re-post, if provided.</p>
+<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as accepted. The optional <code>reason</code> will be used in this re-post, if provided.</p>
 </li>
 <li>
 <p>Example: <code>accept 1 okay</code> in order to accept the suggestion <code>1</code> with the reason <code>okay</code></p>
@@ -3174,13 +3186,39 @@ When the poster of the message reacts to the message with a star, this is not co
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>reject &lt;suggestionId&gt; [note]</code></p>
+<p>Usage: <code>reject &lt;suggestionId&gt; [reason]</code></p>
 </li>
 <li>
-<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as denied. The optional <code>note</code> will be used in this re-post, if provided.</p>
+<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as denied. The optional <code>reason</code> will be used in this re-post, if provided.</p>
 </li>
 <li>
 <p>Example: <code>deny 1 not okay</code> in order to reject the suggestion <code>1</code> with the reason <code>not okay</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing a suggestion you created</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>unSuggest &lt;suggestionId&gt;</code></p>
+</li>
+<li>
+<p>Description: This will delete the suggestion identified by <code>suggestionId</code> from the channel and the database, but this is only possible within a specicied time range.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Vetoing a suggestion</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage : <code>veto &lt;suggestion&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description: This command will veto the suggestion, this means, it should be indicated that the suggestion was not rejected by votes, but because it was not acceptable on a fundamental level. This is basically just a different state of the suggestion.</p>
 </li>
 </ul>
 </div>
@@ -3597,8 +3635,8 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.2.9<br>
-Last updated 2021-04-24 20:16:42 UTC
+Version 1.2.10<br>
+Last updated 2021-05-02 21:30:42 UTC
 </div>
 </div>
 </body>
