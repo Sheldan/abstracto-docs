@@ -442,8 +442,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Abstracto Discord Bot Documentation</h1>
 <div class="details">
 <span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
-<span id="revnumber">version 1.2.10,</span>
-<span id="revdate">2021/05/02 21:30</span>
+<span id="revnumber">version 1.2.11,</span>
+<span id="revdate">2021/05/11 22:54</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -1044,13 +1044,13 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>makeAffected &lt;featureName|commandName&gt; &lt;role&gt;</code></p>
+<p>Usage: <code>makeAffected &lt;effect&gt; &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Makes the role affected by all commands in the <code>feature</code>/the <code>command</code>.</p>
+<p>Description: Makes the <code>role</code> affected by the <code>effect</code>.</p>
 </li>
 <li>
-<p>Example: <code>makeAffected ban @Staff</code> in order so the role <code>Staff</code> can be banned via the command (where @Staff is a role mention)</p>
+<p>Example: <code>makeAffected ban @Staff</code> in order so the role <code>Staff</code> can be banned (where @Staff is a role mention)</p>
 </li>
 </ul>
 </div>
@@ -1060,13 +1060,26 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>makeImmune &lt;featureName|commandName&gt; &lt;role&gt;</code></p>
+<p>Usage: <code>makeImmune &lt;effect&gt; &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Makes the role immune from all commands in the <code>feature</code>/the <code>command</code>.</p>
+<p>Description: Makes the <code>role</code> immune to <code>effect</code>.</p>
 </li>
 <li>
-<p>Example: <code>makeImmune ban @Staff</code> in order so the role <code>Staff</code> cannot be banned via the command (where @Staff is a role mention)</p>
+<p>Example: <code>makeImmune ban @Staff</code> in order so the role <code>Staff</code> cannot be banned (where @Staff is a role mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show all effects</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showEffects</code></p>
+</li>
+<li>
+<p>Description: Shows the currently possible effects and a short description of them.</p>
 </li>
 </ul>
 </div>
@@ -1426,29 +1439,6 @@ and <code>memberDuration</code> for each member.</p>
 </div>
 </dd>
 </dl>
-</div>
-<div class="paragraph">
-<div class="title">What does it mean if a role is immune?</div>
-<p>A command can take a member as a target, for example <code>ban</code>. If a role is considered immune, this means, if the member which is the target of the command has the given role, this command will fail. Not all commands support this feature, but only the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ban</p>
-</li>
-<li>
-<p>Kick</p>
-</li>
-<li>
-<p>Warn</p>
-</li>
-<li>
-<p>Mute</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>While a role can be made immune for any command, only these commands actually use this information.</p>
 </div>
 <div class="paragraph">
 <div class="title">What is a feature mode?</div>
@@ -3635,8 +3625,8 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.2.10<br>
-Last updated 2021-05-02 21:30:42 UTC
+Version 1.2.11<br>
+Last updated 2021-05-11 22:53:43 UTC
 </div>
 </div>
 </body>
