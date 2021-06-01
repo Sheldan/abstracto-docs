@@ -1,0 +1,3783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="Sheldan https://github.com/Sheldan/abstracto">
+<title>Abstracto Discord Bot Documentation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Abstracto Discord Bot Documentation</h1>
+<div class="details">
+<span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
+<span id="revnumber">version 1.2.15,</span>
+<span id="revdate">2021/06/01 22:48</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_description">1. Description</a></li>
+<li><a href="#_glossary">2. Glossary</a></li>
+<li><a href="#_general_information">3. General information</a></li>
+<li><a href="#_features">4. Features</a>
+<ul class="sectlevel2">
+<li><a href="#_core">4.1. Core</a>
+<ul class="sectlevel3">
+<li><a href="#_emotes">4.1.1. Emotes</a></li>
+<li><a href="#_commands">4.1.2. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_moderation">4.2. Moderation</a>
+<ul class="sectlevel3">
+<li><a href="#_post_targets">4.2.1. Post targets</a></li>
+<li><a href="#_commands_2">4.2.2. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_warning">4.3. Warning</a>
+<ul class="sectlevel3">
+<li><a href="#_post_targets_2">4.3.1. Post targets</a></li>
+<li><a href="#_feature_modes">4.3.2. Feature modes</a></li>
+<li><a href="#_commands_3">4.3.3. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_automatic_warn_decay">4.4. Automatic warn decay</a>
+<ul class="sectlevel3">
+<li><a href="#_relevant_system_configuration">4.4.1. Relevant system configuration</a></li>
+<li><a href="#_post_targets_3">4.4.2. Post targets</a></li>
+<li><a href="#_feature_modes_2">4.4.3. Feature modes</a></li>
+<li><a href="#_commands_4">4.4.4. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_muting">4.5. Muting</a>
+<ul class="sectlevel3">
+<li><a href="#_post_targets_4">4.5.1. Post targets</a></li>
+<li><a href="#_feature_modes_3">4.5.2. Feature modes</a></li>
+<li><a href="#_commands_5">4.5.3. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_logging">4.6. Logging</a>
+<ul class="sectlevel3">
+<li><a href="#_post_targets_5">4.6.1. Post targets</a></li>
+</ul>
+</li>
+<li><a href="#_user_notes">4.7. User notes</a>
+<ul class="sectlevel3">
+<li><a href="#_commands_6">4.7.1. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_invite_filter">4.8. Invite filter</a>
+<ul class="sectlevel3">
+<li><a href="#_post_targets_6">4.8.1. Post targets</a></li>
+<li><a href="#_feature_modes_4">4.8.2. Feature modes</a></li>
+<li><a href="#_commands_7">4.8.3. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_profanity_filter">4.9. Profanity filter</a>
+<ul class="sectlevel3">
+<li><a href="#_post_targets_7">4.9.1. Post targets</a></li>
+<li><a href="#_feature_modes_5">4.9.2. Feature modes</a></li>
+<li><a href="#_emotes_2">4.9.3. Emotes</a></li>
+<li><a href="#_commands_8">4.9.4. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_reporting_a_message_via_reaction">4.10. Reporting a message via reaction</a>
+<ul class="sectlevel3">
+<li><a href="#_relevant_system_configuration_2">4.10.1. Relevant system configuration</a></li>
+<li><a href="#_post_targets_8">4.10.2. Post targets</a></li>
+<li><a href="#_emotes_3">4.10.3. Emotes</a></li>
+</ul>
+</li>
+<li><a href="#_mod_mail">4.11. Mod mail</a>
+<ul class="sectlevel3">
+<li><a href="#_necessary_bot_permissions">4.11.1. Necessary bot permissions</a></li>
+<li><a href="#_workflow">4.11.2. Workflow</a></li>
+<li><a href="#_relevant_system_configuration_3">4.11.3. Relevant system configuration</a></li>
+<li><a href="#_post_targets_9">4.11.4. Post targets</a></li>
+<li><a href="#_feature_modes_6">4.11.5. Feature modes</a></li>
+<li><a href="#_emotes_4">4.11.6. Emotes</a></li>
+<li><a href="#_commands_9">4.11.7. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_experience_tracking">4.12. Experience tracking</a>
+<ul class="sectlevel3">
+<li><a href="#_necessary_bot_permissions_2">4.12.1. Necessary bot permissions</a></li>
+<li><a href="#_relevant_system_configuration_4">4.12.2. Relevant system configuration</a></li>
+<li><a href="#_commands_10">4.12.3. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_assignable_roles">4.13. Assignable roles</a>
+<ul class="sectlevel3">
+<li><a href="#_commands_11">4.13.1. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_statistic">4.14. Statistic</a></li>
+<li><a href="#_emote_tracking">4.15. Emote tracking</a>
+<ul class="sectlevel3">
+<li><a href="#_feature_modes_7">4.15.1. Feature modes</a></li>
+<li><a href="#_commands_12">4.15.2. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_reminders">4.16. Reminders</a>
+<ul class="sectlevel3">
+<li><a href="#_commands_13">4.16.1. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_starboard">4.17. Starboard</a>
+<ul class="sectlevel3">
+<li><a href="#_emotes_5">4.17.1. Emotes</a></li>
+<li><a href="#_relevant_system_configuration_5">4.17.2. Relevant system configuration</a></li>
+<li><a href="#_post_targets_10">4.17.3. Post targets</a></li>
+<li><a href="#_commands_14">4.17.4. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_suggestions">4.18. Suggestions</a>
+<ul class="sectlevel3">
+<li><a href="#_feature_modes_8">4.18.1. Feature modes</a></li>
+<li><a href="#_post_targets_11">4.18.2. Post targets</a></li>
+<li><a href="#_emotes_6">4.18.3. Emotes</a></li>
+<li><a href="#_relevant_system_configuration_6">4.18.4. Relevant system configuration</a></li>
+<li><a href="#_commands_15">4.18.5. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_miscellaneous">4.19. Miscellaneous</a>
+<ul class="sectlevel3">
+<li><a href="#_commands_16">4.19.1. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_link_embeds">4.20. Link embeds</a>
+<ul class="sectlevel3">
+<li><a href="#_emotes_7">4.20.1. Emotes</a></li>
+</ul>
+</li>
+<li><a href="#_repost_detection_and_tracking">4.21. Repost detection and tracking</a>
+<ul class="sectlevel3">
+<li><a href="#_feature_modes_9">4.21.1. Feature modes</a></li>
+<li><a href="#_emotes_8">4.21.2. Emotes</a></li>
+<li><a href="#_commands_17">4.21.3. Commands</a></li>
+</ul>
+</li>
+<li><a href="#_entertainment_commands">4.22. Entertainment commands</a>
+<ul class="sectlevel3">
+<li><a href="#_relevant_system_configuration_7">4.22.1. Relevant system configuration</a></li>
+</ul>
+</li>
+<li><a href="#_webservices">4.23. Webservices</a></li>
+<li><a href="#_youtube">4.24. Youtube</a>
+<ul class="sectlevel3">
+<li><a href="#_feature_modes_10">4.24.1. Feature modes</a></li>
+<li><a href="#_command">4.24.2. Command</a></li>
+</ul>
+</li>
+<li><a href="#_urban_dictionary">4.25. Urban dictionary</a>
+<ul class="sectlevel3">
+<li><a href="#_command_2">4.25.1. Command</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_description">1. Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Abstracto is a feature rich Discord bot written in Java and uses JDA as the wrapper for the Discord API.
+This documentation is split into two parts: Technical documentation and user documentation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_glossary">2. Glossary</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Post target</dt>
+<dd>
+<p>Describes the channel where Abstracto will send specific messages to. For example, the command <code>ban</code> sends a message containing information about the ban to the <code>banLog</code> post target.
+Post targets can be configured with the command <code>posttarget</code> and once defined can only be switched to another channel. The bot needs <code>MESSAGE_WRITE</code> in the channel in order to send the messages.</p>
+</dd>
+<dt class="hdlist1">Decayed warnings</dt>
+<dd>
+<p>Warnings have a decayed property, which means it can be marked as inactive, while the warning itself is not deleted.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general_information">3. General information</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Duration input</dt>
+<dd>
+<p>This procedure is done when a command requires a duration as an input, for example <code>mute</code>.
+In order to define a duration: use a positive number followed by one of the following time units: <code>s</code>, <code>m</code>, <code>h</code>, <code>d</code> or <code>w</code> representing seconds, minutes, hours, days and weeks respectively.
+Weeks in this case are just a short hand for 7 days.</p>
+</dd>
+<dt class="hdlist1">Pagination navigation</dt>
+<dd>
+<p>If a pagination is used for the output of a command you can navigate the pages with <code>◀️</code> and <code>▶️</code> and <code>⏹️</code> to close the pagination.</p>
+</dd>
+<dt class="hdlist1">Role as parameter</dt>
+<dd>
+<p>Whenever a role is a parameter for a command, this can be done by either providing the role ID or mentioning the role.</p>
+</dd>
+<dt class="hdlist1">Channel groups</dt>
+<dd>
+<p>This concept enables you to group channels together into channel groups and enact certain restrictions or features on this whole group.</p>
+</dd>
+<dt class="hdlist1">System configuration</dt>
+<dd>
+<p>Some properties can be configured while the bot is running and can be changed for each guild respectively.
+In the respective features they are noted under <code>Relevant system configuration</code>.
+In order to change this you need to use the command <code>setConfig</code> with the provided key and the new desired value.</p>
+</dd>
+<dt class="hdlist1">Emotes</dt>
+<dd>
+<p>The features have section of the keys of used emotes in the feature, you can change this emote with the <code>setEmote</code> command.</p>
+</dd>
+<dt class="hdlist1">Feature Modes</dt>
+<dd>
+<p>Features can have different modes. This means, a feature behaves differently if the mode is changed. For example: <code>modmail</code> has two modes: <code>log</code> and <code>noLog</code>.
+In the mode <code>log</code> mod mail threads will be logged into the post target <code>modmailLog</code> while in the <code>noLog</code> mode, this does not happen. This consideration of the modes does depend on the implementation of the features.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features">4. Features</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core">4.1. Core</h3>
+<div class="paragraph">
+<p>The core feature contains necessary commands in order for Abstracto to function and be configured.</p>
+</div>
+<div class="sect3">
+<h4 id="_emotes">4.1.1. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>successReaction</code> reaction emote in case the command completed successfully</p>
+</li>
+<li>
+<p><code>warnReaction</code> reaction emote in case the command did not complete successfully</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands">4.1.2. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Help</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>help [module/command]</code></p>
+</li>
+<li>
+<p>Description: If no parameter is provided, this will list the currently available modules. If the provided parameter matches the name of a module, information about that module is displayed.
+This information includes a description and the available commands of this module. If the provided parameter matches a command name, information about this command is displayed.
+The module matching takes precedence over command matching.
+This information includes the a short description, a more detailed description, aliases (if any), parameters (if any), which roles are allowed to execute the command,
+or if it is not restricted and which effects a command has.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Changing the system configuration</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>setConfig &lt;key&gt; &lt;value&gt;</code></p>
+</li>
+<li>
+<p>Description: Changes the value of this configuration identified by <code>key</code> to <code>value</code>. Some of these configurations have separate commands, but this works in general.</p>
+</li>
+<li>
+<p>Example: <code>setConfig expMin 15</code> to set the minimum experience to 15</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Resetting the configuration to default values</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>resetConfig [key/feature]</code></p>
+</li>
+<li>
+<p>Description: Resets the configuration of the given <code>key</code> or for the complete feature identified by <code>feature</code>. If this is not provided, it will reset the entire server to the default configuration.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Changing emotes Abstracto uses</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setEmote &lt;key&gt; &lt;emote&gt;</code></p>
+</li>
+<li>
+<p>Description: Sets the emote identified by <code>key</code> used by Abstracto on this server to <code>emote</code>.
+This allows both built in emotes and custom emotes, but Abstracto must be in the server of the custom emote in order to use them.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Clearing the cache</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>clearCache</code></p>
+</li>
+<li>
+<p>Description: Clears the internal cache used by Abstracto. This mostly affects template changes directly done in the database.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Ping</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>ping</code></p>
+</li>
+<li>
+<p>Description: Prints the latency of Abstracto to the Discord servers.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Echo</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>echo &lt;text&gt;</code></p>
+</li>
+<li>
+<p>Description: Echos <code>text</code> in the same channel this command as executed in.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Changing the prefix</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setPrefix &lt;prefix&gt;</code></p>
+</li>
+<li>
+<p>Description: Changes the prefix of the bot in this guild to <code>prefix</code>. This can be one or multiple characters.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Changing a post target</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>posttarget &lt;key&gt; &lt;channel&gt;</code></p>
+</li>
+<li>
+<p>Description: Changes the given post target identified by <code>key</code> to the given channel. All messages using this post target will be send to this channel from now on.
+If neither <code>key</code> nor <code>channel</code> is given, this will print the currently available post targets and the channels they point to, if set.</p>
+</li>
+<li>
+<p>Example: <code>posttarget banLog #general</code> to log the bans in the #general channel.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Changing admin mode</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setAdminMode &lt;true/false&gt;</code></p>
+</li>
+<li>
+<p>Description: Changes the admin modes on this server to the given value. Admin mode means, that <strong>all</strong> commands in the current server, can only be executed by members who have the ADMINISTRATOR permission.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Listing the features</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>features</code></p>
+</li>
+<li>
+<p>Description: Lists the available features and whether or not they are enabled in this server.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enabling a feature</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enableFeature &lt;key&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables the feature identified by <code>key</code> in this server. If the feature dependents on other features, they will be enabled as well.</p>
+</li>
+<li>
+<p>Example: <code>enableFeature moderation</code> to enable the moderation feature</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disabling a feature</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableFeature &lt;key&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables the feature identified by <code>key</code> in this server. If the feature is required for other features, they will be disabled as well.</p>
+</li>
+<li>
+<p>Example: <code>disableFeature moderation</code> to disable the moderation feature</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Creating a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>createChannelGroup &lt;key&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a new channel group identified by <code>key</code>.</p>
+</li>
+<li>
+<p>Aliases: <code>+ChGroup</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Adding a channel to a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>addToChannelGroup &lt;groupName&gt; &lt;channel&gt;</code></p>
+</li>
+<li>
+<p>Description: Adds the <code>channel</code> to the channel group identified by the <code>groupName</code>. It is not possible for a channel to be in a group twice.</p>
+</li>
+<li>
+<p>Aliases: <code>addTChGrp</code>, <code>chGrpCh+</code></p>
+</li>
+<li>
+<p>Example: <code>addToChannelGroup group1 #general</code> to add the channel #general to the group <code>group1</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing a channel from a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>removeFromChannelGroup &lt;groupName&gt; &lt;channel&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes the <code>channel</code> from the channel group identified by <code>groupName</code>.</p>
+</li>
+<li>
+<p>Aliases: <code>rmChChgrp</code>, <code>chGrpCh-</code></p>
+</li>
+<li>
+<p>Example: <code>removeFromChannelGroup group1 #general</code> to remove the channel #general from the group <code>group1</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deleting a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteChannelGroup &lt;key&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes the channel group identified by <code>key</code>. This will also remove all associated channels from this group. This command fails, if the group is used in other features and referenced.</p>
+</li>
+<li>
+<p>Aliases: <code>-ChGroup</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disabling a command in a group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableCommand &lt;commandName&gt; &lt;groupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables the command identified by <code>commandName</code> in the channel group <code>groupName</code>. A command is considered disabled in a specified channel, if the command is disabled in <strong>all</strong> the groups the channel is in.</p>
+</li>
+<li>
+<p>Example: <code>disableCommand warn group1</code> to disable the command <code>warn</code> in the group <code>group1</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enabling a command in a group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enableCommand &lt;commandName&gt; &lt;groupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables the command identified by <code>commandName</code> in the channel group <code>groupName</code>. A command is considered enabled in a specified channel, if the command is enabled in <strong>any</strong> the groups the channel is in.</p>
+</li>
+<li>
+<p>Example: <code>enableCommand warn group1</code> to enable the command <code>warn</code> in the group <code>group1</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Showing all available channel groups and the respective channels</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>listChannelGroups</code></p>
+</li>
+<li>
+<p>Description: Provides an overview of the currently available channel groups and which channels are in this channel group.</p>
+</li>
+<li>
+<p>Aliases: <code>lsChGrp</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing role restrictions from a command</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>allow &lt;featureName|commandName&gt;</code></p>
+</li>
+<li>
+<p>Description: Allows everyone to execute all commands in this <code>feature</code>/the <code>command</code>. Which means, any restrictions concerning which role is able to execute a certain command is ignored even if it still shows in the help output.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Allowing a role to execute a command</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>allowRole  &lt;featureName|commandName&gt; &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Allows the provided <code>role</code> to execute all commands in the <code>feature</code>/the <code>command</code>. This command automatically restricts the commands, which means, if it was unrestricted before, after executing this command only the provided role can execute the command.</p>
+</li>
+<li>
+<p>Example: <code>allowRole moderation @Staff</code> to allow the role <code>Staff</code> to execute all commands in the <code>moderation</code> feature (where @Staff is a role mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Forbidding a role to execute a command</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disAllowRole &lt;featureName|commandName&gt; &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes the <code>role</code> from the list of allowed roles for all commands in the <code>feature</code>/the <code>command</code>.</p>
+</li>
+<li>
+<p>Example: <code>disAllowRole moderation @Staff</code> to forbid the role <code>Staff</code> to execute all commands in the <code>moderation</code> feature (where @Staff is a role mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Make a role affected by a command</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>makeAffected &lt;effect&gt; &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Makes the <code>role</code> affected by the <code>effect</code>.</p>
+</li>
+<li>
+<p>Example: <code>makeAffected ban @Staff</code> in order so the role <code>Staff</code> can be banned (where @Staff is a role mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Make a role immune against a command</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>makeImmune &lt;effect&gt; &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Makes the <code>role</code> immune to <code>effect</code>.</p>
+</li>
+<li>
+<p>Example: <code>makeImmune ban @Staff</code> in order so the role <code>Staff</code> cannot be banned (where @Staff is a role mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show all effects</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showEffects</code></p>
+</li>
+<li>
+<p>Description: Shows the currently possible effects and a short description of them.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enforce the role restrictions of commands</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>restrict &lt;featureName|commandName&gt;</code></p>
+</li>
+<li>
+<p>Description: Causes the role restrictions for a all commands in the <code>feature</code>/the <code>command</code> to be in effect again.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enabling a feature mode</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enableMode &lt;featureName&gt; &lt;mode&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables the mode <code>mode</code> in feature <code>featureName</code>. If the enabled state of the feature <code>featureName</code> is part of the default config, it will no longer be default config that after executing <code>enableMode</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disabling a feature mode</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableMode &lt;featureName&gt; &lt;mode&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables the mode <code>mode</code> in feature <code>featureName</code>. If the enabled state of the feature <code>featureName</code> is part of the default config, it will no longer be default config after executing <code>disableMode</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Listing all feature modes</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>usage <code>featureModes [feature]</code></p>
+</li>
+<li>
+<p>Description: Lists all of the currently available feature modes and the feature they are associated with. If <code>feature</code> is given, it only lists the feature modes of this feature. The output also includes whether or not the current mode is enabled and if this value comes from the default configuration.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Setting up a feature with an interactive wizard</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setupFeature &lt;featureName&gt;</code></p>
+</li>
+<li>
+<p>Description: Starts an interactive wizard to configure the necessary properties and post targets of a feature. Also includes custom steps. Closes with a summary page to see all changes.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Allow the bot to use certain mentions</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>allowMention &lt;mentionType&gt;</code></p>
+</li>
+<li>
+<p>Description: Allows the bot to use certain mentions. ´mentionType` can either be <code>everyone</code>, <code>role</code> or <code>user</code>. If @everyone is enabled, this also enables @here mentions.
+This change takes immediate effect and is only for the current server. Per default user and role mentions are enabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disallow the bot to use certain mentions</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disallowMention &lt;mentionType&gt;</code></p>
+</li>
+<li>
+<p>Description: Disallows the bot to use certain mentions. ´mentionType` can either be <code>everyone</code>, <code>role</code> or <code>user</code>. If @everyone is disabled, this also disables @here mentions.
+This change takes immediate effect and is only for the current server. Per default everyone/here mentions are disabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Setting a custom template for this server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setTemplate &lt;templateKey&gt;</code></p>
+</li>
+<li>
+<p>Description: Adds or updates the given template identified by <code>templateKey</code> only for the current server. The content of the template needs to be attached to the message as a file and is required to be a plaintext file. The file can be named anything. The template needs to be in <a href="https://freemarker.apache.org/">Freemarker</a> format. This change is only in effect for this server and is called a 'customized template'. This will take effect immediately.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Retrieving the current default template</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>getTemplate &lt;templateKey&gt;</code></p>
+</li>
+<li>
+<p>Description: Loads the current global template identified by <code>templateKey</code> and returns the content as an attached file to the response of the command.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Retrieving the current customized template for this server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>getCustomTemplate &lt;templateKey&gt;</code></p>
+</li>
+<li>
+<p>Description: Loads the current customized tempalte identified by <code>templateKey</code> and returns the content as an attached file to the response of the command. Shows an error message, if there exists no customized template for this server for the provided <code>templateKey</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Resetting a customized template to the default template</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>resetTemplate &lt;templateKey&gt;</code></p>
+</li>
+<li>
+<p>Description: Resets the template identified by <code>templateKey</code> to the default content.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show a link to documentation</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>documentation</code></p>
+</li>
+<li>
+<p>Description: Shows links to access the documentation.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Create a server specific alias</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>createAlias &lt;commandName&gt; &lt;alias&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates the server specific alias for command <code>commandName</code> identified by <code>alias</code>. This means that from now on, users can use the command identified by <code>commandName</code> by using <code>alias</code> in its place, when executing the command or when using the help command. This alias is only available in this server, and it is not allowed to use the names of existing commands or pre-defined aliases. In case such an alias is used as <code>alias</code>, an error message is shown.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Delete a server specific alias</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteAlias &lt;alias&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes the server specific alias identified by <code>alias</code>. It is not possible to delete pre-defined aliases. If <code>alias</code> does not exist, an error message is shown.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Creating a profanity group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>createProfanityGroup &lt;profanityGroupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a profanity group with the given <code>profanityGroupName</code>. This name must be unique within the server.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Adding a profanity regex to a profanity group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>addProfanityRegex &lt;profanityGroupName&gt; &lt;profanityName&gt; &lt;regex&gt; [replacement]</code></p>
+</li>
+<li>
+<p>Description: Adds a profanity regex identified by <code>profanityName</code> to the profanity group identified by <code>profanityGroupName</code>. The regex to be used is in <code>regex</code>. Depending on how the regex is used, you can define a <code>replacement</code>, with which a found text will be replaced. The <code>profanityName</code> must be unique within the profanity group.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show the current profanity configuration</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showProfanityConfig</code></p>
+</li>
+<li>
+<p>Description: Shows the current profanity configuration for the current server, including all profanity groups and profanity regex.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing a profanity regex from a profanity group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>removeProfanityRegex &lt;profanityGroupName&gt; &lt;profanityName&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes the profanity regex identified by <code>profanityName</code> from the profanity group identified by <code>profanityGroupName</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deleting a profanity group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteProfanityGroup &lt;profanityGroupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes the profanity group identified by <code>profanityGroupName</code> and all profanity regexes within.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Showing the uptime of the bot</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>uptime</code></p>
+</li>
+<li>
+<p>Shows the uptime and start time of the bot instance.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Adding a command to a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>addCommandToChannelGroup &lt;channelGroupName&gt; &lt;commandName&gt;</code></p>
+</li>
+<li>
+<p>Description: Adds the command <code>commandName</code> to the channel group <code>channelGroupName</code>. This can be used to add the command to a channel group which can disable the command or set a cooldown on the command.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disabling a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableChannelGroup &lt;channelGroupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables the effect the channel group <code>channelGroupName</code> has.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enabling a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enableChannelGroup &lt;channelGroupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables the effect the channel group <code>channelGroupName</code> has.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing a command from a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>removeCommandFromChannelGroup &lt;channelGroupName&gt; &lt;commandName&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes the command <code>commandName</code> from the channel group <code>channelGroupName</code>. This can be used to remove the command from a channel group which can enable the command or remove a cooldown on the command.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Clearing cooldowns</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>clearCommandCoolDowns</code></p>
+</li>
+<li>
+<p>Description: Resets all currently active cooldowns of the current server, so every command can be used again.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Setting channel and member cooldowns in a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>commandCoolDownChannelGroup &lt;channelGroupName&gt; &lt;channelDuration&gt; &lt;memberDuration&gt;</code></p>
+</li>
+<li>
+<p>Description: Sets the cooldown of the commands of the channel group <code>channelGroupName</code> to <code>channelDuration</code> for the channel group
+and <code>memberDuration</code> for each member.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Setting the global cooldown for a command</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>commandCoolDownServer &lt;command&gt; &lt;duration&gt;</code></p>
+</li>
+<li>
+<p>Description: Sets the cooldown for command <code>command</code> to <code>duration</code> for the whole server.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<div class="title">What is a feature mode?</div>
+<p>A feature mode is a very specific way in which a feature behaves for a certain decision. These feature modes can be defined for each server and are directly bound to a feature.
+These feature modes influence the availability of commands or general behavior of features.</p>
+</div>
+<div class="paragraph">
+<p>An example of a feature mode is mod mail logging: If the feature mode <code>log</code> of mod mail is disabled, no thread will be logged and the separate command <code>closeNoLog</code> will not be available in the first place, because it will behave the same as the normal <code>close</code> command.
+If the feature mode is enabled, the messages from the thread are logged in the respective post target and the command will be available.</p>
+</div>
+<div class="paragraph">
+<div class="title">What is a profanity group?</div>
+<p>A profanity group is just a container for various regexes. They are grouped together in order to be identified together and kept organized.
+Each profanity regex within that group has another identified. For example a regex group handles the word 'test'. Then a profanity regex is for all lower cases, this regex can be named 'lower', and the regex group is then named 'test'.</p>
+</div>
+<div class="paragraph">
+<div class="title">How do multiple cooldowns interact</div>
+<p>If there are multiple cooldowns on a command active, the longest cooldown will decide the cool down.
+A channel cannot be in multiple cool down channel groups and this is actively enforced by the command.
+If a cooldown is active, an error message is shown with the duration after which the command can be used again.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_moderation">4.2. Moderation</h3>
+<div class="paragraph">
+<p>Feature key: <code>moderation</code></p>
+</div>
+<div class="sect3">
+<h4 id="_post_targets">4.2.1. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>banLog</code></dt>
+<dd>
+<p>target of the message notifying about bans, both via command and via UI. Will still ban if not setup.</p>
+</dd>
+<dt class="hdlist1"><code>unBanLog</code></dt>
+<dd>
+<p>target of the message notifying about un-bans, both via command and via UI. Will still ban if not setup.</p>
+</dd>
+<dt class="hdlist1"><code>kickLog</code></dt>
+<dd>
+<p>target of the log message containing information about the kick. Will still kick if not setup.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_2">4.2.2. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Ban a member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>ban &lt;member&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description:
+Bans the given <code>member</code> with the given optional <code>reason</code>. This sends a logging message to the <code>banLog</code> post target.
+Banning this way does not delete old messages of the member on the server. If the <code>reason</code> is not provided, a default reason is used.
+It is also possible to ban users via ID, if they are not part of the server anymore.</p>
+</li>
+<li>
+<p>Example: <code>ban @Member bad</code> in order to ban <code>Member</code> with the reason <code>bad</code> (the @Member is a user mention)</p>
+</li>
+<li>
+<p>Required bot permission: <code>BAN_MEMBERS</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Unban a user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>unBan &lt;userId&gt;</code></p>
+</li>
+<li>
+<p>Description: Un-bans the given user with the id <code>userId</code>.</p>
+</li>
+<li>
+<p>Required bot permission: <code>BAN_MEMBERS</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Kick a member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>kick &lt;member&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description: Kicks the <code>member</code> from the guild with the given <code>reason</code>. If the <code>reason</code> is not provided, a default reason is used.</p>
+</li>
+<li>
+<p>Example: <code>kick @Member bad</code> in order to kick <code>Member</code> with the reason <code>bad</code> (the @Member is a user mention)</p>
+</li>
+<li>
+<p>Required bot permission: <code>KICK_MEMBERS</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Change the slow mode in a channel</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>slowmode &lt;duration&gt; [channel]</code></p>
+</li>
+<li>
+<p>Description: This command sets the slow mode in the <code>channel</code> to the given <code>duration</code>. This command uses duration parsing. The <code>channel</code> is optional and if none is provided, the current channel is used.</p>
+</li>
+<li>
+<p>Example: <code>slowMode 1h2m3s #general</code> in order to set the slow mode in channel <code>general</code> to 1 hour 2 minutes and 3 seconds (the #general is a user mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Purging messages in a channel</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>purge &lt;messageCount&gt; [member]</code></p>
+</li>
+<li>
+<p>Description: Deletes the last <code>messageCount</code> messages in the current channel. If a <code>member</code> is provided as parameter, only the messages by this member
+will be deleted. The deletion of this messages will <strong>not</strong> be logged by the logging mechanism. The messages to be deleted need to be from within the last 2 weeks, but there is no limit on how much messages can be deleted besides that.
+While the command is ongoing, a status update message will be shown indicating how far the command is. This message will be deleted after the command is done.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_warning">4.3. Warning</h3>
+<div class="paragraph">
+<p>This feature can be used to warn specific users if they did something not allowed by the rules.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>warnings</code></p>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_2">4.3.1. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>warnLog</code></dt>
+<dd>
+<p>target of the log message containing information about a created warn, only used if feature mode <code>warnLogging</code> is enabled.</p>
+</dd>
+<dt class="hdlist1"><code>decayLog</code></dt>
+<dd>
+<p>will be used when all the warnings are decayed by <code>decayAllWarnings</code> and feature mode <code>warnDecayLogging</code> is enabled.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes">4.3.2. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>automaticWarnDecayLogging</code></dt>
+<dd>
+<p>if enabled, warn decays by <code>decayAllWarnings</code> are logged to the post target <code>decayLog</code>. Enabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_3">4.3.3. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Warn a user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>warn &lt;member&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description: Warns the <code>member</code> with the given <code>reason</code> or a default one, if none is provided. This command sends a log message to the <code>warnLog</code> post
+target and notifies the member about the warn.</p>
+</li>
+<li>
+<p>Example: <code>warn @Member bad</code> in order to warn <code>Member</code> with the reason <code>bad</code> (the @Member is a user mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Listing the warnings of users</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>warnings [member]</code></p>
+</li>
+<li>
+<p>Description: If no <code>member</code> is provided displays all the warnings on the server. If a <code>member</code> is provided, will only display the warnings of the user.
+This uses a paginated output, which means multiple pages in case there are more warnings to display. This will also display the date the warning was decayed if applicable.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Showing your warnings</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>myWarnings</code></p>
+</li>
+<li>
+<p>Description: Displays the amount of warnings of the user executing on the server. This will show both active and total warnings.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Decaying all warnings regardless of the date</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>decayAllWarnings</code></p>
+</li>
+<li>
+<p>Description: This will cause all warnings of this server which are not decayed yet to be decayed instantly.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deleting a warning</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteWarning &lt;warnId&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes the warning identified by <code>warnId</code> completely from the database.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_automatic_warn_decay">4.4. Automatic warn decay</h3>
+<div class="paragraph">
+<p>This feature enables warnings to be decayed after a configurable amount of days. This feature directly depends on the feature <code>warnings</code>.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>warnDecay</code></p>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration">4.4.1. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>decayDays</code> The amount of days after which a warning gets decayed. Default: 90</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_3">4.4.2. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>decayLog</code></dt>
+<dd>
+<p>target of the log message containing the information in case a warning is decayed.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_2">4.4.3. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>automaticWarnDecayLogging</code></dt>
+<dd>
+<p>if enabled, automatic warn decays are logged to the <code>decayLog</code> post target. Enabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_4">4.4.4. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Decaying all warnings if necessary</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>decayWarnings</code></p>
+</li>
+<li>
+<p>Description: Triggers the decay of the warnings instantly, which means, every not decayed warning on this server older than the configured amount of days will be decayed and the decay will be logged.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_muting">4.5. Muting</h3>
+<div class="paragraph">
+<p>This feature provides the capability to mute users, which effectively means it applies a role which prevents them from sending messages and speaking in voice chat.
+The role used to mute member will not be created and needs to be provided. There is no validation if the provided role actually mutes members.
+If the user leaves the guild and rejoins, the mute role will be re-applied.</p>
+</div>
+<div class="paragraph">
+<p>Feature key <code>muting</code></p>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_4">4.5.1. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>muteLog</code></dt>
+<dd>
+<p>target of log message containing the information in case a member was muted and when the mute ended automatically.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_3">4.5.2. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>muteLogging</code></dt>
+<dd>
+<p>if enabled, each mute is to be logged to the post target <code>muteLog</code>. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>unMuteLogging</code></dt>
+<dd>
+<p>if enabled, each un mute which happens 'naturally' (after the defined time period is over) will be logged to the <code>muteLog</code> post target. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>manualUnMuteLogging</code></dt>
+<dd>
+<p>if enabled, each un mute which happens via the command <code>unmute</code> will be logged to the <code>muteLog</code> post target. Enabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_5">4.5.3. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Muting a user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>mute &lt;member&gt; &lt;duration&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description: Applies the mute role to the given <code>member</code> for the given <code>duration</code>. If <code>reason</code> is not provided, a default reason will be used for logging in the <code>muteLog</code> post target.  This will automatically
+un-mute the user after the duration has passed. If the un-mute happens automatically, this will also be logged in the <code>muteLog</code> post target.
+This command sends a notification to the user about the mute and kicks the user from the voice channel, if any.</p>
+</li>
+<li>
+<p>Example: <code>mute @Member 1h2m3s bad</code> in order to mute the member <code>Member</code> for 1 hour 2 minutes and 3 seconds with the reason <code>bad</code> (the @Member is a user mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Un-Muting a user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>unMute &lt;member&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes the mute role from the given member. This does <strong>not</strong> log the un-mute.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Configuring which role to use for muting</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setMuteRole &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Sets the  <code>role</code> to be used as the role when applying a mute. This role needs to be muting, which means, if you want it to be effective, this role needs to deny <code>MESSAGE_WRITE</code>. Abstracto does not validate nor require the role to actually mute.
+Only <strong>one</strong> role can be used as a mute role.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_logging">4.6. Logging</h3>
+<div class="paragraph">
+<p>This feature provides a range of utilities to monitor the server.
+The logging includes:</p>
+</div>
+<div class="paragraph">
+<p>Feature key <code>logging</code></p>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_5">4.6.1. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>deleteLog</code></dt>
+<dd>
+<p>target for the messages containing information about a deleted message.</p>
+</dd>
+<dt class="hdlist1"><code>editLog</code></dt>
+<dd>
+<p>target for the messages containing information about an edited message.</p>
+</dd>
+<dt class="hdlist1"><code>joinLog</code></dt>
+<dd>
+<p>target for the messages containing information about an user joining the server.</p>
+</dd>
+<dt class="hdlist1"><code>leaveLog</code></dt>
+<dd>
+<p>target or the messages containing information about an user leaving the server.</p>
+</dd>
+<dt class="hdlist1">Deleted message logging</dt>
+<dd>
+<p>When a message is deleted, the content of the message and the possible attachments of said message will be logged.</p>
+</dd>
+<dt class="hdlist1">Edited message logging</dt>
+<dd>
+<p>When a message is edited, the previous content of the message and the new content of the message will be logged.
+This does not work if the message was sent before the bot was started.</p>
+</dd>
+<dt class="hdlist1">Member joining logging</dt>
+<dd>
+<p>When a member joins the guild, a message indicating this is send.</p>
+</dd>
+<dt class="hdlist1">Member leaving logging</dt>
+<dd>
+<p>When a member leaves the guild, a message indicating this is send.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_notes">4.7. User notes</h3>
+<div class="paragraph">
+<p>Feature key <code>userNotes</code></p>
+</div>
+<div class="paragraph">
+<p>This feature provides the ability to store specific notes for members in the database. These notes can then be retrieved and deleted and consist of only text.</p>
+</div>
+<div class="sect3">
+<h4 id="_commands_6">4.7.1. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Creating a user note</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>userNote &lt;user&gt; &lt;text&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a single user note for the specified user.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deleting a user note</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteNote &lt;id&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes the user note identified by its ID. The ID can be retrieved by the command <code>userNotes</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Retrieving user notes</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>userNotes [user]</code></p>
+</li>
+<li>
+<p>Description: If <code>user</code> is not provided, this will list the user notes of the whole server, if <code>user</code> is provided, this will only list user notes from this particular <code>user</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_invite_filter">4.8. Invite filter</h3>
+<div class="paragraph">
+<p>Feature key <code>inviteFilter</code></p>
+</div>
+<div class="paragraph">
+<p>This feature provides the ability to automatically delete invites not allowed on the server. These illegal invites can be tracked in a specific feature mode, in order to analyze if allowing them would make sense.
+Another feature mode can send a notification to a post target in case an invite link has been deleted.</p>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_6">4.8.1. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>inviteDeleteLog</code></dt>
+<dd>
+<p>target for notifications about deleted invite links - if the feature mode <code>filterNotifications</code> is enabled.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_4">4.8.2. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>trackUses</code></dt>
+<dd>
+<p>if enabled, each filtered invite will be tracked in the database. Disabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>filterNotifications</code></dt>
+<dd>
+<p>if enabled, sends a notification to the <code>inviteDeleteLog</code> post target in case a message was deleted because of an invite. This notification contains the detected invite link(s), the author and a link to where the message was. Enabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_7">4.8.3. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Allowing an invite</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>allowInvite &lt;invite&gt;</code></p>
+</li>
+<li>
+<p>Description: Adds the <code>invite</code> to the list of invites, which are allowed on the server. The <code>invite</code> can either be the full invite URL or only the last part. If the invite is already allowed, this command will do nothing.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disallowing an invite</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disAllowInvite &lt;invite&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes the <code>invite</code> from the list of invites, which are allowed on the server. The <code>invite</code> can either be the full invite URL or only the last part. In case the given invite is not allowed, this command will throw an error.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Showing the tracked filtered invites</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showTrackedInviteLinks [amount]</code></p>
+</li>
+<li>
+<p>Description: Shows the invites which were used and deleted on the server ordered by the amount of times they were deleted. The <code>amount</code> can be used to define how many invite links to display. The default is the top 5.</p>
+</li>
+<li>
+<p>Mode Restriction: This command is only available when the feature mode <code>trackUses</code> is enabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Remove all or individual invites from the tracked filtered invites</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>removeTrackedInviteLinks [invite]</code></p>
+</li>
+<li>
+<p>Description: Removes the stored statistic for the given <code>invite</code>. In case <code>invite</code> is not given, it will delete all tracked filtered invites from the server.</p>
+</li>
+<li>
+<p>Mode Restriction: This command is only available when the feature mode <code>trackUses</code> is enabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_profanity_filter">4.9. Profanity filter</h3>
+<div class="paragraph">
+<p>Feature key <code>profanityFilter</code></p>
+</div>
+<div class="paragraph">
+<p>This functionality provides the ability to automatically delete any detected profanities. These profanities are configured via the profanity groups and profanity regexes. Every group in these groups are active and every profanity regex will be evaluated and (depending on the feature mode) reported to be voted on.
+The uses of profanities can be tracked and a command is available to show the profanities for a user.</p>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_7">4.9.1. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>profanityQueue</code></dt>
+<dd>
+<p>target for reports to be voted on - if the feature mode <code>filterNotifications</code> is enabled.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_5">4.9.2. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>autoDeleteProfanities</code></dt>
+<dd>
+<p>if enabled, each detected profanity will be deleted immediately. Disabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>profanityReport</code></dt>
+<dd>
+<p>if enabled, sends a notification to the <code>profanityQueue</code> post target to notify about a detected profanity. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>profanityVote</code></dt>
+<dd>
+<p>if enabled, sends a notification to the <code>profanityQueue</code> post target to notify about a detected profanity to be voted on. Requires feature mode <code>profanityReport</code> to be enabled. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>autoDeleteAfterVote</code></dt>
+<dd>
+<p>if enabled, after a profanity vote has reached the threshold (system config key <code>profanityVotes</code>), depending on the outcome, it will be deleted. Requires feature mode <code>profanityVote</code> to be enabled. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>trackProfanities</code></dt>
+<dd>
+<p>if enabled, the command <code>profanities</code> is available to show the profanities of a member. Requires feature mode <code>profanityVote</code> to be enabled. Enabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes_2">4.9.3. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>profanityFilterAgreeEmote</code> reaction emote to indicate agreement about a reported profanity</p>
+</li>
+<li>
+<p><code>profanityFilterDisagreeEmote</code> reaction emote to indicate disagreement about a reported profanity</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_8">4.9.4. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Show the profanities of a member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>profanities &lt;member&gt;</code></p>
+</li>
+<li>
+<p>Description: Shows the true and false positive profanities of the given member. Also, if there any, shows the recent true positive reports.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reporting_a_message_via_reaction">4.10. Reporting a message via reaction</h3>
+<div class="paragraph">
+<p>Feature key <code>reportReactions</code></p>
+</div>
+<div class="paragraph">
+<p>This functionality is used to report user by members via adding a reaction to a message. This message is then send to the post target <code>reactionReports</code>
+notifying the moderation of the server. Additional reports of the same user, within the cooldown defined by system config <code>reactionReportCooldownSeconds</code> in seconds, increment the report counter instead of adding another notification. A reporting user also cannot report another user within a time range defined by the same system config.</p>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_2">4.10.1. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>reactionReportCooldownSeconds</code> The amount of seconds between the reports to create a new report for a user. The amount of seconds necessary for a new report of a user to be reported again. Default: 300</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_8">4.10.2. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>reactionReports</code></dt>
+<dd>
+<p>target for report notification messages</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes_3">4.10.3. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>reactionReport</code> reaction emote to report a message</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mod_mail">4.11. Mod mail</h3>
+<div class="paragraph">
+<p>This feature enables users to contact the moderation of the server in a private manner. This can be initiated by messaging the Abstracto bot.
+The messages, in the channel which is created to contain the mod mail thread, are not automatically sent to the user, but only when using the commands
+<code>reply</code> or <code>anonReply</code>. Any other message is ignored with the intention of enabling discussions within the channel. In case the message of a message sent to the user
+needs to be updated or deleted, you can do simply by editing/deleting the message containing the command.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>modmail</code></p>
+</div>
+<div class="sect3">
+<h4 id="_necessary_bot_permissions">4.11.1. Necessary bot permissions</h4>
+<div class="paragraph">
+<p><code>MANAGE_CHANNEL</code> to create the channels representing the mod mail threads</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_workflow">4.11.2. Workflow</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>User messages the Abstracto bot</p>
+</li>
+<li>
+<p>If Abstracto is active in multiple servers with mod mail enabled, the user is prompted to which server he wants to open a mod mail thread for.</p>
+</li>
+<li>
+<p>A channel in the mod mail category is created for the user and notification is sent that a new mod mail thread has been opened</p>
+</li>
+<li>
+<p>User can send messages in the private channel and they get relayed to this created text channel.</p>
+</li>
+<li>
+<p>Moderators can answer in the thread with the respective commands</p>
+</li>
+<li>
+<p>Moderators close the thread</p>
+</li>
+<li>
+<p>The interactions between the user and the moderators gets logged in the mod mail logging channel</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_3">4.11.3. Relevant system configuration</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>modmailCategory</code></dt>
+<dd>
+<p>The category on the server which is used to hold the text channels representing the threads</p>
+</dd>
+<dt class="hdlist1"><code>modMailClosingText</code></dt>
+<dd>
+<p>The text being used when notifying the user when a thread is closed.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_9">4.11.4. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>modmailPing</code></dt>
+<dd>
+<p>Will be used to send the notification when a new thread is opened.</p>
+</dd>
+<dt class="hdlist1"><code>modmailLog</code></dt>
+<dd>
+<p>Will be used to log the interactions when a thread is closed.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_6">4.11.5. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>log</code></dt>
+<dd>
+<p>If this is enabled, the messages should be logged into the <code>modmailLog</code> post target when the thread is closed (by the respective commands). This is required for the command <code>closeNoLog</code> to be available. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>threadMessage</code></dt>
+<dd>
+<p>If this is enabled, every message which is send via the commands <code>reply</code> and <code>anonReply</code> will also be sent to the thread in order to have a visualizer how the message looks
+and to have a clear indication which messages were sent. Enabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes_4">4.11.6. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>readReaction</code> to indicate to the user that the message sent was processed</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_9">4.11.7. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Opening a mod mail thread for a user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>contact &lt;member&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a new mod mail thread with the <code>member</code>. Does not send a notification about the new thread.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Adding a role to the roles responsible for managing mod mail threads</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setModMailRole &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Adds this role to the roles responsible for mod mail threads, which means: this role will be pinged when a new thread is created and this role is automatically added to the roles allowed to execute all commands related to mod mail.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing a role from the roles responsible for managing mod mail threads</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>removeModMailRole &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes this role from the roles responsible for mod mail threads, which means: this role will no longer be pinged when a new thread is created and this role will also be removed from the roles allowed to execute all commands related to mod mail.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Changing the category in which the text channels are created</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setModMailCategory &lt;categoryId&gt;</code></p>
+</li>
+<li>
+<p>Description: Sets the category which Abstracto uses to create the text channels containing the mod mail threads. The existing threads will not be migrated automatically.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The following commands are only available within a mod mail thread.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Replying to a mod mail thread</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>reply [text]</code></p>
+</li>
+<li>
+<p>Description: Sends <code>text</code> to the user if provided. <code>text</code> is optional, because its also possible to only send a picture.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Replying anonymously to a mod mail thread</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>anonReply [text]</code></p>
+</li>
+<li>
+<p>Description: Sends <code>text</code> to the user without showing how is the author. Instead the avatar and name of Abstracto will be used.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enabling notifications of messages sent by the user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>subscribe</code></p>
+</li>
+<li>
+<p>Description: Subscribes you to the current thread, and will ping you when a new message from the member arrives.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disabling notifications of messages sent by the user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>unSubscribe</code></p>
+</li>
+<li>
+<p>Description: Removes your subscription from the current thread, and you will no longer be notified when a message from the member arrives.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Closing the mod mail thread</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>close [note]</code></p>
+</li>
+<li>
+<p>Description: Closes the thread, deletes the text channel containing the thread and logs the interactions between the member and the moderators in the <code>modmailLog</code> post target. (only if <code>modmail_logging</code> is enabled)
+When closing a thread, a closing header with general information will be send and the note will be displayed there.
+When a thread is closed this way the user is notified of this.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Closing the mod mail thread without notifying the user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>closeSilently [note]</code></p>
+</li>
+<li>
+<p>Description: Closes the thread, deletes the text channel containing the thread and logs the interactions between the member and the moderators in the <code>modmailLog</code> post target. (only if <code>modmail_logging</code> is enabled)
+When closing a thread, a closing header with general information will be send and the note will be displayed there.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Close a thread without logging</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>closeNoLog</code></p>
+</li>
+<li>
+<p>Description: Closes the thread without notifying the user and without logging the messages.</p>
+</li>
+<li>
+<p>Mode Restriction: This command is only available when the feature mode <code>log</code> is enabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_experience_tracking">4.12. Experience tracking</h3>
+<div class="paragraph">
+<p>This feature contains the ability to track experience of users on the server and award roles based on the level they reach.
+The experience is awarded once per minute and is calculated by \$`\text{rand}(\text{minExp}, \text{maxExp}) * \text{expScale}`\$.
+Only one role is awarded at a time and the past unlocked roles are not given to the members.</p>
+</div>
+<div class="sect3">
+<h4 id="_necessary_bot_permissions_2">4.12.1. Necessary bot permissions</h4>
+<div class="paragraph">
+<p><code>MANAGE_ROLES</code> in order to award members with roles</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_4">4.12.2. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>minExp</code> The lower bound of the awarded base experience. Default: 10.</p>
+</div>
+<div class="paragraph">
+<p><code>maxExp</code> The upper bound of the awarded base experience Default: 25.</p>
+</div>
+<div class="paragraph">
+<p><code>expScale</code> The multiplier applied after the experience amount was determined. Default: 1.0.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_10">4.12.3. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Changing the experience scale of the server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>expScale &lt;value&gt;</code></p>
+</li>
+<li>
+<p>Description: Changes the value of <code>expScale</code> on this server to <code>value</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Showing the leader board of the server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>leaderboard [page]</code></p>
+</li>
+<li>
+<p>Description: Shows the leader board of the server in a paginated format. This does not use the interactive pagination.
+If no parameter is provided, it will show the top 10 members and their message count, level, experience and rank.
+Additionally, the same information for the user executing is shown, regardless whether or not the user is already shown on the given leader board page.
+If a <code>page</code> is provided, it will display the leader board of the ranks <code>page * 10</code> until  <code>(page + 1) * 10</code> instead. If <code>page</code> is beyond the member count, the last members are shown.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Setting a role to be awarded at a certain level</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setExpRole &lt;level&gt; &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Sets <code>role</code> to be awarded at the given <code>level</code>. If the role was previously assigned,
+this will cause to remove this assignment and recalculate the roles for all users previously having this role.
+This command will provide a status message indicating this process.
+This will not award this role to users which qualify for this, a <code>syncRoles</code> is necessary for this.</p>
+</li>
+<li>
+<p>Example: <code>setExpRole 50 @HighLevel</code> in order to award the role <code>HighLevel</code> at level <code>50</code> (the @HighLevel is a role mention)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Syncing the roles of the members with the configuration</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>syncRoles</code></p>
+</li>
+<li>
+<p>Description: Recalculates the appropriate levels for all users on the server and awards the roles appropriate for the level.
+There will be a message indicating the current status of the progress and it is highly advised to not execute this command while another instance is still processing.
+This command can run for a longer period of time, depending on the amount of members in the guild.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Remove a role from being awarded at a certain level</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>unSetExpRole &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes this role from the experience tracking, removes the role from all members previously owning it and recalculates their new role according to the configuration.
+This will provide a status update message displaying the process.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disable experience gain for a certain role</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableExpForRole &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables any experience gain for members with this role. They will not gain any experience until the role is removed or it is possible for the role to gain experience again.
+If a member has <strong>any</strong> role of the ones for which experience is disabled, the member will not gain experience.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enable experience gain for a certain role</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enableExpForRole &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables experience gain for members with this role again.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">List roles for which experience gain is disabled</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>listDisabledExperienceRoles</code></p>
+</li>
+<li>
+<p>Description: Lists the roles for which experience gain is disabled on this server.</p>
+</li>
+<li>
+<p>Aliases: <code>lsDisEpRoles</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disable experience gain for specific member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableExpGain &lt;member&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables the ability to gain experience for this certain member.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enable experience gain for specific member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enableExpGain &lt;member&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables the ability to gain experience for this certain member.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show the currently configured experience roles in the server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>levelRoles</code></p>
+</li>
+<li>
+<p>Description: Shows the current configured experience roles, and the level they are awarded at.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_assignable_roles">4.13. Assignable roles</h3>
+<div class="paragraph">
+<p>This feature enables creating and maintaining so-called 'assignable role places'. These places are messages at which reactions are added, and when a member reacts, a configured role, is assigned to the user.
+These places can consist of multiple messages (reactions are limited to 20 per message) and assignable roles can be added/removed. A place can be disabled, which causes any reaction to be removed and no role to be assigned.
+There are several configurations possible for each individual assignable role place.
+* <code>inline</code>: tries to display the embed as compact as possible and when this is disabled, every assignable role is displayed in a separate line. Default: <code>false</code>
+* <code>autoRemove</code>: if a member adds a reaction to the assignable role place, they are removed immediately afterwards. Default: <code>false</code>
+* <code>unique</code>: if a member adds a reaction and has previously selected other roles, these previous roles are removed before the new ones are assigned. Default: <code>false</code>
+* <code>active</code>: an inactive assignable role place does not assign any roles and immediately removes any reactions added. Default: <code>true</code></p>
+</div>
+<div class="paragraph">
+<p>If there are reactions added by members, which are not used within an assignable role place, the reaction gets removed automatically.</p>
+</div>
+<div class="paragraph">
+<p>If the emote is deleted, the assignable role place is still functional, but if you set it up again, it fails to do so. You need to remove the emote from the assignable role place via its ID. The ID will be displayed for the emotes which were removed.
+Deleting the actual role behind an assignable role causes the assignable role place to become non-functional: the added reaction will remain and reactions can still be added, but nothing will happen.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>assignableRole</code></p>
+</div>
+<div class="sect3">
+<h4 id="_commands_11">4.13.1. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Create a new assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>createAssignableRolePlace &lt;name&gt; &lt;channel&gt; &lt;text&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a new assignable role place with the key <code>name</code>. The <code>text</code> will be shown in the description of the first message.
+When the place is setup, it will be posted in the <code>channel</code>. The created place is active and inline by default.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Add a role to an assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>addRoleToAssignableRolePlace &lt;name&gt; &lt;emote&gt; &lt;text&gt; &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Adds to the assignable role place identified by <code>name</code> an additional assignable role. The reaction to be used will be <code>emote</code> and <code>role</code> will be assigned when a member adds the reaction.
+It is required that <code>emote</code> is usable by Abstracto and not yet used in the assignable role place. If the assignable role place is currently setup, the assignable role will be directly appended to the assignable role place and is
+immediately available to be used. If this requires a new post, because the last message already has the maximum amount of reactions, it is required to setup the assignable role place again.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Create the assignable role place in discord</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setupAssignableRolePlace &lt;name&gt;</code></p>
+</li>
+<li>
+<p>Description: Posts the messages of the assignable role place identified by <code>name</code> to the configured channel in discord and adds the reactions. This will delete the old messages connected to this assignable role place, if there are any.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Remove a role from an assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>removeRoleFromAssignableRolePlace &lt;name&gt; &lt;emote&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes from the assignable role place identified by <code>name</code>, the emote identified by <code>emote</code>. If the assignable role place is currently in use, this will update the message and remove all reactions using <code>emote</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show the current configuration for an assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showAssignableRolePlaceConfig &lt;name&gt;</code></p>
+</li>
+<li>
+<p>Description: This command displays the current configuration of assignable role place identified by <code>name</code>. This information includes the available emotes, which roles they represent and what position they have.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Test how the assignable role place would look like</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>testAssignableRolePlace &lt;name&gt;</code></p>
+</li>
+<li>
+<p>Description: Posts the assignable role place identified by <code>name</code> in the current channel. This command does not add the reactions, and is purely to check how the messages look.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Move an assignable role place to another channel</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>moveAssignableRolePlace &lt;name&gt; &lt;newChannel&gt;</code></p>
+</li>
+<li>
+<p>Description: Moves the assignable role place identified by <code>name</code> to be in <code>newChannel</code>. This change takes effect the next time the assignable role place is setup via <code>setupAssignableRolePlace</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deactivate the assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deactivateAssignableRolePlace &lt;name&gt;</code></p>
+</li>
+<li>
+<p>Description: Deactivates the assignable role place identified by <code>name</code>. Any further reactions placed by members will be removed immediately and not assign any roles.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Activate the assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>activateAssignableRolePlace &lt;name&gt;</code></p>
+</li>
+<li>
+<p>Description: Activates the assignable role place identified by <code>name</code> and enables the assignment of roles.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Change configuration of assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>changeAssignableRolePlaceConfig &lt;name&gt; &lt;key&gt; &lt;newValue&gt;</code></p>
+</li>
+<li>
+<p>Description: Changes the config attribute indicated by <code>key</code> of the place identified by <code>name</code> to <code>newValue</code>. The possible keys are: <code>inline</code>, <code>unique</code>, <code>autoRemove</code> and <code>active</code> respectively and all of these can take <code>true</code>/<code>false</code> as <code>newValue</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Swap two emotes in an assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>swapAssignableRolePosition &lt;name&gt; &lt;firstEmote&gt; &lt;secondEmote&gt;</code></p>
+</li>
+<li>
+<p>Description: Swaps the position of the assignable role places <code>firstEmote</code> and <code>secondEmote</code> in the assignable role place identified by <code>name</code>.  This change takes effect the next time the assignable role place is setup via <code>setupAssignableRolePlace</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Set the position of an assignable role within an assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>setAssignableRolePosition &lt;name&gt; &lt;emote&gt; &lt;position&gt;</code></p>
+</li>
+<li>
+<p>Description: Sets the position of the <code>emote</code> within the assignable role place identified by <code>name</code> to <code>position</code>.  This change takes effect the next time the assignable role place is setup via <code>setupAssignableRolePlace</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Delete an assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteAssignableRolePlace &lt;name&gt;</code></p>
+</li>
+<li>
+<p>Description: Completely deletes the assignable role place identified by <code>name</code>. This includes any trace in the database and the current messages, if any.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Change description text of assignable role place</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>editAssignableRolePlaceText &lt;name&gt; &lt;newText&gt;</code></p>
+</li>
+<li>
+<p>Description: Changes the text which is shown in the first message of the assignable role place identified by <code>name</code> to <code>newText</code>. This changes the message immediately.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_statistic">4.14. Statistic</h3>
+<div class="paragraph">
+<p>This component will contain multiple features, currently only emote tracking is available.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_emote_tracking">4.15. Emote tracking</h3>
+<div class="paragraph">
+<p>This feature is about tracking the usage of emotes from the server and external servers.
+The intention of this feature is to see what emotes are doing better than others and which emotes might be interesting to add to the server.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>emoteTracking</code></p>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_7">4.15.1. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>emoteAutoTrack</code></dt>
+<dd>
+<p>If this is enabled, emotes which are created within the server, are automatically stored and tracked. If they are renamed/deleted this will also be reflected automatically. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>externalEmotes</code></dt>
+<dd>
+<p>If this is enabled, every external tracked emote will be counted. It is also possible to track additional external emotes via the <code>trackEmote</code> command. Disabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>autoTrackExternal</code></dt>
+<dd>
+<p>If this is enabled, every external emote which is used in a message by a server member will be automatically stored and tracked. <code>externalEmotes</code> needs to be enabled in order for this to function properly. Disabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_12">4.15.2. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Creating a newly tracked emote</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>trackEmote &lt;emote&gt;</code></p>
+</li>
+<li>
+<p>Description: The <code>enoteName</code> needs to be a valid usage of an emote. If this emote is part of the server, it will now be automatically tracked.
+If the emote was tracked previously, it will be enabled again. For external emotes to be tracked this way, the feature mode <code>externalEmotes</code> needs to be enabled. The <code>emote</code> can either be a valid usage or the ID of an emote (it can only be an ID if it was previously tracked).</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disable tracking for an emote</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableEmoteTracking [emote]</code></p>
+</li>
+<li>
+<p>Description: This command will cause the usages of <code>emote</code> to not be counted anymore. The <code>emote</code> can either be a valid usage or the ID of an emote. If <code>emote</code> is not given, the tracking for all tracked emotes is disabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show currently tracked emotes</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showTrackedEmotes [showTrackingDisabled]</code></p>
+</li>
+<li>
+<p>Description: This commands shows the currently tracked emotes of this server. If ´showTrackingDisabled´ is <code>true</code> this command will also show the emotes for which the tracking is currently disabled.
+The shown tracked emotes are split into six groups: static/animated emotes from the server, static/animated emotes which previously existed on the server and static/animated external emotes. The categories for external emotes will not be shown if <code>externalEmotes</code> is disabled.
+If there are no emotes of a group, there will be no message.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show emote statistics of emotes in the server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>emoteStats [period]</code></p>
+</li>
+<li>
+<p>Description: This command shows the amount each tracked emote from the server has been used overall. If a <code>period</code> is supplied, it will only show the amount of usages in that time period. If it is not provided, it will show the whole timeline.
+Beware that the amount of emotes is only tracked per day. For example, if it is 3PM UTC and you use <code>18h</code> as a timeperiod, it will also show the emote statistics for the day before.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show emote statistics of emotes previously in the server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deletedEmoteStats [period]</code></p>
+</li>
+<li>
+<p>Description: This command behaves the same way as <code>emoteStats</code> with the difference that it shows the emotes which were previously in the server. This means that the output will only show the name and the ID of the emote.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show emote statistics of external emotes</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>externalEmoteStats [period]</code></p>
+</li>
+<li>
+<p>Description: This command behaves the same way as <code>emoteStats</code> with the difference that it shows emotes which are not from this server. This means that the output will only show the name and the ID of the emote.</p>
+</li>
+<li>
+<p>Mode Restriction: This command is only available when the feature mode <code>externalEmotes</code> is enabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Synchronize the server emotes with the database</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>syncTrackedEmotes</code></p>
+</li>
+<li>
+<p>Description: This command cross checks the emotes in the database with the ones currently available in the server. If an emote was deleted in the server, but is still marked as available in the database, it will be marked as deleted. If an emote from the server is not available in the database, it will be created and tracked automatically.
+A message containing the amount of emotes deleted and created is shown. If the feature mode <code>emoteAutoTrack</code> is enabled, this should only be necessary in case the bot had an outage.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Delete emote usages</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>purgeEmoteStats &lt;emote&gt; [period]</code></p>
+</li>
+<li>
+<p>Description: This command removes any stored usages of <code>emote</code>. The <code>emote</code> can either be a valid usage or the ID of an emote. If <code>period</code> is given, only usages within this time period will be deleted, if it is not provided, the complete timeline will be deleted.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deleting an individual tracked emote</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>deleteTrackedEmote &lt;emote&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes the tracked emote from the database including the usages. The <code>emote</code> can either be a valid usage or the ID of an emote.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Reset emote statistics</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>resetEmoteStats</code></p>
+</li>
+<li>
+<p>Description: This will delete all emote usages and tracked emotes in the database.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show the image of external tracked emotes</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showExternalTrackedEmote &lt;emote&gt;</code></p>
+</li>
+<li>
+<p>Description: Shows the ID, name, link to the image and the image directly for <code>emote</code> in an embed.</p>
+</li>
+<li>
+<p>Mode Restriction: This command is only available when the feature mode <code>externalEmotes</code> is enabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Export the stored emote usages</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>exportEmoteStats [period]</code></p>
+</li>
+<li>
+<p>Description: Creates a CSV file containing the emote usages and attaches it to a message. Each line in the file is the amount of usages of an emote per day. When an emote has not been used in a day, no line is present. If <code>period</code> is given, only usages from this time period will be exported, if it is not provided, the complete timeline will be exported.
+If the resulting file size is over the upload limit of the server, this command will not provide the file.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reminders">4.16. Reminders</h3>
+<div class="paragraph">
+<p>Provides the ability to schedule reminders.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>remind</code></p>
+</div>
+<div class="sect3">
+<h4 id="_commands_13">4.16.1. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Create a reminder</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>remind &lt;duration&gt; &lt;text&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a reminder with <code>text</code> which will be triggered after <code>duration</code>. This command uses duration parsing. The reminder will ping when the duration has passed and provide the context of the reminder.</p>
+</li>
+<li>
+<p>Example: <code>remind 1h2m3s text</code> in order to be reminded in 1 hour 2 minutes and 3 seconds with the reason <code>text</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Cancelling a reminder</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>unRemind &lt;reminderId&gt;</code></p>
+</li>
+<li>
+<p>Description: Cancels this reminder and will cause this reminder to not be executed. Only possible for reminders started by you.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Listing all active reminders</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>reminders</code></p>
+</li>
+<li>
+<p>Description: Lists all the currently not yet executed reminders and information about each of them.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Re-schedule a past reminder</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>snooze &lt;reminderId&gt; &lt;duration&gt;</code></p>
+</li>
+<li>
+<p>Description: Schedules the reminder identified by <code>reminderId</code> to be triggered after <code>duration</code> again. It is only possible to do this for reminders which have already been executed. Only possible for reminders started by you.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_starboard">4.17. Starboard</h3>
+<div class="paragraph">
+<p>Provides the ability to track note worthy posts in a separate channel, identified by the post target <code>starboard</code>, because the pins within a channel are limited to 50.
+This feature works by users reacting to a message with the appropriate emote. By default this is <code>&#11088;</code>, but can be changed via the emote <code>star</code>.
+There is a configurable threshold a message needs to reach in order to be posted to starboard.
+The post in the starboard is continuously updated and depending on the current star count an associated emote is displayed.
+When the poster of the message reacts to the message with a star, this is not counted. When the post is deleted from the starboard, the original message cannot appear on the starboard again.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>starboard</code></p>
+</div>
+<div class="sect3">
+<h4 id="_emotes_5">4.17.1. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>star</code> to vote on posting something to starboard</p>
+</li>
+<li>
+<p><code>star1</code> for level 1 of starboard</p>
+</li>
+<li>
+<p><code>star2</code> for level 2 of starboard</p>
+</li>
+<li>
+<p><code>star3</code> for level 3 of starboard</p>
+</li>
+<li>
+<p><code>star4</code> for level 4 of starboard</p>
+</li>
+<li>
+<p><code>starboardBadge1</code> used as marker for first place in the command <code>starStats</code></p>
+</li>
+<li>
+<p><code>starboardBadge2</code> used as marker for first place in the command <code>starStats</code></p>
+</li>
+<li>
+<p><code>starboardBadge3</code> used as marker for first place in the command <code>starStats</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_5">4.17.2. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>starLvl1</code> The amount of stars necessary to appear on the starboard. Default: 5</p>
+</div>
+<div class="paragraph">
+<p><code>starLvl2</code> The amount of stars necessary in order for the level 2 emote to be used in the starboard post. Default: 8</p>
+</div>
+<div class="paragraph">
+<p><code>starLvl3</code> The amount of stars necessary in order for the level 3 emote to be used in the starboard post. Default: 13</p>
+</div>
+<div class="paragraph">
+<p><code>starLvl4</code> The amount of stars necessary in order for the level 4 emote to be used in the starboard post. Default: 17</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_10">4.17.3. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>starboard</code></dt>
+<dd>
+<p>The target used for the messages containing the starboard posts with the current star amount</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_14">4.17.4. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Showing starboard statistics</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>starStats [member]</code></p>
+</li>
+<li>
+<p>Description: Shows the most starred posts, the member with the most received stars and the members rewarding the most stars. If <code>member</code> is provided, this command will show the top posts, received stars and given stars for this member. The user is still required to be part of the server.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_suggestions">4.18. Suggestions</h3>
+<div class="paragraph">
+<p>This feature provides the ability for members to post suggestions containing text to the post target <code>suggestions</code>. These suggestions can then be accepted or denied by the moderators.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>suggestion</code></p>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_8">4.18.1. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>suggestionReminder</code></dt>
+<dd>
+<p>If this is enabled, a message will be sent to the post target <code>suggestionReminder</code>, after the amount of days configured in <code>suggestionReminderDays</code>. Disabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_11">4.18.2. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>suggestions</code></dt>
+<dd>
+<p>the target of the messages containing the suggestions</p>
+</dd>
+<dt class="hdlist1"><code>suggestionReminder</code></dt>
+<dd>
+<p>the target for the message to remind about suggestions. Requires feature mode <code>suggestionReminder</code> to be enabled</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes_6">4.18.3. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>suggestionYes</code> for up-voting a suggestion</p>
+</li>
+<li>
+<p><code>suggestionNo</code> for down-voting a suggestion</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_6">4.18.4. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>suggestionReminderDays</code> The amount of days in which the reminder, from feature mode <code>suggestionReminder</code>, should be posted in. Default: 7</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_15">4.18.5. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Creating a suggestion</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>suggest &lt;text&gt;</code></p>
+</li>
+<li>
+<p>Description: Posts the text to the <code>suggest</code> post target and places the emotes for up and down voting. If <code>suggestionReminder</code> is enabled, this will create a suggestion reminder.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Accepting a suggestion</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>accept &lt;suggestionId&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as accepted. The optional <code>reason</code> will be used in this re-post, if provided. This will cancel the suggestion reminder (if it exists)</p>
+</li>
+<li>
+<p>Example: <code>accept 1 okay</code> in order to accept the suggestion <code>1</code> with the reason <code>okay</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Rejecting a suggestion</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>reject &lt;suggestionId&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as denied. The optional <code>reason</code> will be used in this re-post, if provided. This will cancel the suggestion reminder (if it exists)</p>
+</li>
+<li>
+<p>Example: <code>deny 1 not okay</code> in order to reject the suggestion <code>1</code> with the reason <code>not okay</code></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing a suggestion you created</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>unSuggest &lt;suggestionId&gt;</code></p>
+</li>
+<li>
+<p>Description: This will delete the suggestion identified by <code>suggestionId</code> from the channel and the database, but this is only possible within a specified time range. This will cancel the suggestion reminder (if it exists)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Vetoing a suggestion</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage : <code>veto &lt;suggestion&gt; [reason]</code></p>
+</li>
+<li>
+<p>Description: This command will veto the suggestion, this means, it should be indicated that the suggestion was not rejected by votes, but because it was not acceptable on a fundamental level. This is basically just a different state of the suggestion. This will cancel the suggestion reminder (if it exists)</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_miscellaneous">4.19. Miscellaneous</h3>
+<div class="paragraph">
+<p>This feature provides some utility commands.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>utility</code></p>
+</div>
+<div class="sect3">
+<h4 id="_commands_16">4.19.1. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Retrieving the URL of an emote</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showEmote &lt;emote&gt;</code></p>
+</li>
+<li>
+<p>Description: Posts the name of the emote accompanied with the URL where the image of the emote is stored.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Displaying the avatar or a member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showAvatar [member]</code></p>
+</li>
+<li>
+<p>Description: Displays the avatar of the given member accompanied with a URL to access it directly. If no member is provided, the member executing will be used.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Displaying information about members</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>userInfo [member]</code></p>
+</li>
+<li>
+<p>Description: Displays information about a member including: username, ID, activity, nickname (if any), date joined the server and date registered on discord.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Displaying information about the server</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>serverInfo</code></p>
+</li>
+<li>
+<p>Description: Displays information about the server including: ID, server name, owner, member count, creation date, role count, server features and custom emotes of the server.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Choose one of multiple options</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>choose [options separated by space]</code></p>
+</li>
+<li>
+<p>Description: Selects one of the given options and returns it. The options need to be separated by space. If you want to have a space in an option, the complete option needs to be wrapped by ". For example "this is a test" is one whole option.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_link_embeds">4.20. Link embeds</h3>
+<div class="sect3">
+<h4 id="_emotes_7">4.20.1. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>removeEmbed</code> to remove the embed of a link</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This feature enables the automatic embedding of messages containing a message link.
+If a message contains a link to a discord message this will create an embed containing the the message content. This supports image attachments, but not videos or files.
+A reaction is placed on the embedded message which can be used to delete this embed. Only the original author and the person creating the embed can delete the embed this way.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>linkEmbeds</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_repost_detection_and_tracking">4.21. Repost detection and tracking</h3>
+<div class="paragraph">
+<p>This feature can be used to detect whether an image has been posted before on the server. Images are compared by the hash stored in the database, which makes it very strict.
+In order to calculate the hash, the image needs to be downloaded. It is possible to show a leaderboard of the most reposting users. Both of these features can be changed via feature modes.
+If a reaction has been detected a reaction will be added to the post. If a message contains multiple or the detected repost is not the first image in the message a reaction containing digit indicating the position of the repost will be added.
+For example if the repost is the second image in a message, a reaction representing the digit two will be added.</p>
+</div>
+<div class="paragraph">
+<p>While it can be configured that the feature is only active in certain channels, the detection whether an image is a repost checks all previously posted images from the server (given they have been posted in a channel where the repost check is active).</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>repostDetection</code></p>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_9">4.21.1. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>download</code></dt>
+<dd>
+<p>If this is enabled, the images in the configured channels will be downloaded and the hash is calculated basd on the file content. The images are deleted immediately afterwards. If this is disabled, the proxy URL of the image will be used to calculate the hash. Enabled by default.</p>
+</dd>
+<dt class="hdlist1"><code>leaderboard</code></dt>
+<dd>
+<p>If this is enabled, the command <code>repostLeaderboard</code> will be available. This command shows the leaderboard of the user with the most reposts. Disabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes_8">4.21.2. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>repostMarker</code> to indicate that a post has been identified as a repost</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_commands_17">4.21.3. Commands</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Remove stored image posts and reposts of whole server or specific member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>purgeImagePosts [member]</code></p>
+</li>
+<li>
+<p>Description: If <code>member</code> is provided, this will delete all stored image hashes (and their reposts) from the database. If <code>member</code> is not provided, this will delete all stored image hashes (and their reposts) from the whole server.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Remove reposts of whole server or specific member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>purgeReposts [member]</code></p>
+</li>
+<li>
+<p>Description: If <code>member</code> is provided, this will delete all reposts of the given member. If <code>member</code> is not provided, this will delete all reposts in the whole server.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show the leaderboard of reposts</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>repostLeaderboard [page]</code></p>
+</li>
+<li>
+<p>Description: Shows the rank and the amount of reposts for a provided <code>page</code>, if <code>page</code> is not provided, it will show five users with the highest a mount of reposts. <code>page</code> is 1-indexed. It will also show the amount and rank of the user executing.</p>
+</li>
+<li>
+<p>Mode Restriction: This command is only available when the feature mode <code>leaderboard</code> is enabled.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enable repost check for a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enableRepostCheck &lt;groupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables the repost checking for all channels in the channel group identified by <code>groupName</code>. This channel group needs to be of type <code>repostCheck</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disable repost check for a channel group</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disableRepostCheck &lt;groupName&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables the repost checking for all channels in the channel group identified by <code>groupName</code>. This channel group needs to be of type <code>repostCheck</code>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Show the channels for which repost check has been enabled</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>showRepostCheckChannels</code></p>
+</li>
+<li>
+<p>Description: Shows the channel groups with their respective channels for which the repost check has been enabled. These can only be channel groups of type <code>repostCheck</code>. It can still be enabled if there are now channels in the channel group.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_entertainment_commands">4.22. Entertainment commands</h3>
+<div class="paragraph">
+<p>This feature basically contains a few commands which can be used for entertainment purposes directly</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>entertainment</code></p>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_7">4.22.1. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>rouletteBullets</code> The amount of bullets the revolver for <code>roulette</code> can hold. Default: 6
+<code>rollDefaultHigh</code> The default sides of the die for <code>roll</code>. Default: 6</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Play a round of russian roulette</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>roulette</code></p>
+</li>
+<li>
+<p>Description: Decides, based on the configured amount of bullets possible, whether a shot happens. Shows the result as a message.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Calculate the love chance between two texts</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>loveCalc &lt;textA&gt; &lt;xtextB&gt;</code></p>
+</li>
+<li>
+<p>Description: Decides, by a random chance, the percentage of love between the two given texts and displays it in a message.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Ask a magic 8-ball a question</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>8ball &lt;texŧ&gt;</code></p>
+</li>
+<li>
+<p>Description: Decides the answer for the question, given on a set of pre-defined answers. This happens randomly.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Roll a virtual die</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>role [max] [min]</code></p>
+</li>
+<li>
+<p>Description: Rolls a virtual die. Per default this is a six sided die. If <code>max</code> is provided, it changes the amount of sides possible and if <code>min</code> is provided, no value below this is possible. If <code>min</code> is larger than <code>max</code>, it is taken as <code>max</code> and vice-versa.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Mock the message of another user</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>mock &lt;text/message&gt;</code></p>
+</li>
+<li>
+<p>Description: Takes the <code>text</code> and prints the text with the characters with alternating upper and lower case. If no text is provided, this command requires that the command has been executed in a message which replies to another message. In this case the text to be mocked will be the content of the message which has been replied to.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Add text as reactions to another message</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>react &lt;message&gt; &lt;text&gt;</code></p>
+</li>
+<li>
+<p>Description: Takes the <code>text</code>, converts it into unicode characters, while trying to avoid duplicates, and adds the reactions to the given <code>message</code>. If it was not possible to avoid duplicates, or the overall reactions (including already existing reactions) would go over the Discord limit, this command will show an error message, without adding any reaction. Some characters can be replaced with one unicode character, for example 'SOS'.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_webservices">4.23. Webservices</h3>
+<div class="paragraph">
+<p>Integrates different web APIs to be used via the bot.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_youtube">4.24. Youtube</h3>
+<div class="paragraph">
+<p>Feature key: <code>youtube</code></p>
+</div>
+<div class="sect3">
+<h4 id="_feature_modes_10">4.24.1. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>videoDetails</code></dt>
+<dd>
+<p>if enabled, the video shown with video details. Disabled by default.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_command">4.24.2. Command</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Search for a youtube video</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>youtubeSearch &lt;query&gt;</code></p>
+</li>
+<li>
+<p>Aliases: <code>yt</code></p>
+</li>
+<li>
+<p>Description: Searches youtube for a video with this query, and returns the link with additional information.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_urban_dictionary">4.25. Urban dictionary</h3>
+<div class="paragraph">
+<p>Feature key: <code>urban</code></p>
+</div>
+<div class="sect3">
+<h4 id="_command_2">4.25.1. Command</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Search for an urban dictionary definition</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>urbanDefine &lt;query&gt;</code></p>
+</li>
+<li>
+<p>Aliases: <code>ud</code></p>
+</li>
+<li>
+<p>Description: Searches an urban dictionary definition, and returns the definition, with an example and meta information.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 1.2.15<br>
+Last updated 2021-06-01 22:47:56 UTC
+</div>
+</div>
+</body>
+</html>
