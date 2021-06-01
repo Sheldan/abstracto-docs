@@ -442,8 +442,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Abstracto Discord Bot Documentation</h1>
 <div class="details">
 <span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
-<span id="revnumber">version 1.2.14,</span>
-<span id="revdate">2021/05/26 19:53</span>
+<span id="revnumber">version 1.2.15,</span>
+<span id="revdate">2021/06/01 22:48</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -462,14 +462,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_moderation">4.2. Moderation</a>
 <ul class="sectlevel3">
 <li><a href="#_post_targets">4.2.1. Post targets</a></li>
-<li><a href="#_feature_modes">4.2.2. Feature modes</a></li>
-<li><a href="#_commands_2">4.2.3. Commands</a></li>
+<li><a href="#_commands_2">4.2.2. Commands</a></li>
 </ul>
 </li>
 <li><a href="#_warning">4.3. Warning</a>
 <ul class="sectlevel3">
 <li><a href="#_post_targets_2">4.3.1. Post targets</a></li>
-<li><a href="#_feature_modes_2">4.3.2. Feature modes</a></li>
+<li><a href="#_feature_modes">4.3.2. Feature modes</a></li>
 <li><a href="#_commands_3">4.3.3. Commands</a></li>
 </ul>
 </li>
@@ -477,14 +476,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_relevant_system_configuration">4.4.1. Relevant system configuration</a></li>
 <li><a href="#_post_targets_3">4.4.2. Post targets</a></li>
-<li><a href="#_feature_modes_3">4.4.3. Feature modes</a></li>
+<li><a href="#_feature_modes_2">4.4.3. Feature modes</a></li>
 <li><a href="#_commands_4">4.4.4. Commands</a></li>
 </ul>
 </li>
 <li><a href="#_muting">4.5. Muting</a>
 <ul class="sectlevel3">
 <li><a href="#_post_targets_4">4.5.1. Post targets</a></li>
-<li><a href="#_feature_modes_4">4.5.2. Feature modes</a></li>
+<li><a href="#_feature_modes_3">4.5.2. Feature modes</a></li>
 <li><a href="#_commands_5">4.5.3. Commands</a></li>
 </ul>
 </li>
@@ -501,102 +500,109 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_invite_filter">4.8. Invite filter</a>
 <ul class="sectlevel3">
 <li><a href="#_post_targets_6">4.8.1. Post targets</a></li>
-<li><a href="#_feature_modes_5">4.8.2. Feature modes</a></li>
+<li><a href="#_feature_modes_4">4.8.2. Feature modes</a></li>
 <li><a href="#_commands_7">4.8.3. Commands</a></li>
 </ul>
 </li>
 <li><a href="#_profanity_filter">4.9. Profanity filter</a>
 <ul class="sectlevel3">
 <li><a href="#_post_targets_7">4.9.1. Post targets</a></li>
-<li><a href="#_feature_modes_6">4.9.2. Feature modes</a></li>
+<li><a href="#_feature_modes_5">4.9.2. Feature modes</a></li>
 <li><a href="#_emotes_2">4.9.3. Emotes</a></li>
 <li><a href="#_commands_8">4.9.4. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_mod_mail">4.10. Mod mail</a>
+<li><a href="#_reporting_a_message_via_reaction">4.10. Reporting a message via reaction</a>
 <ul class="sectlevel3">
-<li><a href="#_necessary_bot_permissions">4.10.1. Necessary bot permissions</a></li>
-<li><a href="#_workflow">4.10.2. Workflow</a></li>
-<li><a href="#_relevant_system_configuration_2">4.10.3. Relevant system configuration</a></li>
-<li><a href="#_post_targets_8">4.10.4. Post targets</a></li>
-<li><a href="#_feature_modes_7">4.10.5. Feature modes</a></li>
-<li><a href="#_emotes_3">4.10.6. Emotes</a></li>
-<li><a href="#_commands_9">4.10.7. Commands</a></li>
+<li><a href="#_relevant_system_configuration_2">4.10.1. Relevant system configuration</a></li>
+<li><a href="#_post_targets_8">4.10.2. Post targets</a></li>
+<li><a href="#_emotes_3">4.10.3. Emotes</a></li>
 </ul>
 </li>
-<li><a href="#_experience_tracking">4.11. Experience tracking</a>
+<li><a href="#_mod_mail">4.11. Mod mail</a>
 <ul class="sectlevel3">
-<li><a href="#_necessary_bot_permissions_2">4.11.1. Necessary bot permissions</a></li>
-<li><a href="#_relevant_system_configuration_3">4.11.2. Relevant system configuration</a></li>
-<li><a href="#_commands_10">4.11.3. Commands</a></li>
+<li><a href="#_necessary_bot_permissions">4.11.1. Necessary bot permissions</a></li>
+<li><a href="#_workflow">4.11.2. Workflow</a></li>
+<li><a href="#_relevant_system_configuration_3">4.11.3. Relevant system configuration</a></li>
+<li><a href="#_post_targets_9">4.11.4. Post targets</a></li>
+<li><a href="#_feature_modes_6">4.11.5. Feature modes</a></li>
+<li><a href="#_emotes_4">4.11.6. Emotes</a></li>
+<li><a href="#_commands_9">4.11.7. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_assignable_roles">4.12. Assignable roles</a>
+<li><a href="#_experience_tracking">4.12. Experience tracking</a>
 <ul class="sectlevel3">
-<li><a href="#_commands_11">4.12.1. Commands</a></li>
+<li><a href="#_necessary_bot_permissions_2">4.12.1. Necessary bot permissions</a></li>
+<li><a href="#_relevant_system_configuration_4">4.12.2. Relevant system configuration</a></li>
+<li><a href="#_commands_10">4.12.3. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_statistic">4.13. Statistic</a></li>
-<li><a href="#_emote_tracking">4.14. Emote tracking</a>
+<li><a href="#_assignable_roles">4.13. Assignable roles</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_8">4.14.1. Feature modes</a></li>
-<li><a href="#_commands_12">4.14.2. Commands</a></li>
+<li><a href="#_commands_11">4.13.1. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_reminders">4.15. Reminders</a>
+<li><a href="#_statistic">4.14. Statistic</a></li>
+<li><a href="#_emote_tracking">4.15. Emote tracking</a>
 <ul class="sectlevel3">
-<li><a href="#_commands_13">4.15.1. Commands</a></li>
+<li><a href="#_feature_modes_7">4.15.1. Feature modes</a></li>
+<li><a href="#_commands_12">4.15.2. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_starboard">4.16. Starboard</a>
+<li><a href="#_reminders">4.16. Reminders</a>
 <ul class="sectlevel3">
-<li><a href="#_emotes_4">4.16.1. Emotes</a></li>
-<li><a href="#_relevant_system_configuration_4">4.16.2. Relevant system configuration</a></li>
-<li><a href="#_post_targets_9">4.16.3. Post targets</a></li>
-<li><a href="#_commands_14">4.16.4. Commands</a></li>
+<li><a href="#_commands_13">4.16.1. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_suggestions">4.17. Suggestions</a>
+<li><a href="#_starboard">4.17. Starboard</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_9">4.17.1. Feature modes</a></li>
-<li><a href="#_post_targets_10">4.17.2. Post targets</a></li>
-<li><a href="#_emotes_5">4.17.3. Emotes</a></li>
-<li><a href="#_relevant_system_configuration_5">4.17.4. Relevant system configuration</a></li>
-<li><a href="#_commands_15">4.17.5. Commands</a></li>
+<li><a href="#_emotes_5">4.17.1. Emotes</a></li>
+<li><a href="#_relevant_system_configuration_5">4.17.2. Relevant system configuration</a></li>
+<li><a href="#_post_targets_10">4.17.3. Post targets</a></li>
+<li><a href="#_commands_14">4.17.4. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_miscellaneous">4.18. Miscellaneous</a>
+<li><a href="#_suggestions">4.18. Suggestions</a>
 <ul class="sectlevel3">
-<li><a href="#_commands_16">4.18.1. Commands</a></li>
+<li><a href="#_feature_modes_8">4.18.1. Feature modes</a></li>
+<li><a href="#_post_targets_11">4.18.2. Post targets</a></li>
+<li><a href="#_emotes_6">4.18.3. Emotes</a></li>
+<li><a href="#_relevant_system_configuration_6">4.18.4. Relevant system configuration</a></li>
+<li><a href="#_commands_15">4.18.5. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_link_embeds">4.19. Link embeds</a>
+<li><a href="#_miscellaneous">4.19. Miscellaneous</a>
 <ul class="sectlevel3">
-<li><a href="#_emotes_6">4.19.1. Emotes</a></li>
+<li><a href="#_commands_16">4.19.1. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_repost_detection_and_tracking">4.20. Repost detection and tracking</a>
+<li><a href="#_link_embeds">4.20. Link embeds</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_10">4.20.1. Feature modes</a></li>
-<li><a href="#_emotes_7">4.20.2. Emotes</a></li>
-<li><a href="#_commands_17">4.20.3. Commands</a></li>
+<li><a href="#_emotes_7">4.20.1. Emotes</a></li>
 </ul>
 </li>
-<li><a href="#_entertainment_commands">4.21. Entertainment commands</a>
+<li><a href="#_repost_detection_and_tracking">4.21. Repost detection and tracking</a>
 <ul class="sectlevel3">
-<li><a href="#_relevant_system_configuration_6">4.21.1. Relevant system configuration</a></li>
+<li><a href="#_feature_modes_9">4.21.1. Feature modes</a></li>
+<li><a href="#_emotes_8">4.21.2. Emotes</a></li>
+<li><a href="#_commands_17">4.21.3. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_webservices">4.22. Webservices</a></li>
-<li><a href="#_youtube">4.23. Youtube</a>
+<li><a href="#_entertainment_commands">4.22. Entertainment commands</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_11">4.23.1. Feature modes</a></li>
-<li><a href="#_command">4.23.2. Command</a></li>
+<li><a href="#_relevant_system_configuration_7">4.22.1. Relevant system configuration</a></li>
 </ul>
 </li>
-<li><a href="#_urban_dictionary">4.24. Urban dictionary</a>
+<li><a href="#_webservices">4.23. Webservices</a></li>
+<li><a href="#_youtube">4.24. Youtube</a>
 <ul class="sectlevel3">
-<li><a href="#_command_2">4.24.1. Command</a></li>
+<li><a href="#_feature_modes_10">4.24.1. Feature modes</a></li>
+<li><a href="#_command">4.24.2. Command</a></li>
+</ul>
+</li>
+<li><a href="#_urban_dictionary">4.25. Urban dictionary</a>
+<ul class="sectlevel3">
+<li><a href="#_command_2">4.25.1. Command</a></li>
 </ul>
 </li>
 </ul>
@@ -1483,7 +1489,11 @@ If a cooldown is active, an error message is shown with the duration after which
 <dl>
 <dt class="hdlist1"><code>banLog</code></dt>
 <dd>
-<p>target of the log message containing information about the ban for both <code>ban</code> and <code>banId</code>. Will still ban if not setup.</p>
+<p>target of the message notifying about bans, both via command and via UI. Will still ban if not setup.</p>
+</dd>
+<dt class="hdlist1"><code>unBanLog</code></dt>
+<dd>
+<p>target of the message notifying about un-bans, both via command and via UI. Will still ban if not setup.</p>
 </dd>
 <dt class="hdlist1"><code>kickLog</code></dt>
 <dd>
@@ -1493,22 +1503,7 @@ If a cooldown is active, an error message is shown with the duration after which
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes">4.2.2. Feature modes</h4>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><code>banLogging</code></dt>
-<dd>
-<p>if enabled, log bans to the post target <code>banLog</code>. Enabled by default.</p>
-</dd>
-<dt class="hdlist1"><code>kickLogging</code></dt>
-<dd>
-<p>if enabled, log bans to the post target <code>kickLog</code>. Enabled by default.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_commands_2">4.2.3. Commands</h4>
+<h4 id="_commands_2">4.2.2. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Ban a member</dt>
@@ -1520,8 +1515,9 @@ If a cooldown is active, an error message is shown with the duration after which
 </li>
 <li>
 <p>Description:
-Bans the given given <code>member</code> with the given optional <code>reason</code>. This sends a logging message to the <code>banLog</code> post target.
-Banning this way does not delete old messages of the member on the server. If the <code>reason</code> is not provided, a default reason is used.</p>
+Bans the given <code>member</code> with the given optional <code>reason</code>. This sends a logging message to the <code>banLog</code> post target.
+Banning this way does not delete old messages of the member on the server. If the <code>reason</code> is not provided, a default reason is used.
+It is also possible to ban users via ID, if they are not part of the server anymore.</p>
 </li>
 <li>
 <p>Example: <code>ban @Member bad</code> in order to ban <code>Member</code> with the reason <code>bad</code> (the @Member is a user mention)</p>
@@ -1532,19 +1528,15 @@ Banning this way does not delete old messages of the member on the server. If th
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Ban a user by ID</dt>
+<dt class="hdlist1">Unban a user</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>banId &lt;userId&gt; [reason]</code></p>
+<p>Usage: <code>unBan &lt;userId&gt;</code></p>
 </li>
 <li>
-<p>Description: Bans the <code>user</code> by his id with the optional <code>reason</code>. . This command can be used in case the user is not part of the server anymore.
-This will also send a log message to <code>banLog</code> and not delete old messages.</p>
-</li>
-<li>
-<p>Example: <code>banId 1234 bad</code> in order to ban the user with ID <code>1234</code> with the reason <code>bad</code></p>
+<p>Description: Un-bans the given user with the id <code>userId</code>.</p>
 </li>
 <li>
 <p>Required bot permission: <code>BAN_MEMBERS</code></p>
@@ -1630,13 +1622,9 @@ While the command is ongoing, a status update message will be shown indicating h
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_2">4.3.2. Feature modes</h4>
+<h4 id="_feature_modes">4.3.2. Feature modes</h4>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>warnLogging</code></dt>
-<dd>
-<p>if enabled, each warn is logged to the post target <code>warnLog</code>. Enabled by default.</p>
-</dd>
 <dt class="hdlist1"><code>automaticWarnDecayLogging</code></dt>
 <dd>
 <p>if enabled, warn decays by <code>decayAllWarnings</code> are logged to the post target <code>decayLog</code>. Enabled by default.</p>
@@ -1748,7 +1736,7 @@ This uses a paginated output, which means multiple pages in case there are more 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_3">4.4.3. Feature modes</h4>
+<h4 id="_feature_modes_2">4.4.3. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>automaticWarnDecayLogging</code></dt>
@@ -1801,7 +1789,7 @@ If the user leaves the guild and rejoins, the mute role will be re-applied.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_4">4.5.2. Feature modes</h4>
+<h4 id="_feature_modes_3">4.5.2. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>muteLogging</code></dt>
@@ -1998,7 +1986,7 @@ Another feature mode can send a notification to a post target in case an invite 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_5">4.8.2. Feature modes</h4>
+<h4 id="_feature_modes_4">4.8.2. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>trackUses</code></dt>
@@ -2099,7 +2087,7 @@ The uses of profanities can be tracked and a command is available to show the pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_6">4.9.2. Feature modes</h4>
+<h4 id="_feature_modes_5">4.9.2. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>autoDeleteProfanities</code></dt>
@@ -2160,7 +2148,44 @@ The uses of profanities can be tracked and a command is available to show the pr
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mod_mail">4.10. Mod mail</h3>
+<h3 id="_reporting_a_message_via_reaction">4.10. Reporting a message via reaction</h3>
+<div class="paragraph">
+<p>Feature key <code>reportReactions</code></p>
+</div>
+<div class="paragraph">
+<p>This functionality is used to report user by members via adding a reaction to a message. This message is then send to the post target <code>reactionReports</code>
+notifying the moderation of the server. Additional reports of the same user, within the cooldown defined by system config <code>reactionReportCooldownSeconds</code> in seconds, increment the report counter instead of adding another notification. A reporting user also cannot report another user within a time range defined by the same system config.</p>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_2">4.10.1. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>reactionReportCooldownSeconds</code> The amount of seconds between the reports to create a new report for a user. The amount of seconds necessary for a new report of a user to be reported again. Default: 300</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_8">4.10.2. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>reactionReports</code></dt>
+<dd>
+<p>target for report notification messages</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes_3">4.10.3. Emotes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>reactionReport</code> reaction emote to report a message</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mod_mail">4.11. Mod mail</h3>
 <div class="paragraph">
 <p>This feature enables users to contact the moderation of the server in a private manner. This can be initiated by messaging the Abstracto bot.
 The messages, in the channel which is created to contain the mod mail thread, are not automatically sent to the user, but only when using the commands
@@ -2171,13 +2196,13 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 <p>Feature key: <code>modmail</code></p>
 </div>
 <div class="sect3">
-<h4 id="_necessary_bot_permissions">4.10.1. Necessary bot permissions</h4>
+<h4 id="_necessary_bot_permissions">4.11.1. Necessary bot permissions</h4>
 <div class="paragraph">
 <p><code>MANAGE_CHANNEL</code> to create the channels representing the mod mail threads</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_workflow">4.10.2. Workflow</h4>
+<h4 id="_workflow">4.11.2. Workflow</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2205,7 +2230,7 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_2">4.10.3. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_3">4.11.3. Relevant system configuration</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>modmailCategory</code></dt>
@@ -2220,7 +2245,7 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_targets_8">4.10.4. Post targets</h4>
+<h4 id="_post_targets_9">4.11.4. Post targets</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>modmailPing</code></dt>
@@ -2235,7 +2260,7 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_7">4.10.5. Feature modes</h4>
+<h4 id="_feature_modes_6">4.11.5. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>log</code></dt>
@@ -2251,7 +2276,7 @@ and to have a clear indication which messages were sent. Enabled by default.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_emotes_3">4.10.6. Emotes</h4>
+<h4 id="_emotes_4">4.11.6. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2261,7 +2286,7 @@ and to have a clear indication which messages were sent. Enabled by default.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_9">4.10.7. Commands</h4>
+<h4 id="_commands_9">4.11.7. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Opening a mod mail thread for a user</dt>
@@ -2434,20 +2459,20 @@ When closing a thread, a closing header with general information will be send an
 </div>
 </div>
 <div class="sect2">
-<h3 id="_experience_tracking">4.11. Experience tracking</h3>
+<h3 id="_experience_tracking">4.12. Experience tracking</h3>
 <div class="paragraph">
 <p>This feature contains the ability to track experience of users on the server and award roles based on the level they reach.
 The experience is awarded once per minute and is calculated by \$`\text{rand}(\text{minExp}, \text{maxExp}) * \text{expScale}`\$.
 Only one role is awarded at a time and the past unlocked roles are not given to the members.</p>
 </div>
 <div class="sect3">
-<h4 id="_necessary_bot_permissions_2">4.11.1. Necessary bot permissions</h4>
+<h4 id="_necessary_bot_permissions_2">4.12.1. Necessary bot permissions</h4>
 <div class="paragraph">
 <p><code>MANAGE_ROLES</code> in order to award members with roles</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_3">4.11.2. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_4">4.12.2. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>minExp</code> The lower bound of the awarded base experience. Default: 10.</p>
 </div>
@@ -2459,7 +2484,7 @@ Only one role is awarded at a time and the past unlocked roles are not given to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_10">4.11.3. Commands</h4>
+<h4 id="_commands_10">4.12.3. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Changing the experience scale of the server</dt>
@@ -2626,7 +2651,7 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 </div>
 </div>
 <div class="sect2">
-<h3 id="_assignable_roles">4.12. Assignable roles</h3>
+<h3 id="_assignable_roles">4.13. Assignable roles</h3>
 <div class="paragraph">
 <p>This feature enables creating and maintaining so-called 'assignable role places'. These places are messages at which reactions are added, and when a member reacts, a configured role, is assigned to the user.
 These places can consist of multiple messages (reactions are limited to 20 per message) and assignable roles can be added/removed. A place can be disabled, which causes any reaction to be removed and no role to be assigned.
@@ -2647,7 +2672,7 @@ Deleting the actual role behind an assignable role causes the assignable role pl
 <p>Feature key: <code>assignableRole</code></p>
 </div>
 <div class="sect3">
-<h4 id="_commands_11">4.12.1. Commands</h4>
+<h4 id="_commands_11">4.13.1. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Create a new assignable role place</dt>
@@ -2840,13 +2865,13 @@ immediately available to be used. If this requires a new post, because the last 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_statistic">4.13. Statistic</h3>
+<h3 id="_statistic">4.14. Statistic</h3>
 <div class="paragraph">
 <p>This component will contain multiple features, currently only emote tracking is available.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_emote_tracking">4.14. Emote tracking</h3>
+<h3 id="_emote_tracking">4.15. Emote tracking</h3>
 <div class="paragraph">
 <p>This feature is about tracking the usage of emotes from the server and external servers.
 The intention of this feature is to see what emotes are doing better than others and which emotes might be interesting to add to the server.</p>
@@ -2855,7 +2880,7 @@ The intention of this feature is to see what emotes are doing better than others
 <p>Feature key: <code>emoteTracking</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_8">4.14.1. Feature modes</h4>
+<h4 id="_feature_modes_7">4.15.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>emoteAutoTrack</code></dt>
@@ -2874,7 +2899,7 @@ The intention of this feature is to see what emotes are doing better than others
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_12">4.14.2. Commands</h4>
+<h4 id="_commands_12">4.15.2. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Creating a newly tracked emote</dt>
@@ -3050,7 +3075,7 @@ If the resulting file size is over the upload limit of the server, this command 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_reminders">4.15. Reminders</h3>
+<h3 id="_reminders">4.16. Reminders</h3>
 <div class="paragraph">
 <p>Provides the ability to schedule reminders.</p>
 </div>
@@ -3058,7 +3083,7 @@ If the resulting file size is over the upload limit of the server, this command 
 <p>Feature key: <code>remind</code></p>
 </div>
 <div class="sect3">
-<h4 id="_commands_13">4.15.1. Commands</h4>
+<h4 id="_commands_13">4.16.1. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Create a reminder</dt>
@@ -3121,7 +3146,7 @@ If the resulting file size is over the upload limit of the server, this command 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_starboard">4.16. Starboard</h3>
+<h3 id="_starboard">4.17. Starboard</h3>
 <div class="paragraph">
 <p>Provides the ability to track note worthy posts in a separate channel, identified by the post target <code>starboard</code>, because the pins within a channel are limited to 50.
 This feature works by users reacting to a message with the appropriate emote. By default this is <code>&#11088;</code>, but can be changed via the emote <code>star</code>.
@@ -3133,7 +3158,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Feature key: <code>starboard</code></p>
 </div>
 <div class="sect3">
-<h4 id="_emotes_4">4.16.1. Emotes</h4>
+<h4 id="_emotes_5">4.17.1. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3164,7 +3189,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_4">4.16.2. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_5">4.17.2. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>starLvl1</code> The amount of stars necessary to appear on the starboard. Default: 5</p>
 </div>
@@ -3179,7 +3204,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_targets_9">4.16.3. Post targets</h4>
+<h4 id="_post_targets_10">4.17.3. Post targets</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>starboard</code></dt>
@@ -3190,7 +3215,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_14">4.16.4. Commands</h4>
+<h4 id="_commands_14">4.17.4. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Showing starboard statistics</dt>
@@ -3211,7 +3236,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_suggestions">4.17. Suggestions</h3>
+<h3 id="_suggestions">4.18. Suggestions</h3>
 <div class="paragraph">
 <p>This feature provides the ability for members to post suggestions containing text to the post target <code>suggestions</code>. These suggestions can then be accepted or denied by the moderators.</p>
 </div>
@@ -3219,7 +3244,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Feature key: <code>suggestion</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_9">4.17.1. Feature modes</h4>
+<h4 id="_feature_modes_8">4.18.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>suggestionReminder</code></dt>
@@ -3230,7 +3255,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_targets_10">4.17.2. Post targets</h4>
+<h4 id="_post_targets_11">4.18.2. Post targets</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>suggestions</code></dt>
@@ -3245,7 +3270,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_emotes_5">4.17.3. Emotes</h4>
+<h4 id="_emotes_6">4.18.3. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3258,13 +3283,13 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_5">4.17.4. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_6">4.18.4. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>suggestionReminderDays</code> The amount of days in which the reminder, from feature mode <code>suggestionReminder</code>, should be posted in. Default: 7</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_15">4.17.5. Commands</h4>
+<h4 id="_commands_15">4.18.5. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Creating a suggestion</dt>
@@ -3343,7 +3368,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_miscellaneous">4.18. Miscellaneous</h3>
+<h3 id="_miscellaneous">4.19. Miscellaneous</h3>
 <div class="paragraph">
 <p>This feature provides some utility commands.</p>
 </div>
@@ -3351,7 +3376,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Feature key: <code>utility</code></p>
 </div>
 <div class="sect3">
-<h4 id="_commands_16">4.18.1. Commands</h4>
+<h4 id="_commands_16">4.19.1. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Retrieving the URL of an emote</dt>
@@ -3424,9 +3449,9 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_link_embeds">4.19. Link embeds</h3>
+<h3 id="_link_embeds">4.20. Link embeds</h3>
 <div class="sect3">
-<h4 id="_emotes_6">4.19.1. Emotes</h4>
+<h4 id="_emotes_7">4.20.1. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3445,7 +3470,7 @@ A reaction is placed on the embedded message which can be used to delete this em
 </div>
 </div>
 <div class="sect2">
-<h3 id="_repost_detection_and_tracking">4.20. Repost detection and tracking</h3>
+<h3 id="_repost_detection_and_tracking">4.21. Repost detection and tracking</h3>
 <div class="paragraph">
 <p>This feature can be used to detect whether an image has been posted before on the server. Images are compared by the hash stored in the database, which makes it very strict.
 In order to calculate the hash, the image needs to be downloaded. It is possible to show a leaderboard of the most reposting users. Both of these features can be changed via feature modes.
@@ -3459,7 +3484,7 @@ For example if the repost is the second image in a message, a reaction represent
 <p>Feature key: <code>repostDetection</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_10">4.20.1. Feature modes</h4>
+<h4 id="_feature_modes_9">4.21.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>download</code></dt>
@@ -3474,7 +3499,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect3">
-<h4 id="_emotes_7">4.20.2. Emotes</h4>
+<h4 id="_emotes_8">4.21.2. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3484,7 +3509,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_17">4.20.3. Commands</h4>
+<h4 id="_commands_17">4.21.3. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Remove stored image posts and reposts of whole server or specific member</dt>
@@ -3573,7 +3598,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect2">
-<h3 id="_entertainment_commands">4.21. Entertainment commands</h3>
+<h3 id="_entertainment_commands">4.22. Entertainment commands</h3>
 <div class="paragraph">
 <p>This feature basically contains a few commands which can be used for entertainment purposes directly</p>
 </div>
@@ -3581,7 +3606,7 @@ For example if the repost is the second image in a message, a reaction represent
 <p>Feature key: <code>entertainment</code></p>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_6">4.21.1. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_7">4.22.1. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>rouletteBullets</code> The amount of bullets the revolver for <code>roulette</code> can hold. Default: 6
 <code>rollDefaultHigh</code> The default sides of the die for <code>roll</code>. Default: 6</p>
@@ -3671,18 +3696,18 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect2">
-<h3 id="_webservices">4.22. Webservices</h3>
+<h3 id="_webservices">4.23. Webservices</h3>
 <div class="paragraph">
 <p>Integrates different web APIs to be used via the bot.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_youtube">4.23. Youtube</h3>
+<h3 id="_youtube">4.24. Youtube</h3>
 <div class="paragraph">
 <p>Feature key: <code>youtube</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_11">4.23.1. Feature modes</h4>
+<h4 id="_feature_modes_10">4.24.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>videoDetails</code></dt>
@@ -3693,7 +3718,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect3">
-<h4 id="_command">4.23.2. Command</h4>
+<h4 id="_command">4.24.2. Command</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Search for a youtube video</dt>
@@ -3717,12 +3742,12 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect2">
-<h3 id="_urban_dictionary">4.24. Urban dictionary</h3>
+<h3 id="_urban_dictionary">4.25. Urban dictionary</h3>
 <div class="paragraph">
 <p>Feature key: <code>urban</code></p>
 </div>
 <div class="sect3">
-<h4 id="_command_2">4.24.1. Command</h4>
+<h4 id="_command_2">4.25.1. Command</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Search for an urban dictionary definition</dt>
@@ -3750,8 +3775,8 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.2.14<br>
-Last updated 2021-05-26 19:52:52 UTC
+Version 1.2.15<br>
+Last updated 2021-06-01 22:47:56 UTC
 </div>
 </div>
 </body>
