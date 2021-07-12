@@ -442,8 +442,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Abstracto Discord Bot Documentation</h1>
 <div class="details">
 <span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
-<span id="revnumber">version 1.3.0,</span>
-<span id="revdate">2021/07/04 11:43</span>
+<span id="revnumber">version 1.3.2,</span>
+<span id="revdate">2021/07/12 23:20</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -593,16 +593,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_relevant_system_configuration_7">4.22.1. Relevant system configuration</a></li>
 </ul>
 </li>
-<li><a href="#_webservices">4.23. Webservices</a></li>
-<li><a href="#_youtube">4.24. Youtube</a>
+<li><a href="#_voice_channel_context">4.23. Voice channel context</a></li>
+<li><a href="#_webservices">4.24. Webservices</a></li>
+<li><a href="#_youtube">4.25. Youtube</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_10">4.24.1. Feature modes</a></li>
-<li><a href="#_command">4.24.2. Command</a></li>
+<li><a href="#_feature_modes_10">4.25.1. Feature modes</a></li>
+<li><a href="#_command">4.25.2. Command</a></li>
 </ul>
 </li>
-<li><a href="#_urban_dictionary">4.25. Urban dictionary</a>
+<li><a href="#_urban_dictionary">4.26. Urban dictionary</a>
 <ul class="sectlevel3">
-<li><a href="#_command_2">4.25.1. Command</a></li>
+<li><a href="#_command_2">4.26.1. Command</a></li>
 </ul>
 </li>
 </ul>
@@ -2637,20 +2638,11 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 <div class="sect2">
 <h3 id="_assignable_roles">4.13. Assignable roles</h3>
 <div class="paragraph">
-<p>This feature enables creating and maintaining so-called 'assignable role places'. These places are messages at which reactions are added, and when a member reacts, a configured role, is assigned to the user.
-These places can consist of multiple messages (reactions are limited to 20 per message) and assignable roles can be added/removed. A place can be disabled, which causes any reaction to be removed and no role to be assigned.
-There are several configurations possible for each individual assignable role place.
-* <code>inline</code>: tries to display the embed as compact as possible and when this is disabled, every assignable role is displayed in a separate line. Default: <code>false</code>
-* <code>autoRemove</code>: if a member adds a reaction to the assignable role place, they are removed immediately afterwards. Default: <code>false</code>
-* <code>unique</code>: if a member adds a reaction and has previously selected other roles, these previous roles are removed before the new ones are assigned. Default: <code>false</code>
-* <code>active</code>: an inactive assignable role place does not assign any roles and immediately removes any reactions added. Default: <code>true</code></p>
+<p>This feature enables creating and maintaining so-called 'assignable role places'. These places are messages at which buttons are added, and when a member clicks such a button, a configured role, is assigned to the user.
+A place can be disabled, which causes the buttons to become disabled. Such places can be made 'unique', which means that users can only have one role available in the place.</p>
 </div>
 <div class="paragraph">
-<p>If there are reactions added by members, which are not used within an assignable role place, the reaction gets removed automatically.</p>
-</div>
-<div class="paragraph">
-<p>If the emote is deleted, the assignable role place is still functional, but if you set it up again, it fails to do so. You need to remove the emote from the assignable role place via its ID. The ID will be displayed for the emotes which were removed.
-Deleting the actual role behind an assignable role causes the assignable role place to become non-functional: the added reaction will remain and reactions can still be added, but nothing will happen.</p>
+<p>Deleting the actual role behind an assignable role causes the assignable role place to become non-functional: the button will remain and can still be clicked, but users will receive and error message.</p>
 </div>
 <div class="paragraph">
 <p>Feature key: <code>assignableRole</code></p>
@@ -2678,12 +2670,11 @@ When the place is setup, it will be posted in the <code>channel</code>. The crea
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>addRoleToAssignableRolePlace &lt;name&gt; &lt;emote&gt; &lt;text&gt; &lt;role&gt;</code></p>
+<p>Usage: <code>addRoleToAssignableRolePlace &lt;name&gt; &lt;role&gt; &lt;text&gt; [emote]</code></p>
 </li>
 <li>
-<p>Description: Adds to the assignable role place identified by <code>name</code> an additional assignable role. The reaction to be used will be <code>emote</code> and <code>role</code> will be assigned when a member adds the reaction.
-It is required that <code>emote</code> is usable by Abstracto and not yet used in the assignable role place. If the assignable role place is currently setup, the assignable role will be directly appended to the assignable role place and is
-immediately available to be used. If this requires a new post, because the last message already has the maximum amount of reactions, it is required to setup the assignable role place again.</p>
+<p>Description: Adds to the assignable role place identified by <code>name</code> an additional assignable role. The <code>role</code> will be assigned when a member adds the reaction. The <code>text</code> will be the text of the button, and the optional <code>emote</code> will be used in the button.
+It is required that <code>emote</code> is usable by Abstracto.</p>
 </li>
 </ul>
 </div>
@@ -2696,7 +2687,7 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage: <code>setupAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Posts the messages of the assignable role place identified by <code>name</code> to the configured channel in discord and adds the reactions. This will delete the old messages connected to this assignable role place, if there are any.</p>
+<p>Description: Posts the message of the assignable role place identified by <code>name</code> to the configured channel in discord. This will delete the old message connected to this assignable role place, if there is any.</p>
 </li>
 </ul>
 </div>
@@ -2706,10 +2697,10 @@ immediately available to be used. If this requires a new post, because the last 
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>removeRoleFromAssignableRolePlace &lt;name&gt; &lt;emote&gt;</code></p>
+<p>Usage: <code>removeRoleFromAssignableRolePlace &lt;name&gt; &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Removes from the assignable role place identified by <code>name</code>, the emote identified by <code>emote</code>. If the assignable role place is currently in use, this will update the message and remove all reactions using <code>emote</code>.</p>
+<p>Description: Removes from the assignable role place identified by <code>name</code>, the button associated with the role <code>role</code>. If the role was deleted in the meantime, providing the role ID works as well.</p>
 </li>
 </ul>
 </div>
@@ -2722,20 +2713,7 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage: <code>showAssignableRolePlaceConfig &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: This command displays the current configuration of assignable role place identified by <code>name</code>. This information includes the available emotes, which roles they represent and what position they have.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Test how the assignable role place would look like</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Usage: <code>testAssignableRolePlace &lt;name&gt;</code></p>
-</li>
-<li>
-<p>Description: Posts the assignable role place identified by <code>name</code> in the current channel. This command does not add the reactions, and is purely to check how the messages look.</p>
+<p>Description: This command displays the current configuration of assignable role place identified by <code>name</code>.</p>
 </li>
 </ul>
 </div>
@@ -2748,7 +2726,7 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage: <code>moveAssignableRolePlace &lt;name&gt; &lt;newChannel&gt;</code></p>
 </li>
 <li>
-<p>Description: Moves the assignable role place identified by <code>name</code> to be in <code>newChannel</code>. This change takes effect the next time the assignable role place is setup via <code>setupAssignableRolePlace</code>.</p>
+<p>Description: Moves the assignable role place identified by <code>name</code> to be in <code>newChannel</code>. If the place is currently shown, this will immediately delete the message and create the place in the given <code>newChannel</code>.</p>
 </li>
 </ul>
 </div>
@@ -2761,7 +2739,7 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage: <code>deactivateAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Deactivates the assignable role place identified by <code>name</code>. Any further reactions placed by members will be removed immediately and not assign any roles.</p>
+<p>Description: Deactivates the buttons of the assignable role place identified by <code>name</code>.</p>
 </li>
 </ul>
 </div>
@@ -2774,7 +2752,7 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage: <code>activateAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Activates the assignable role place identified by <code>name</code> and enables the assignment of roles.</p>
+<p>Description: Activates the buttons of the assignable role place identified by <code>name</code> and enables the assignment of roles.</p>
 </li>
 </ul>
 </div>
@@ -2787,33 +2765,7 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage: <code>changeAssignableRolePlaceConfig &lt;name&gt; &lt;key&gt; &lt;newValue&gt;</code></p>
 </li>
 <li>
-<p>Description: Changes the config attribute indicated by <code>key</code> of the place identified by <code>name</code> to <code>newValue</code>. The possible keys are: <code>inline</code>, <code>unique</code>, <code>autoRemove</code> and <code>active</code> respectively and all of these can take <code>true</code>/<code>false</code> as <code>newValue</code>.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Swap two emotes in an assignable role place</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Usage: <code>swapAssignableRolePosition &lt;name&gt; &lt;firstEmote&gt; &lt;secondEmote&gt;</code></p>
-</li>
-<li>
-<p>Description: Swaps the position of the assignable role places <code>firstEmote</code> and <code>secondEmote</code> in the assignable role place identified by <code>name</code>.  This change takes effect the next time the assignable role place is setup via <code>setupAssignableRolePlace</code>.</p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Set the position of an assignable role within an assignable role place</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Usage: <code>setAssignableRolePosition &lt;name&gt; &lt;emote&gt; &lt;position&gt;</code></p>
-</li>
-<li>
-<p>Description: Sets the position of the <code>emote</code> within the assignable role place identified by <code>name</code> to <code>position</code>.  This change takes effect the next time the assignable role place is setup via <code>setupAssignableRolePlace</code>.</p>
+<p>Description: Changes the config attribute indicated by <code>key</code> of the place identified by <code>name</code> to <code>newValue</code>. The possible key is <code>unique</code> and it can take <code>true</code>/<code>false</code> as <code>newValue</code>.</p>
 </li>
 </ul>
 </div>
@@ -2826,7 +2778,7 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage: <code>deleteAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Completely deletes the assignable role place identified by <code>name</code>. This includes any trace in the database and the current messages, if any.</p>
+<p>Description: Completely deletes the assignable role place identified by <code>name</code>. This includes any trace in the database and the current message, if any.</p>
 </li>
 </ul>
 </div>
@@ -2839,7 +2791,33 @@ immediately available to be used. If this requires a new post, because the last 
 <p>Usage <code>editAssignableRolePlaceText &lt;name&gt; &lt;newText&gt;</code></p>
 </li>
 <li>
-<p>Description: Changes the text which is shown in the first message of the assignable role place identified by <code>name</code> to <code>newText</code>. This changes the message immediately.</p>
+<p>Description: Changes the text which is shown in the message of the assignable role place identified by <code>name</code> to <code>newText</code>. This changes the message immediately.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Create an assignable role condition</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>addAssignableRoleCondition &lt;name&gt; &lt;role&gt; &lt;conditionKey&gt; &lt;conditionValue&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a condition for the given assignable role identified by <code>role</code> for the assignable role place identified by <code>name</code>. There only exist one <code>conditionKey</code> right now, which is <code>min_level</code>. The given <code>conditionValue</code> for this condition must be a number between 1 and 150.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Delete an assignable role condition</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>removeAssignableRoleCondition &lt;name&gt; &lt;role&gt; &lt;conditionKey&gt;</code></p>
+</li>
+<li>
+<p>Description: Removes the assignable role condition <code>conditionKey</code> for <code>role</code> in the assignable role place identified by <code>name</code>. There only exist one <code>conditionKey</code> right now, which is <code>min_level</code>.</p>
 </li>
 </ul>
 </div>
@@ -3680,18 +3658,59 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect2">
-<h3 id="_webservices">4.23. Webservices</h3>
+<h3 id="_voice_channel_context">4.23. Voice channel context</h3>
+<div class="paragraph">
+<p>This feature provides the ability to show certain text channels for certain voice channels and enable voice channels to be used for chatting while in voice channels.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>voiceChannelContext</code></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Create a voice channel context</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>createVoiceChannelContext &lt;voiceChannel&gt; &lt;role&gt;</code></p>
+</li>
+<li>
+<p>Description: Creates a connection between the <code>voiceChannel</code> and the given <code>role</code>. When a member joins the <code>voiceChannel</code> they will be given the <code>role</code>.
+This role can then be used to provide the 'view channel' permission on a text channel which can be used as a 'context channel' for the voice chat.
+The voice channel can be provided as a parameter via a mention (type '#!' + voice channel name), channel ID or the channel name.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deleting a voice channel context</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>deleteVoiceChannelContext &lt;voiceChannel&gt;</code></p>
+</li>
+<li>
+<p>Description: Deletes any voice channel context for the given <code>voiceChannel</code>. Members will no longer receive a role, when joining the voice channel. The <code>voiceChannel</code> can also be a channel ID.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_webservices">4.24. Webservices</h3>
 <div class="paragraph">
 <p>Integrates different web APIs to be used via the bot.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_youtube">4.24. Youtube</h3>
+<h3 id="_youtube">4.25. Youtube</h3>
 <div class="paragraph">
 <p>Feature key: <code>youtube</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_10">4.24.1. Feature modes</h4>
+<h4 id="_feature_modes_10">4.25.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>videoDetails</code></dt>
@@ -3702,7 +3721,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect3">
-<h4 id="_command">4.24.2. Command</h4>
+<h4 id="_command">4.25.2. Command</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Search for a youtube video</dt>
@@ -3726,12 +3745,12 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect2">
-<h3 id="_urban_dictionary">4.25. Urban dictionary</h3>
+<h3 id="_urban_dictionary">4.26. Urban dictionary</h3>
 <div class="paragraph">
 <p>Feature key: <code>urban</code></p>
 </div>
 <div class="sect3">
-<h4 id="_command_2">4.25.1. Command</h4>
+<h4 id="_command_2">4.26.1. Command</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Search for an urban dictionary definition</dt>
@@ -3759,8 +3778,8 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.3.0<br>
-Last updated 2021-07-04 11:43:01 UTC
+Version 1.3.2<br>
+Last updated 2021-07-12 23:20:25 UTC
 </div>
 </div>
 </body>
