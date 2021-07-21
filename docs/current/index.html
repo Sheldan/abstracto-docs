@@ -442,8 +442,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Abstracto Discord Bot Documentation</h1>
 <div class="details">
 <span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
-<span id="revnumber">version 1.3.3,</span>
-<span id="revdate">2021/07/14 00:19</span>
+<span id="revnumber">version 1.3.4,</span>
+<span id="revdate">2021/07/21 21:35</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -1518,12 +1518,12 @@ If a cooldown is active, an error message is shown with the duration after which
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>ban &lt;member&gt; [reason]</code></p>
+<p>Usage: <code>ban &lt;member&gt; &lt;reason&gt;</code></p>
 </li>
 <li>
 <p>Description:
 Bans the given <code>member</code> with the given optional <code>reason</code>. This sends a logging message to the <code>banLog</code> post target.
-Banning this way does not delete old messages of the member on the server. If the <code>reason</code> is not provided, a default reason is used.
+Banning this way does not delete old messages of the member on the server.
 It is also possible to ban users via ID, if they are not part of the server anymore.</p>
 </li>
 <li>
@@ -1597,6 +1597,19 @@ It is also possible to ban users via ID, if they are not part of the server anym
 <p>Description: Deletes the last <code>messageCount</code> messages in the current channel. If a <code>member</code> is provided as parameter, only the messages by this member
 will be deleted. The deletion of this messages will <strong>not</strong> be logged by the logging mechanism. The messages to be deleted need to be from within the last 2 weeks, but there is no limit on how much messages can be deleted besides that.
 While the command is ongoing, a status update message will be shown indicating how far the command is. This message will be deleted after the command is done.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Deleting all messages and kicking a member</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage <code>softBan &lt;user&gt; [delDays]</code></p>
+</li>
+<li>
+<p>Description: Bans the given <code>user</code> and deletes the messages for the given time period in <code>delDays</code>. This duration must be in days and can be at most 7 days. When no duration is provided 7 days are used. This command automatically unbans the user afterwards.</p>
 </li>
 </ul>
 </div>
@@ -2680,7 +2693,10 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 A place can be disabled, which causes the buttons to become disabled. Such places can be made 'unique', which means that users can only have one role available in the place.</p>
 </div>
 <div class="paragraph">
-<p>Deleting the actual role behind an assignable role causes the assignable role place to become non-functional: the button will remain and can still be clicked, but users will receive and error message.</p>
+<p>An assignable role place can have a type. This type can either be <code>DEFAULT</code>, or <code>BOOSTER´. The `BOOSTER</code> type comes with special functionalities: if a member clicked a button, it will evaluate whether the member has boosted the server and reject if not. There is also functionality to automatically remove the assigned roles for members who stopped boosting.</p>
+</div>
+<div class="paragraph">
+<p>Deleting the actual role behind an assignable role causes the assignable role place to become non-functional: the button will remain and can still be clicked, but users will receive an error message.</p>
 </div>
 <div class="paragraph">
 <p>Feature key: <code>assignableRole</code></p>
@@ -2694,11 +2710,11 @@ A place can be disabled, which causes the buttons to become disabled. Such place
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>createAssignableRolePlace &lt;name&gt; &lt;channel&gt; &lt;text&gt;</code></p>
+<p>Usage: <code>createAssignableRolePlace &lt;name&gt; &lt;channel&gt; &lt;text&gt; [type]</code></p>
 </li>
 <li>
 <p>Description: Creates a new assignable role place with the key <code>name</code>. The <code>text</code> will be shown in the description of the first message.
-When the place is setup, it will be posted in the <code>channel</code>. The created place is active and inline by default.</p>
+When the place is setup, it will be posted in the <code>channel</code>. If <code>type</code> is not provided, it will be <code>DEFAULT</code>. Possible values for are <code>booster</code> and <code>default</code>.</p>
 </li>
 </ul>
 </div>
@@ -3816,8 +3832,8 @@ The voice channel can be provided as a parameter via a mention (type '#!' + voic
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.3.3<br>
-Last updated 2021-07-14 00:18:59 UTC
+Version 1.3.4<br>
+Last updated 2021-07-21 21:35:37 UTC
 </div>
 </div>
 </body>
