@@ -442,8 +442,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Abstracto Discord Bot Documentation</h1>
 <div class="details">
 <span id="author" class="author">Sheldan https://github.com/Sheldan/abstracto</span><br>
-<span id="revnumber">version 1.3.8,</span>
-<span id="revdate">2021/09/05 23:59</span>
+<span id="revnumber">version 1.3.9,</span>
+<span id="revdate">2021/10/25 21:35</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -455,8 +455,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_core">4.1. Core</a>
 <ul class="sectlevel3">
-<li><a href="#_emotes">4.1.1. Emotes</a></li>
-<li><a href="#_commands">4.1.2. Commands</a></li>
+<li><a href="#_relevant_system_configuration">4.1.1. Relevant system configuration</a></li>
+<li><a href="#_emotes">4.1.2. Emotes</a></li>
+<li><a href="#_commands">4.1.3. Commands</a></li>
 </ul>
 </li>
 <li><a href="#_moderation">4.2. Moderation</a>
@@ -474,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_automatic_warn_decay">4.4. Automatic warn decay</a>
 <ul class="sectlevel3">
-<li><a href="#_relevant_system_configuration">4.4.1. Relevant system configuration</a></li>
+<li><a href="#_relevant_system_configuration_2">4.4.1. Relevant system configuration</a></li>
 <li><a href="#_post_targets_3">4.4.2. Post targets</a></li>
 <li><a href="#_feature_modes_2">4.4.3. Feature modes</a></li>
 <li><a href="#_commands_4">4.4.4. Commands</a></li>
@@ -514,7 +515,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_reporting_a_message_via_reaction">4.10. Reporting a message via reaction</a>
 <ul class="sectlevel3">
-<li><a href="#_relevant_system_configuration_2">4.10.1. Relevant system configuration</a></li>
+<li><a href="#_relevant_system_configuration_3">4.10.1. Relevant system configuration</a></li>
 <li><a href="#_post_targets_8">4.10.2. Post targets</a></li>
 <li><a href="#_emotes_3">4.10.3. Emotes</a></li>
 </ul>
@@ -522,94 +523,101 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_mass_mention_automatic_mute">4.11. Mass mention automatic mute</a>
 <ul class="sectlevel3">
 <li><a href="#_post_targets_9">4.11.1. Post targets</a></li>
-<li><a href="#_relevant_system_configuration_3">4.11.2. Relevant system configuration</a></li>
+<li><a href="#_relevant_system_configuration_4">4.11.2. Relevant system configuration</a></li>
 </ul>
 </li>
-<li><a href="#_mod_mail">4.12. Mod mail</a>
+<li><a href="#_tracking_general_infractions">4.12. Tracking general infractions</a>
 <ul class="sectlevel3">
-<li><a href="#_necessary_bot_permissions">4.12.1. Necessary bot permissions</a></li>
-<li><a href="#_workflow">4.12.2. Workflow</a></li>
-<li><a href="#_relevant_system_configuration_4">4.12.3. Relevant system configuration</a></li>
-<li><a href="#_post_targets_10">4.12.4. Post targets</a></li>
-<li><a href="#_feature_modes_6">4.12.5. Feature modes</a></li>
-<li><a href="#_emotes_4">4.12.6. Emotes</a></li>
-<li><a href="#_commands_9">4.12.7. Commands</a></li>
+<li><a href="#_post_targets_10">4.12.1. Post targets</a></li>
+<li><a href="#_relevant_system_configuration_5">4.12.2. Relevant system configuration</a></li>
 </ul>
 </li>
-<li><a href="#_experience_tracking">4.13. Experience tracking</a>
+<li><a href="#_mod_mail">4.13. Mod mail</a>
 <ul class="sectlevel3">
-<li><a href="#_necessary_bot_permissions_2">4.13.1. Necessary bot permissions</a></li>
-<li><a href="#_relevant_system_configuration_5">4.13.2. Relevant system configuration</a></li>
-<li><a href="#_commands_10">4.13.3. Commands</a></li>
+<li><a href="#_necessary_bot_permissions">4.13.1. Necessary bot permissions</a></li>
+<li><a href="#_workflow">4.13.2. Workflow</a></li>
+<li><a href="#_relevant_system_configuration_6">4.13.3. Relevant system configuration</a></li>
+<li><a href="#_post_targets_11">4.13.4. Post targets</a></li>
+<li><a href="#_feature_modes_6">4.13.5. Feature modes</a></li>
+<li><a href="#_emotes_4">4.13.6. Emotes</a></li>
+<li><a href="#_commands_9">4.13.7. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_assignable_roles">4.14. Assignable roles</a>
+<li><a href="#_experience_tracking">4.14. Experience tracking</a>
 <ul class="sectlevel3">
-<li><a href="#_commands_11">4.14.1. Commands</a></li>
+<li><a href="#_necessary_bot_permissions_2">4.14.1. Necessary bot permissions</a></li>
+<li><a href="#_relevant_system_configuration_7">4.14.2. Relevant system configuration</a></li>
+<li><a href="#_commands_10">4.14.3. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_statistic">4.15. Statistic</a></li>
-<li><a href="#_emote_tracking">4.16. Emote tracking</a>
+<li><a href="#_assignable_roles">4.15. Assignable roles</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_7">4.16.1. Feature modes</a></li>
-<li><a href="#_commands_12">4.16.2. Commands</a></li>
+<li><a href="#_commands_11">4.15.1. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_reminders">4.17. Reminders</a>
+<li><a href="#_statistic">4.16. Statistic</a></li>
+<li><a href="#_emote_tracking">4.17. Emote tracking</a>
 <ul class="sectlevel3">
-<li><a href="#_commands_13">4.17.1. Commands</a></li>
+<li><a href="#_feature_modes_7">4.17.1. Feature modes</a></li>
+<li><a href="#_commands_12">4.17.2. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_starboard">4.18. Starboard</a>
+<li><a href="#_reminders">4.18. Reminders</a>
 <ul class="sectlevel3">
-<li><a href="#_emotes_5">4.18.1. Emotes</a></li>
-<li><a href="#_relevant_system_configuration_6">4.18.2. Relevant system configuration</a></li>
-<li><a href="#_post_targets_11">4.18.3. Post targets</a></li>
-<li><a href="#_commands_14">4.18.4. Commands</a></li>
+<li><a href="#_commands_13">4.18.1. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_suggestions">4.19. Suggestions</a>
+<li><a href="#_starboard">4.19. Starboard</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_8">4.19.1. Feature modes</a></li>
-<li><a href="#_post_targets_12">4.19.2. Post targets</a></li>
-<li><a href="#_emotes_6">4.19.3. Emotes</a></li>
-<li><a href="#_relevant_system_configuration_7">4.19.4. Relevant system configuration</a></li>
-<li><a href="#_commands_15">4.19.5. Commands</a></li>
+<li><a href="#_emotes_5">4.19.1. Emotes</a></li>
+<li><a href="#_relevant_system_configuration_8">4.19.2. Relevant system configuration</a></li>
+<li><a href="#_post_targets_12">4.19.3. Post targets</a></li>
+<li><a href="#_commands_14">4.19.4. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_miscellaneous">4.20. Miscellaneous</a>
+<li><a href="#_suggestions">4.20. Suggestions</a>
 <ul class="sectlevel3">
-<li><a href="#_commands_16">4.20.1. Commands</a></li>
+<li><a href="#_feature_modes_8">4.20.1. Feature modes</a></li>
+<li><a href="#_post_targets_13">4.20.2. Post targets</a></li>
+<li><a href="#_emotes_6">4.20.3. Emotes</a></li>
+<li><a href="#_relevant_system_configuration_9">4.20.4. Relevant system configuration</a></li>
+<li><a href="#_commands_15">4.20.5. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_link_embeds">4.21. Link embeds</a>
+<li><a href="#_miscellaneous">4.21. Miscellaneous</a>
 <ul class="sectlevel3">
-<li><a href="#_emotes_7">4.21.1. Emotes</a></li>
+<li><a href="#_commands_16">4.21.1. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_repost_detection_and_tracking">4.22. Repost detection and tracking</a>
+<li><a href="#_link_embeds">4.22. Link embeds</a>
 <ul class="sectlevel3">
 <li><a href="#_feature_modes_9">4.22.1. Feature modes</a></li>
-<li><a href="#_emotes_8">4.22.2. Emotes</a></li>
-<li><a href="#_commands_17">4.22.3. Commands</a></li>
+<li><a href="#_emotes_7">4.22.2. Emotes</a></li>
 </ul>
 </li>
-<li><a href="#_entertainment_commands">4.23. Entertainment commands</a>
+<li><a href="#_repost_detection_and_tracking">4.23. Repost detection and tracking</a>
 <ul class="sectlevel3">
-<li><a href="#_relevant_system_configuration_8">4.23.1. Relevant system configuration</a></li>
+<li><a href="#_feature_modes_10">4.23.1. Feature modes</a></li>
+<li><a href="#_emotes_8">4.23.2. Emotes</a></li>
+<li><a href="#_commands_17">4.23.3. Commands</a></li>
 </ul>
 </li>
-<li><a href="#_voice_channel_context">4.24. Voice channel context</a></li>
-<li><a href="#_webservices">4.25. Webservices</a></li>
-<li><a href="#_youtube">4.26. Youtube</a>
+<li><a href="#_entertainment_commands">4.24. Entertainment commands</a>
 <ul class="sectlevel3">
-<li><a href="#_feature_modes_10">4.26.1. Feature modes</a></li>
-<li><a href="#_command">4.26.2. Command</a></li>
+<li><a href="#_relevant_system_configuration_10">4.24.1. Relevant system configuration</a></li>
 </ul>
 </li>
-<li><a href="#_urban_dictionary">4.27. Urban dictionary</a>
+<li><a href="#_voice_channel_context">4.25. Voice channel context</a></li>
+<li><a href="#_webservices">4.26. Webservices</a></li>
+<li><a href="#_youtube">4.27. Youtube</a>
 <ul class="sectlevel3">
-<li><a href="#_command_2">4.27.1. Command</a></li>
+<li><a href="#_feature_modes_11">4.27.1. Feature modes</a></li>
+<li><a href="#_command">4.27.2. Command</a></li>
+</ul>
+</li>
+<li><a href="#_urban_dictionary">4.28. Urban dictionary</a>
+<ul class="sectlevel3">
+<li><a href="#_command_2">4.28.1. Command</a></li>
 </ul>
 </li>
 </ul>
@@ -696,7 +704,19 @@ In the mode <code>log</code> mod mail threads will be logged into the post targe
 <p>The core feature contains necessary commands in order for Abstracto to function and be configured.</p>
 </div>
 <div class="sect3">
-<h4 id="_emotes">4.1.1. Emotes</h4>
+<h4 id="_relevant_system_configuration">4.1.1. Relevant system configuration</h4>
+<div class="paragraph">
+<p><code>noCommandFoundReporting</code> Whether not found commands should be reported back to the user. Default: true.</p>
+</div>
+<div class="paragraph">
+<p><code>maxMessages</code> The upper limit of messages created by the template mechanism. Default: 3.</p>
+</div>
+<div class="paragraph">
+<p><code>confirmationTimeout</code> The duration in seconds after which the confirmation is deleted. Default: 120.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes">4.1.2. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -709,7 +729,7 @@ In the mode <code>log</code> mod mail threads will be logged into the post targe
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands">4.1.2. Commands</h4>
+<h4 id="_commands">4.1.3. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Help</dt>
@@ -720,11 +740,11 @@ In the mode <code>log</code> mod mail threads will be logged into the post targe
 <p>Usage: <code>help [module/command]</code></p>
 </li>
 <li>
-<p>Description: If no parameter is provided, this will list the currently available modules. If the provided parameter matches the name of a module, information about that module is displayed.
-This information includes a description and the available commands of this module. If the provided parameter matches a command name, information about this command is displayed.
+<p>Description: If no parameter is provided, this will list the currently available modules and a short description. If the provided parameter matches the name of a module, information about that module is displayed.
+This information includes a description and the executable commands of this module. If the provided parameter matches a command name, information about this command is displayed.
 The module matching takes precedence over command matching.
-This information includes the a short description, a more detailed description, aliases (if any), parameters (if any), which roles are allowed to execute the command,
-or if it is not restricted and which effects a command has.</p>
+This information includes a short description, a more detailed description, aliases (if any), parameters (if any), which roles are allowed to execute the command,
+and which effects a command has</p>
 </li>
 </ul>
 </div>
@@ -737,7 +757,7 @@ or if it is not restricted and which effects a command has.</p>
 <p>Usage <code>setConfig &lt;key&gt; &lt;value&gt;</code></p>
 </li>
 <li>
-<p>Description: Changes the value of this configuration identified by <code>key</code> to <code>value</code>. Some of these configurations have separate commands, but this works in general.</p>
+<p>Description: Changes the value of this configuration identified by <code>key</code> to <code>value</code>. Some of these configurations have separate specific commands, but this works in general.</p>
 </li>
 <li>
 <p>Example: <code>setConfig expMin 15</code> to set the minimum experience to 15</p>
@@ -758,7 +778,7 @@ or if it is not restricted and which effects a command has.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Changing emotes Abstracto uses</dt>
+<dt class="hdlist1">Changing emotes the bot uses</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -766,8 +786,8 @@ or if it is not restricted and which effects a command has.</p>
 <p>Usage: <code>setEmote &lt;key&gt; &lt;emote&gt;</code></p>
 </li>
 <li>
-<p>Description: Sets the emote identified by <code>key</code> used by Abstracto on this server to <code>emote</code>.
-This allows both built in emotes and custom emotes, but Abstracto must be in the server of the custom emote in order to use them.</p>
+<p>Description: Sets the emote identified by <code>key</code> used by the bot on this server to <code>emote</code>.
+This allows both built in emotes and custom emotes, but the bot must be in the server of the custom emote in order to use them.</p>
 </li>
 </ul>
 </div>
@@ -780,7 +800,7 @@ This allows both built in emotes and custom emotes, but Abstracto must be in the
 <p>Usage: <code>clearCache</code></p>
 </li>
 <li>
-<p>Description: Clears the internal cache used by Abstracto. This mostly affects template changes directly done in the database.</p>
+<p>Description: Clears the internal cache used by the bot. This is mostly useful to update tempaltes when they were changed in the database.</p>
 </li>
 </ul>
 </div>
@@ -793,7 +813,7 @@ This allows both built in emotes and custom emotes, but Abstracto must be in the
 <p>Usage: <code>ping</code></p>
 </li>
 <li>
-<p>Description: Prints the latency of Abstracto to the Discord servers.</p>
+<p>Description: Prints the gateway ping of the bot to the Discord servers.</p>
 </li>
 </ul>
 </div>
@@ -832,11 +852,37 @@ This allows both built in emotes and custom emotes, but Abstracto must be in the
 <p>Usage: <code>posttarget &lt;key&gt; &lt;channel&gt;</code></p>
 </li>
 <li>
-<p>Description: Changes the given post target identified by <code>key</code> to the given channel. All messages using this post target will be send to this channel from now on.
+<p>Description: Changes the given post target identified by <code>key</code> to <code>channel</code>. All messages using this post target will be sent to this channel from now on.
 If neither <code>key</code> nor <code>channel</code> is given, this will print the currently available post targets and the channels they point to, if set.</p>
 </li>
 <li>
 <p>Example: <code>posttarget banLog #general</code> to log the bans in the #general channel.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Disabling a post target</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>disablePostTarget &lt;key&gt;</code></p>
+</li>
+<li>
+<p>Description: Disables the post target identified by <code>key</code> to not send any messages towards. Some features require a post target to be enabled, and have the option to throw an exception, others might just ignore it.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enabling a post target</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>enablePostTarget &lt;key&gt;</code></p>
+</li>
+<li>
+<p>Description: Enables the post target identified by <code>key</code> to not send any messages towards.</p>
 </li>
 </ul>
 </div>
@@ -862,7 +908,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>features</code></p>
 </li>
 <li>
-<p>Description: Lists the available features and whether or not they are enabled in this server.</p>
+<p>Description: Lists the available features and whether they are enabled in this server.</p>
 </li>
 </ul>
 </div>
@@ -875,7 +921,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>enableFeature &lt;key&gt;</code></p>
 </li>
 <li>
-<p>Description: Enables the feature identified by <code>key</code> in this server. If the feature dependents on other features, they will be enabled as well.</p>
+<p>Description: Enables the feature identified by <code>key</code> in this server. If the feature dependents on other features, they will be enabled as well. Any configuration which requires setup will be listed. In order to start a configuration wizard execute the command <code>setupFeature</code>.</p>
 </li>
 <li>
 <p>Example: <code>enableFeature moderation</code> to enable the moderation feature</p>
@@ -907,7 +953,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>createChannelGroup &lt;key&gt;</code></p>
 </li>
 <li>
-<p>Description: Creates a new channel group identified by <code>key</code>.</p>
+<p>Description: Creates a new channel group identified by <code>key</code>. There are different types of channel groups, depending on the features available. Per default <code>command</code> and <code>commandCoolDown</code> are available.</p>
 </li>
 <li>
 <p>Aliases: <code>+ChGroup</code></p>
@@ -977,7 +1023,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>disableCommand &lt;commandName&gt; &lt;groupName&gt;</code></p>
 </li>
 <li>
-<p>Description: Disables the command identified by <code>commandName</code> in the channel group <code>groupName</code>. A command is considered disabled in a specified channel, if the command is disabled in <strong>all</strong> the groups the channel is in.</p>
+<p>Description: Disables the command identified by <code>commandName</code> in the channel group <code>groupName</code>. A command is considered disabled in a specified channel, if the command is disabled in <strong>all</strong> the groups the channel is in. This requires the command to be added to this channel group first.</p>
 </li>
 <li>
 <p>Example: <code>disableCommand warn group1</code> to disable the command <code>warn</code> in the group <code>group1</code></p>
@@ -1001,7 +1047,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Showing all available channel groups and the respective channels</dt>
+<dt class="hdlist1">Showing all available channel groups</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -1009,23 +1055,10 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>listChannelGroups</code></p>
 </li>
 <li>
-<p>Description: Provides an overview of the currently available channel groups and which channels are in this channel group.</p>
+<p>Description: Provides an overview of the currently available channel groups, which channels are in the group, whether the group has been disabled and the type of the channel group.</p>
 </li>
 <li>
 <p>Aliases: <code>lsChGrp</code></p>
-</li>
-</ul>
-</div>
-</dd>
-<dt class="hdlist1">Removing role restrictions from a command</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Usage: <code>allow &lt;featureName|commandName&gt;</code></p>
-</li>
-<li>
-<p>Description: Allows everyone to execute all commands in this <code>feature</code>/the <code>command</code>. Which means, any restrictions concerning which role is able to execute a certain command is ignored even if it still shows in the help output.</p>
 </li>
 </ul>
 </div>
@@ -1035,10 +1068,10 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <div class="ulist">
 <ul>
 <li>
-<p>Usage: <code>allowRole  &lt;featureName|commandName&gt; &lt;role&gt;</code></p>
+<p>Usage: <code>allowRole &lt;featureName|commandName&gt; &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Allows the provided <code>role</code> to execute all commands in the <code>feature</code>/the <code>command</code>. This command automatically restricts the commands, which means, if it was unrestricted before, after executing this command only the provided role can execute the command.</p>
+<p>Description: Allows the provided <code>role</code> to execute all commands in the <code>feature</code>/the <code>command</code>. This command automatically restricts the commands (does the same as the command <code>restrict</code>), which means, if it was unrestricted before, after executing this command only the provided role can execute the command.</p>
 </li>
 <li>
 <p>Example: <code>allowRole moderation @Staff</code> to allow the role <code>Staff</code> to execute all commands in the <code>moderation</code> feature (where @Staff is a role mention)</p>
@@ -1046,7 +1079,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Forbidding a role to execute a command</dt>
+<dt class="hdlist1">Removing permission of a role to execute a command</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -1062,6 +1095,32 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 </ul>
 </div>
 </dd>
+<dt class="hdlist1">Enforce the role restrictions of commands</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>restrict &lt;featureName|commandName&gt;</code></p>
+</li>
+<li>
+<p>Description: Causes the role restrictions for all commands in the <code>feature</code>/the <code>command</code> to be in effect again.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Removing role restrictions from a command</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Usage: <code>allow &lt;featureName|commandName&gt;</code></p>
+</li>
+<li>
+<p>Description: Allows everyone to execute all commands in this <code>feature</code>/the <code>command</code>. Which means, any restrictions concerning which role is able to execute a certain command is ignored even if it still configured.</p>
+</li>
+</ul>
+</div>
+</dd>
 <dt class="hdlist1">Make a role affected by a command</dt>
 <dd>
 <div class="ulist">
@@ -1073,7 +1132,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Description: Makes the <code>role</code> affected by the <code>effect</code>.</p>
 </li>
 <li>
-<p>Example: <code>makeAffected ban @Staff</code> in order so the role <code>Staff</code> can be banned (where @Staff is a role mention)</p>
+<p>Example: <code>makeAffected ban @Staff</code> in order to the role <code>Staff</code> can be banned (where @Staff is a role mention)</p>
 </li>
 </ul>
 </div>
@@ -1089,7 +1148,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Description: Makes the <code>role</code> immune to <code>effect</code>.</p>
 </li>
 <li>
-<p>Example: <code>makeImmune ban @Staff</code> in order so the role <code>Staff</code> cannot be banned (where @Staff is a role mention)</p>
+<p>Example: <code>makeImmune ban @Staff</code> in order to the role <code>Staff</code> cannot be banned (where @Staff is a role mention)</p>
 </li>
 </ul>
 </div>
@@ -1107,19 +1166,6 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Enforce the role restrictions of commands</dt>
-<dd>
-<div class="ulist">
-<ul>
-<li>
-<p>Usage: <code>restrict &lt;featureName|commandName&gt;</code></p>
-</li>
-<li>
-<p>Description: Causes the role restrictions for a all commands in the <code>feature</code>/the <code>command</code> to be in effect again.</p>
-</li>
-</ul>
-</div>
-</dd>
 <dt class="hdlist1">Enabling a feature mode</dt>
 <dd>
 <div class="ulist">
@@ -1128,7 +1174,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>enableMode &lt;featureName&gt; &lt;mode&gt;</code></p>
 </li>
 <li>
-<p>Description: Enables the mode <code>mode</code> in feature <code>featureName</code>. If the enabled state of the feature <code>featureName</code> is part of the default config, it will no longer be default config that after executing <code>enableMode</code>.</p>
+<p>Description: Enables the mode <code>mode</code> in feature <code>featureName</code>. If the mode followed default configuration previously, it will not anymore after executing this command.</p>
 </li>
 </ul>
 </div>
@@ -1141,7 +1187,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>disableMode &lt;featureName&gt; &lt;mode&gt;</code></p>
 </li>
 <li>
-<p>Description: Disables the mode <code>mode</code> in feature <code>featureName</code>. If the enabled state of the feature <code>featureName</code> is part of the default config, it will no longer be default config after executing <code>disableMode</code>.</p>
+<p>Description: Disables the mode <code>mode</code> in feature <code>featureName</code>. If the mode followed default configuration previously, it will not anymore after executing this command.</p>
 </li>
 </ul>
 </div>
@@ -1151,10 +1197,10 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <div class="ulist">
 <ul>
 <li>
-<p>usage <code>featureModes [feature]</code></p>
+<p>Usage <code>featureModes [feature]</code></p>
 </li>
 <li>
-<p>Description: Lists all of the currently available feature modes and the feature they are associated with. If <code>feature</code> is given, it only lists the feature modes of this feature. The output also includes whether or not the current mode is enabled and if this value comes from the default configuration.</p>
+<p>Description: Lists all of the currently available feature modes and the feature they are associated with. If <code>feature</code> is given, it only lists the feature modes of this feature. The output also includes whether it is enabled and if this value comes from the default configuration.</p>
 </li>
 </ul>
 </div>
@@ -1167,7 +1213,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 <p>Usage: <code>setupFeature &lt;featureName&gt;</code></p>
 </li>
 <li>
-<p>Description: Starts an interactive wizard to configure the necessary properties and post targets of a feature. Also includes custom steps. Closes with a summary page to see all changes.</p>
+<p>Description: Starts an interactive wizard to configure the necessary configuration of a feature. Closes with a summary page to see all changes.</p>
 </li>
 </ul>
 </div>
@@ -1181,7 +1227,7 @@ If neither <code>key</code> nor <code>channel</code> is given, this will print t
 </li>
 <li>
 <p>Description: Allows the bot to use certain mentions. ´mentionType` can either be <code>everyone</code>, <code>role</code> or <code>user</code>. If @everyone is enabled, this also enables @here mentions.
-This change takes immediate effect and is only for the current server. Per default user and role mentions are enabled.</p>
+This change takes immediate effect and is only for the current server. Per default user and role mentions are enabled. This configuration can be overwritten on a template base.</p>
 </li>
 </ul>
 </div>
@@ -1195,7 +1241,7 @@ This change takes immediate effect and is only for the current server. Per defau
 </li>
 <li>
 <p>Description: Disallows the bot to use certain mentions. ´mentionType` can either be <code>everyone</code>, <code>role</code> or <code>user</code>. If @everyone is disabled, this also disables @here mentions.
-This change takes immediate effect and is only for the current server. Per default everyone/here mentions are disabled.</p>
+This change takes immediate effect and is only for the current server. Per default everyone/here mentions are disabled. This configuration can be overwritten on a template base.</p>
 </li>
 </ul>
 </div>
@@ -1221,7 +1267,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>getTemplate &lt;templateKey&gt;</code></p>
 </li>
 <li>
-<p>Description: Loads the current global template identified by <code>templateKey</code> and returns the content as an attached file to the response of the command.</p>
+<p>Description: Loads the current global template identified by <code>templateKey</code> and returns the content as an attached file..</p>
 </li>
 </ul>
 </div>
@@ -1234,7 +1280,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>getCustomTemplate &lt;templateKey&gt;</code></p>
 </li>
 <li>
-<p>Description: Loads the current customized tempalte identified by <code>templateKey</code> and returns the content as an attached file to the response of the command. Shows an error message, if there exists no customized template for this server for the provided <code>templateKey</code>.</p>
+<p>Description: Loads the current customized template identified by <code>templateKey</code> and returns the content as an attached file.</p>
 </li>
 </ul>
 </div>
@@ -1273,7 +1319,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage <code>createAlias &lt;commandName&gt; &lt;alias&gt;</code></p>
 </li>
 <li>
-<p>Description: Creates the server specific alias for command <code>commandName</code> identified by <code>alias</code>. This means that from now on, users can use the command identified by <code>commandName</code> by using <code>alias</code> in its place, when executing the command or when using the help command. This alias is only available in this server, and it is not allowed to use the names of existing commands or pre-defined aliases. In case such an alias is used as <code>alias</code>, an error message is shown.</p>
+<p>Description: Creates the server specific alias for command <code>commandName</code> identified by <code>alias</code>. This means that from now on, users can use the command identified by <code>commandName</code> by using <code>alias</code> in its place, when executing the command or when using the help command. This alias is only available in this server, and it is not allowed to use the names of existing commands or built-in aliases.</p>
 </li>
 </ul>
 </div>
@@ -1286,7 +1332,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>deleteAlias &lt;alias&gt;</code></p>
 </li>
 <li>
-<p>Description: Deletes the server specific alias identified by <code>alias</code>. It is not possible to delete pre-defined aliases. If <code>alias</code> does not exist, an error message is shown.</p>
+<p>Description: Deletes the server specific alias identified by <code>alias</code>. It is not possible to delete built-in aliases.  Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -1312,7 +1358,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>addProfanityRegex &lt;profanityGroupName&gt; &lt;profanityName&gt; &lt;regex&gt; [replacement]</code></p>
 </li>
 <li>
-<p>Description: Adds a profanity regex identified by <code>profanityName</code> to the profanity group identified by <code>profanityGroupName</code>. The regex to be used is in <code>regex</code>. Depending on how the regex is used, you can define a <code>replacement</code>, with which a found text will be replaced. The <code>profanityName</code> must be unique within the profanity group.</p>
+<p>Description: Adds a profanity regex <code>profanityName</code> to the profanity group <code>profanityGroupName</code>. The regex to be used is in <code>regex</code>. Depending on how the regex is used, you can define a <code>replacement</code>, with which a found text can be replaced. The <code>profanityName</code> must be unique within the profanity group.</p>
 </li>
 </ul>
 </div>
@@ -1338,7 +1384,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>removeProfanityRegex &lt;profanityGroupName&gt; &lt;profanityName&gt;</code></p>
 </li>
 <li>
-<p>Description: Removes the profanity regex identified by <code>profanityName</code> from the profanity group identified by <code>profanityGroupName</code>.</p>
+<p>Description: Removes the profanity regex <code>profanityName</code> from the profanity group <code>profanityGroupName</code>.</p>
 </li>
 </ul>
 </div>
@@ -1377,7 +1423,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>addCommandToChannelGroup &lt;channelGroupName&gt; &lt;commandName&gt;</code></p>
 </li>
 <li>
-<p>Description: Adds the command <code>commandName</code> to the channel group <code>channelGroupName</code>. This can be used to add the command to a channel group which can disable the command or set a cooldown on the command.</p>
+<p>Description: Adds the command <code>commandName</code> to the channel group <code>channelGroupName</code>. This can be used in various channel group types to customize how these commands behave in the respective channels. For example per default there are channel group types to define whether a command is disabled or the cooldown thereof.</p>
 </li>
 </ul>
 </div>
@@ -1416,7 +1462,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>removeCommandFromChannelGroup &lt;channelGroupName&gt; &lt;commandName&gt;</code></p>
 </li>
 <li>
-<p>Description: Removes the command <code>commandName</code> from the channel group <code>channelGroupName</code>. This can be used to remove the command from a channel group which can enable the command or remove a cooldown on the command.</p>
+<p>Description: Removes the command <code>commandName</code> from the channel group <code>channelGroupName</code>.</p>
 </li>
 </ul>
 </div>
@@ -1442,8 +1488,7 @@ This change takes immediate effect and is only for the current server. Per defau
 <p>Usage: <code>commandCoolDownChannelGroup &lt;channelGroupName&gt; &lt;channelDuration&gt; &lt;memberDuration&gt;</code></p>
 </li>
 <li>
-<p>Description: Sets the cooldown of the commands of the channel group <code>channelGroupName</code> to <code>channelDuration</code> for the channel group
-and <code>memberDuration</code> for each member.</p>
+<p>Description: Sets the cooldown of the commands in the channel group <code>channelGroupName</code> to <code>channelDuration</code> and <code>memberDuration</code> for each member.</p>
 </li>
 </ul>
 </div>
@@ -1469,18 +1514,18 @@ and <code>memberDuration</code> for each member.</p>
 These feature modes influence the availability of commands or general behavior of features.</p>
 </div>
 <div class="paragraph">
-<p>An example of a feature mode is mod mail logging: If the feature mode <code>log</code> of mod mail is disabled, no thread will be logged and the separate command <code>closeNoLog</code> will not be available in the first place, because it will behave the same as the normal <code>close</code> command.
+<p>An example of a feature mode is mod mail logging: If the feature mode <code>log</code> of mod mail is disabled, no thread will be logged and the separate command <code>closeNoLog</code> will not be available at all, because it will behave the same as the normal <code>close</code> command.
 If the feature mode is enabled, the messages from the thread are logged in the respective post target and the command will be available.</p>
 </div>
 <div class="paragraph">
 <div class="title">What is a profanity group?</div>
 <p>A profanity group is just a container for various regexes. They are grouped together in order to be identified together and kept organized.
-Each profanity regex within that group has another identified. For example a regex group handles the word 'test'. Then a profanity regex is for all lower cases, this regex can be named 'lower', and the regex group is then named 'test'.</p>
+Each profanity regex within that group has an additional identifier. For example a profanity group can be used to detect a particular word, but there are different profanities which would detect various possibilities for that one word. This helps reduce the complexity of individual regexes.</p>
 </div>
 <div class="paragraph">
 <div class="title">How do multiple cooldowns interact</div>
-<p>If there are multiple cooldowns on a command active, the longest cooldown will decide the cool down.
-A channel cannot be in multiple cool down channel groups and this is actively enforced by the command.
+<p>If there are multiple cooldowns on a command active, the longest cooldown will decide the cooldown.
+A channel cannot be in multiple cooldown channel groups at once and this is actively enforced by the command.
 If a cooldown is active, an error message is shown with the duration after which the command can be used again.</p>
 </div>
 </div>
@@ -1500,7 +1545,7 @@ If a cooldown is active, an error message is shown with the duration after which
 </dd>
 <dt class="hdlist1"><code>unBanLog</code></dt>
 <dd>
-<p>target of the message notifying about un-bans, both via command and via UI. Will still ban if not setup.</p>
+<p>target of the message notifying about un-bans, both via command and via UI. Will still unban if not setup.</p>
 </dd>
 <dt class="hdlist1"><code>kickLog</code></dt>
 <dd>
@@ -1522,7 +1567,7 @@ If a cooldown is active, an error message is shown with the duration after which
 </li>
 <li>
 <p>Description:
-Bans the given <code>member</code> with the given optional <code>reason</code>. This sends a logging message to the <code>banLog</code> post target.
+Bans <code>member</code> with the given <code>reason</code>. This sends a logging message to the <code>banLog</code> post target.
 Banning this way does not delete old messages of the member on the server.
 It is also possible to ban users via ID, if they are not part of the server anymore.</p>
 </li>
@@ -1570,7 +1615,7 @@ It is also possible to ban users via ID, if they are not part of the server anym
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Change the slow mode in a channel</dt>
+<dt class="hdlist1">Change slowmode in a channel</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -1581,7 +1626,7 @@ It is also possible to ban users via ID, if they are not part of the server anym
 <p>Description: This command sets the slow mode in the <code>channel</code> to the given <code>duration</code>. This command uses duration parsing. The <code>channel</code> is optional and if none is provided, the current channel is used.</p>
 </li>
 <li>
-<p>Example: <code>slowMode 1h2m3s #general</code> in order to set the slow mode in channel <code>general</code> to 1 hour 2 minutes and 3 seconds (the #general is a user mention)</p>
+<p>Example: <code>slowMode 1h2m3s #general</code> in order to set the slow mode in channel <code>general</code> to 1 hour 2 minutes and 3 seconds (the #general is a channel mention)</p>
 </li>
 </ul>
 </div>
@@ -1665,7 +1710,7 @@ While the command is ongoing, a status update message will be shown indicating h
 </li>
 <li>
 <p>Description: Warns the <code>member</code> with the given <code>reason</code> or a default one, if none is provided. This command sends a log message to the <code>warnLog</code> post
-target and notifies the member about the warn.</p>
+target and notifies the member about the warning.</p>
 </li>
 <li>
 <p>Example: <code>warn @Member bad</code> in order to warn <code>Member</code> with the reason <code>bad</code> (the @Member is a user mention)</p>
@@ -1708,7 +1753,7 @@ This uses a paginated output, which means multiple pages in case there are more 
 <p>Usage: <code>decayAllWarnings</code></p>
 </li>
 <li>
-<p>Description: This will cause all warnings of this server which are not decayed yet to be decayed instantly.</p>
+<p>Description: This will cause all warnings of this server which are not decayed yet to be decayed instantly. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -1739,7 +1784,7 @@ This uses a paginated output, which means multiple pages in case there are more 
 <p>Feature key: <code>warnDecay</code></p>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration">4.4.1. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_2">4.4.1. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>decayDays</code> The amount of days after which a warning gets decayed. Default: 90</p>
 </div>
@@ -1778,7 +1823,7 @@ This uses a paginated output, which means multiple pages in case there are more 
 <p>Usage: <code>decayWarnings</code></p>
 </li>
 <li>
-<p>Description: Triggers the decay of the warnings instantly, which means, every not decayed warning on this server older than the configured amount of days will be decayed and the decay will be logged.</p>
+<p>Description: Triggers the decay of the warnings instantly, which means, every not decayed warning on this server older than the configured amount of days will be decayed and the decay will be logged. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -1792,7 +1837,7 @@ This uses a paginated output, which means multiple pages in case there are more 
 <div class="paragraph">
 <p>This feature provides the capability to mute users, which effectively means it applies a role which prevents them from sending messages and speaking in voice chat.
 The role used to mute member will not be created and needs to be provided. There is no validation if the provided role actually mutes members.
-If the user leaves the guild and rejoins, the mute role will be re-applied.</p>
+If the user leaves the guild and rejoins, the mute will be re-applied.</p>
 </div>
 <div class="paragraph">
 <p>Feature key <code>muting</code></p>
@@ -1839,8 +1884,7 @@ If the user leaves the guild and rejoins, the mute role will be re-applied.</p>
 <p>Usage: <code>mute &lt;member&gt; &lt;duration&gt; [reason]</code></p>
 </li>
 <li>
-<p>Description: Applies the mute role to the given <code>member</code> for the given <code>duration</code>. If <code>reason</code> is not provided, a default reason will be used for logging in the <code>muteLog</code> post target.  This will automatically
-un-mute the user after the duration has passed. If the un-mute happens automatically, this will also be logged in the <code>muteLog</code> post target.
+<p>Description: Applies the mute role to the given <code>member</code> for the given <code>duration</code>. If <code>reason</code> is not provided, a default reason will be used for logging in the <code>muteLog</code> post target.  This will automatically un-mute the user after the duration has passed. If the un-mute happens automatically, this will also be logged in the <code>muteLog</code> post target.
 This command sends a notification to the user about the mute and kicks the user from the voice channel, if any.</p>
 </li>
 <li>
@@ -1857,7 +1901,7 @@ This command sends a notification to the user about the mute and kicks the user 
 <p>Usage: <code>unMute &lt;member&gt;</code></p>
 </li>
 <li>
-<p>Description: Removes the mute role from the given member. This does <strong>not</strong> log the un-mute.</p>
+<p>Description: Removes the mute role from <code>member</code>. This does <strong>not</strong> log the un-mute.</p>
 </li>
 </ul>
 </div>
@@ -1870,7 +1914,7 @@ This command sends a notification to the user about the mute and kicks the user 
 <p>Usage: <code>setMuteRole &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Sets the  <code>role</code> to be used as the role when applying a mute. This role needs to be muting, which means, if you want it to be effective, this role needs to deny <code>MESSAGE_WRITE</code>. Abstracto does not validate nor require the role to actually mute.
+<p>Description: Sets the  <code>role</code> to be used as the role when applying a mute. This role needs to be muting, which means, if you want it to be effective, this role needs to deny <code>MESSAGE_WRITE</code>. The bot does not validate nor require the role to actually mute.
 Only <strong>one</strong> role can be used as a mute role.</p>
 </li>
 </ul>
@@ -1883,8 +1927,7 @@ Only <strong>one</strong> role can be used as a mute role.</p>
 <div class="sect2">
 <h3 id="_logging">4.6. Logging</h3>
 <div class="paragraph">
-<p>This feature provides a range of utilities to monitor the server.
-The logging includes:</p>
+<p>This feature provides a range of utilities to monitor the server.</p>
 </div>
 <div class="paragraph">
 <p>Feature key <code>logging</code></p>
@@ -1903,11 +1946,11 @@ The logging includes:</p>
 </dd>
 <dt class="hdlist1"><code>joinLog</code></dt>
 <dd>
-<p>target for the messages containing information about an user joining the server.</p>
+<p>target for the messages containing information about a user joining the server.</p>
 </dd>
 <dt class="hdlist1"><code>leaveLog</code></dt>
 <dd>
-<p>target or the messages containing information about an user leaving the server.</p>
+<p>target or the messages containing information about a user leaving the server.</p>
 </dd>
 <dt class="hdlist1">Deleted message logging</dt>
 <dd>
@@ -1915,16 +1958,16 @@ The logging includes:</p>
 </dd>
 <dt class="hdlist1">Edited message logging</dt>
 <dd>
-<p>When a message is edited, the previous content of the message and the new content of the message will be logged.
-This does not work if the message was sent before the bot was started.</p>
+<p>When a message is edited, the previous content of the message, and the new content of the message will be logged.
+This does not work if the message was sent before the bot was started or was very old.</p>
 </dd>
 <dt class="hdlist1">Member joining logging</dt>
 <dd>
-<p>When a member joins the guild, a message indicating this is send.</p>
+<p>When a member joins the guild, a message indicating this is sent.</p>
 </dd>
 <dt class="hdlist1">Member leaving logging</dt>
 <dd>
-<p>When a member leaves the guild, a message indicating this is send.</p>
+<p>When a member leaves the guild, a message indicating this is sent.</p>
 </dd>
 </dl>
 </div>
@@ -2015,7 +2058,7 @@ Another feature mode can send a notification to a post target in case an invite 
 </dd>
 <dt class="hdlist1"><code>filterNotifications</code></dt>
 <dd>
-<p>if enabled, sends a notification to the <code>inviteDeleteLog</code> post target in case a message was deleted because of an invite. This notification contains the detected invite link(s), the author and a link to where the message was. Enabled by default.</p>
+<p>if enabled, sends a notification to the <code>inviteDeleteLog</code> post target in case a message was deleted because of an invite. This notification contains the detected invite link(s), the author, the guild name (if possible) and a link to where the message was. Enabled by default.</p>
 </dd>
 </dl>
 </div>
@@ -2058,7 +2101,7 @@ Another feature mode can send a notification to a post target in case an invite 
 <p>Usage: <code>showTrackedInviteLinks [amount]</code></p>
 </li>
 <li>
-<p>Description: Shows the invites which were used and deleted on the server ordered by the amount of times they were deleted. The <code>amount</code> can be used to define how many invite links to display. The default is the top 5.</p>
+<p>Description: Shows the invites which were deleted from the server ordered by the amount of times they were deleted. The <code>amount</code> can be used to define how many invite links to display. The default is the top 5.</p>
 </li>
 <li>
 <p>Mode Restriction: This command is only available when the feature mode <code>trackUses</code> is enabled.</p>
@@ -2074,7 +2117,7 @@ Another feature mode can send a notification to a post target in case an invite 
 <p>Usage: <code>removeTrackedInviteLinks [invite]</code></p>
 </li>
 <li>
-<p>Description: Removes the stored statistic for the given <code>invite</code>. In case <code>invite</code> is not given, it will delete all tracked filtered invites from the server.</p>
+<p>Description: Removes the stored statistic for the given <code>invite</code>. In case <code>invite</code> is not given, it will delete all tracked filtered invites from the server. Requires you to confirm the command.</p>
 </li>
 <li>
 <p>Mode Restriction: This command is only available when the feature mode <code>trackUses</code> is enabled.</p>
@@ -2092,7 +2135,8 @@ Another feature mode can send a notification to a post target in case an invite 
 <p>Feature key <code>profanityFilter</code></p>
 </div>
 <div class="paragraph">
-<p>This functionality provides the ability to automatically delete any detected profanities. These profanities are configured via the profanity groups and profanity regexes. Every group in these groups are active and every profanity regex will be evaluated and (depending on the feature mode) reported to be voted on.
+<p>This functionality provides the ability to automatically delete any detected profanities. These profanities are configured via the profanity groups and profanity regexes.
+It is possible to use a voting process to validate a reported profanity.
 The uses of profanities can be tracked and a command is available to show the profanities for a user.</p>
 </div>
 <div class="sect3">
@@ -2174,10 +2218,10 @@ The uses of profanities can be tracked and a command is available to show the pr
 </div>
 <div class="paragraph">
 <p>This functionality is used to report user by members via adding a reaction to a message. This message is then send to the post target <code>reactionReports</code>
-notifying the moderation of the server. Additional reports of the same user, within the cooldown defined by system config <code>reactionReportCooldownSeconds</code> in seconds, increment the report counter instead of adding another notification. A reporting user also cannot report another user within a time range defined by the same system config.</p>
+notifying the moderation of the server. Additional reports of the same user, within the cooldown defined by system config <code>reactionReportCooldownSeconds</code> (in seconds), increment the report counter instead of adding another notification. A reporting user cannot report another user within a time range defined by the same system config.</p>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_2">4.10.1. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_3">4.10.1. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>reactionReportCooldownSeconds</code> The amount of seconds between the reports to create a new report for a user. The amount of seconds necessary for a new report of a user to be reported again. Default: 300</p>
 </div>
@@ -2225,7 +2269,7 @@ This functionality will automatically mute a member who mentions more than a con
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_3">4.11.2. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_4">4.11.2. Relevant system configuration</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>massPingMinLevel</code></dt>
@@ -2237,9 +2281,44 @@ This functionality will automatically mute a member who mentions more than a con
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mod_mail">4.12. Mod mail</h3>
+<h3 id="_tracking_general_infractions">4.12. Tracking general infractions</h3>
 <div class="paragraph">
-<p>This feature enables users to contact the moderation of the server in a private manner. This can be initiated by messaging the Abstracto bot.
+<p>Feature key <code>infractions</code></p>
+</div>
+<div class="paragraph">
+<p>This functionality just behaves to track general infractions of users, be it through the means of warnings or mutes. Currently, its very limited and only can be used to configure levels of infractions and certain points for various infractions, which will be tracked and stored.</p>
+</div>
+<div class="sect3">
+<h4 id="_post_targets_10">4.12.1. Post targets</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>infractionNotification</code></dt>
+<dd>
+<p>target for notifications of infraction level changes</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_relevant_system_configuration_5">4.12.2. Relevant system configuration</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>infractionLevels</code></dt>
+<dd>
+<p>The amount of infraction levels which should be possible to configure</p>
+</dd>
+<dt class="hdlist1"><code>infractionLevel</code></dt>
+<dd>
+<p>This system config key acts as a prefix up until the amount of infraction levels. With this you can configure the amount of points necessary to reach the given level: For example <code>infractionLevel2</code> would be the amount of points necessary to reach level 2. These levels are not enforced to be ordered nor if all levels have a value assigned to it. Any level evaluation will stop at the first level not defined.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mod_mail">4.13. Mod mail</h3>
+<div class="paragraph">
+<p>This feature enables users to contact the moderation of the server in a private manner. This can be initiated by messaging the bot.
 The messages, in the channel which is created to contain the mod mail thread, are not automatically sent to the user, but only when using the commands
 <code>reply</code> or <code>anonReply</code>. Any other message is ignored with the intention of enabling discussions within the channel. In case the message of a message sent to the user
 needs to be updated or deleted, you can do simply by editing/deleting the message containing the command.</p>
@@ -2248,20 +2327,20 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 <p>Feature key: <code>modmail</code></p>
 </div>
 <div class="sect3">
-<h4 id="_necessary_bot_permissions">4.12.1. Necessary bot permissions</h4>
+<h4 id="_necessary_bot_permissions">4.13.1. Necessary bot permissions</h4>
 <div class="paragraph">
 <p><code>MANAGE_CHANNEL</code> to create the channels representing the mod mail threads</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_workflow">4.12.2. Workflow</h4>
+<h4 id="_workflow">4.13.2. Workflow</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>User messages the Abstracto bot</p>
+<p>User messages the bot</p>
 </li>
 <li>
-<p>If Abstracto is active in multiple servers with mod mail enabled, the user is prompted to which server he wants to open a mod mail thread for.</p>
+<p>If the bot is active in multiple servers with mod mail enabled, the user is prompted to which server they want to open a mod mail thread for.</p>
 </li>
 <li>
 <p>A channel in the mod mail category is created for the user and notification is sent that a new mod mail thread has been opened</p>
@@ -2270,7 +2349,7 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 <p>User can send messages in the private channel and they get relayed to this created text channel.</p>
 </li>
 <li>
-<p>Moderators can answer in the thread with the respective commands</p>
+<p>Moderators can answer in the thread with the commands</p>
 </li>
 <li>
 <p>Moderators close the thread</p>
@@ -2282,7 +2361,7 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_4">4.12.3. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_6">4.13.3. Relevant system configuration</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>modmailCategory</code></dt>
@@ -2297,7 +2376,7 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_targets_10">4.12.4. Post targets</h4>
+<h4 id="_post_targets_11">4.13.4. Post targets</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>modmailPing</code></dt>
@@ -2312,23 +2391,22 @@ needs to be updated or deleted, you can do simply by editing/deleting the messag
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_6">4.12.5. Feature modes</h4>
+<h4 id="_feature_modes_6">4.13.5. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>log</code></dt>
 <dd>
-<p>If this is enabled, the messages should be logged into the <code>modmailLog</code> post target when the thread is closed (by the respective commands). This is required for the command <code>closeNoLog</code> to be available. Enabled by default.</p>
+<p>If this is enabled, the messages should be logged into the <code>modmailLog</code> post target when the thread is closed (by the respective commands). Makes the command <code>closeNoLog</code> available. Enabled by default.</p>
 </dd>
 <dt class="hdlist1"><code>threadMessage</code></dt>
 <dd>
-<p>If this is enabled, every message which is send via the commands <code>reply</code> and <code>anonReply</code> will also be sent to the thread in order to have a visualizer how the message looks
-and to have a clear indication which messages were sent. Enabled by default.</p>
+<p>If this is enabled, every message which is sent via the commands <code>reply</code> and <code>anonReply</code> will also be sent to the thread in order to have a visualizer how the message looks and to have a clear indication which messages were sent. Enabled by default.</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_emotes_4">4.12.6. Emotes</h4>
+<h4 id="_emotes_4">4.13.6. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2338,7 +2416,7 @@ and to have a clear indication which messages were sent. Enabled by default.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_9">4.12.7. Commands</h4>
+<h4 id="_commands_9">4.13.7. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Opening a mod mail thread for a user</dt>
@@ -2388,7 +2466,7 @@ and to have a clear indication which messages were sent. Enabled by default.</p>
 <p>Usage: <code>setModMailCategory &lt;categoryId&gt;</code></p>
 </li>
 <li>
-<p>Description: Sets the category which Abstracto uses to create the text channels containing the mod mail threads. The existing threads will not be migrated automatically.</p>
+<p>Description: Sets the category which the bot uses to create the text channels for mod mail threads. The existing threads will not be migrated automatically.</p>
 </li>
 </ul>
 </div>
@@ -2417,7 +2495,7 @@ The following commands are only available within a mod mail thread.
 <p>Usage <code>reply [text]</code></p>
 </li>
 <li>
-<p>Description: Sends <code>text</code> to the user if provided. <code>text</code> is optional, because its also possible to only send a picture.</p>
+<p>Description: Sends <code>text</code> to the user if provided. <code>text</code> is optional, because it is also possible to only send an image.</p>
 </li>
 </ul>
 </div>
@@ -2430,7 +2508,7 @@ The following commands are only available within a mod mail thread.
 <p>Usage: <code>anonReply [text]</code></p>
 </li>
 <li>
-<p>Description: Sends <code>text</code> to the user without showing how is the author. Instead the avatar and name of Abstracto will be used.</p>
+<p>Description: Sends <code>text</code> to the user without showing how is the author, but using the avatar and name of the bot.</p>
 </li>
 </ul>
 </div>
@@ -2443,7 +2521,7 @@ The following commands are only available within a mod mail thread.
 <p>Usage: <code>subscribe</code></p>
 </li>
 <li>
-<p>Description: Subscribes you to the current thread, and will ping you when a new message from the member arrives.</p>
+<p>Description: Subscribes you to the current thread, and will ping you when a new message from the member is received.</p>
 </li>
 </ul>
 </div>
@@ -2456,7 +2534,7 @@ The following commands are only available within a mod mail thread.
 <p>Usage: <code>unSubscribe</code></p>
 </li>
 <li>
-<p>Description: Removes your subscription from the current thread, and you will no longer be notified when a message from the member arrives.</p>
+<p>Description: Removes your subscription from the current thread, and you will no longer be notified when a message from the member is received.</p>
 </li>
 </ul>
 </div>
@@ -2469,9 +2547,8 @@ The following commands are only available within a mod mail thread.
 <p>Usage: <code>close [note]</code></p>
 </li>
 <li>
-<p>Description: Closes the thread, deletes the text channel containing the thread and logs the interactions between the member and the moderators in the <code>modmailLog</code> post target. (only if <code>modmail_logging</code> is enabled)
-When closing a thread, a closing header with general information will be send and the note will be displayed there.
-When a thread is closed this way the user is notified of this.</p>
+<p>Description: Closes the thread, deletes the text channel containing the thread and logs the interactions between the member and the moderators in the <code>modmailLog</code> post target. (only if <code>log</code> is enabled)
+When closing a thread, a closing header with general information will be sent and the note will be displayed there. Closing with this command notifies the user.</p>
 </li>
 </ul>
 </div>
@@ -2484,8 +2561,8 @@ When a thread is closed this way the user is notified of this.</p>
 <p>Usage: <code>closeSilently [note]</code></p>
 </li>
 <li>
-<p>Description: Closes the thread, deletes the text channel containing the thread and logs the interactions between the member and the moderators in the <code>modmailLog</code> post target. (only if <code>modmail_logging</code> is enabled)
-When closing a thread, a closing header with general information will be send and the note will be displayed there.</p>
+<p>Description: Closes the thread, deletes the text channel containing the thread and logs the interactions between the member and the moderators in the <code>modmailLog</code> post target. (only if <code>log</code> is enabled)
+When closing a thread, a closing header with general information will be send and the note will be displayed there. Closing with this command will <strong>not</strong> notify the user.</p>
 </li>
 </ul>
 </div>
@@ -2495,20 +2572,20 @@ When closing a thread, a closing header with general information will be send an
 </div>
 </div>
 <div class="sect2">
-<h3 id="_experience_tracking">4.13. Experience tracking</h3>
+<h3 id="_experience_tracking">4.14. Experience tracking</h3>
 <div class="paragraph">
 <p>This feature contains the ability to track experience of users on the server and award roles based on the level they reach.
 The experience is awarded once per minute and is calculated by \$`\text{rand}(\text{minExp}, \text{maxExp}) * \text{expScale}`\$.
-Only one role is awarded at a time and the past unlocked roles are not given to the members.</p>
+Currently members only have their highest earned role assigned.</p>
 </div>
 <div class="sect3">
-<h4 id="_necessary_bot_permissions_2">4.13.1. Necessary bot permissions</h4>
+<h4 id="_necessary_bot_permissions_2">4.14.1. Necessary bot permissions</h4>
 <div class="paragraph">
 <p><code>MANAGE_ROLES</code> in order to award members with roles</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_5">4.13.2. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_7">4.14.2. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>minExp</code> The lower bound of the awarded base experience. Default: 10.</p>
 </div>
@@ -2520,7 +2597,7 @@ Only one role is awarded at a time and the past unlocked roles are not given to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_10">4.13.3. Commands</h4>
+<h4 id="_commands_10">4.14.3. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Changing the experience scale of the server</dt>
@@ -2536,7 +2613,7 @@ Only one role is awarded at a time and the past unlocked roles are not given to 
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Showing the leader board of the server</dt>
+<dt class="hdlist1">Showing the leaderboard of the server</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2544,10 +2621,10 @@ Only one role is awarded at a time and the past unlocked roles are not given to 
 <p>Usage: <code>leaderboard [page]</code></p>
 </li>
 <li>
-<p>Description: Shows the leader board of the server in a paginated format. This does not use the interactive pagination.
-If no parameter is provided, it will show the top 10 members and their message count, level, experience and rank.
-Additionally, the same information for the user executing is shown, regardless whether or not the user is already shown on the given leader board page.
-If a <code>page</code> is provided, it will display the leader board of the ranks <code>page * 10</code> until  <code>(page + 1) * 10</code> instead. If <code>page</code> is beyond the member count, the last members are shown.</p>
+<p>Description: Shows the leaderboard of the server in a paginated format.
+If no parameter is provided, it will show message count, level, experience and rank of the top 10 members.
+Additionally, the same information for the executing user is shown, regardless whether or not the user is already shown on the given leader board page.
+If a <code>page</code> is provided, it will display the leaderboard of the ranks <code>page * 10</code> until  <code>(page + 1) * 10</code> instead. If <code>page</code> is beyond the member count, the last members are shown.</p>
 </li>
 </ul>
 </div>
@@ -2562,8 +2639,7 @@ If a <code>page</code> is provided, it will display the leader board of the rank
 <li>
 <p>Description: Sets <code>role</code> to be awarded at the given <code>level</code>. If the role was previously assigned,
 this will cause to remove this assignment and recalculate the roles for all users previously having this role.
-This command will provide a status message indicating this process.
-This will not award this role to users which qualify for this, a <code>syncRoles</code> is necessary for this.</p>
+A status image indicating the progress will be shown. It will not award this role to users which qualify for this, a <code>syncRoles</code> is necessary for this.  Requires you to confirm the command.</p>
 </li>
 <li>
 <p>Example: <code>setExpRole 50 @HighLevel</code> in order to award the role <code>HighLevel</code> at level <code>50</code> (the @HighLevel is a role mention)</p>
@@ -2580,7 +2656,7 @@ This will not award this role to users which qualify for this, a <code>syncRoles
 </li>
 <li>
 <p>Description: Recalculates the appropriate levels for all users on the server and awards the roles appropriate for the level.
-There will be a message indicating the current status of the progress and it is highly advised to not execute this command while another instance is still processing.
+There will be a message indicating the current status of the progress, and it is highly advised to not execute this command while another instance is still processing. Requires you to confirm the command.
 This command can run for a longer period of time, depending on the amount of members in the guild.</p>
 </li>
 </ul>
@@ -2594,7 +2670,7 @@ This command can run for a longer period of time, depending on the amount of mem
 <p>Usage: <code>unSetExpRole &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Removes this role from the experience tracking, removes the role from all members previously owning it and recalculates their new role according to the configuration.
+<p>Description: Removes this role from the experience tracking, removes the role from all members previously owning it and recalculates their new role according to the configuration. Requires you to confirm the command.
 This will provide a status update message displaying the process.</p>
 </li>
 </ul>
@@ -2622,7 +2698,7 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 <p>Usage: <code>enableExpForRole &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Enables experience gain for members with this role again.</p>
+<p>Description: Enables experience gain for <code>role</code>.</p>
 </li>
 </ul>
 </div>
@@ -2635,7 +2711,7 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 <p>Usage: <code>listDisabledExperienceRoles</code></p>
 </li>
 <li>
-<p>Description: Lists the roles for which experience gain is disabled on this server.</p>
+<p>Description: Lists the roles for which experience gain is disabled in this server.</p>
 </li>
 <li>
 <p>Aliases: <code>lsDisEpRoles</code></p>
@@ -2643,7 +2719,7 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Disable experience gain for specific member</dt>
+<dt class="hdlist1">Disable experience gain for a specific member</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2651,12 +2727,12 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 <p>Usage: <code>disableExpGain &lt;member&gt;</code></p>
 </li>
 <li>
-<p>Description: Disables the ability to gain experience for this certain member.</p>
+<p>Description: Disables experience gain fpr <code>member</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Enable experience gain for specific member</dt>
+<dt class="hdlist1">Enable experience gain for a specific member</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2664,7 +2740,7 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 <p>Usage: <code>enableExpGain &lt;member&gt;</code></p>
 </li>
 <li>
-<p>Description: Enables the ability to gain experience for this certain member.</p>
+<p>Description: Enables experience gain for <code>member</code>.</p>
 </li>
 </ul>
 </div>
@@ -2687,25 +2763,25 @@ If a member has <strong>any</strong> role of the ones for which experience is di
 </div>
 </div>
 <div class="sect2">
-<h3 id="_assignable_roles">4.14. Assignable roles</h3>
+<h3 id="_assignable_roles">4.15. Assignable roles</h3>
 <div class="paragraph">
-<p>This feature enables creating and maintaining so-called 'assignable role places'. These places are messages at which buttons are added, and when a member clicks such a button, a configured role, is assigned to the user.
-A place can be disabled, which causes the buttons to become disabled. Such places can be made 'unique', which means that users can only have one role available in the place.</p>
+<p>This feature enables creating and maintaining so-called 'assignable role places' (ARP). These places are messages at which buttons are added, and when a member clicks such a button, a configured role is assigned to the user.
+A place can be disabled, which causes the buttons to become disabled. Such places can be made 'unique', which means that users can only have one role assigned at one point in time.</p>
 </div>
 <div class="paragraph">
-<p>An assignable role place can have a type. This type can either be <code>DEFAULT</code>, or <code>BOOSTER´. The `BOOSTER</code> type comes with special functionalities: if a member clicked a button, it will evaluate whether the member has boosted the server and reject if not. There is also functionality to automatically remove the assigned roles for members who stopped boosting.</p>
+<p>There exist different types of ARPs: <code>DEFAULT</code>, or <code>BOOSTER´. The `BOOSTER</code> type comes with special functionalities: if a member clicked a button, the bot will evaluate whether the member has boosted the server and reject if not. These 'booster assigned roles' will be removed once the member stopped boosting.</p>
 </div>
 <div class="paragraph">
-<p>Deleting the actual role behind an assignable role causes the assignable role place to become non-functional: the button will remain and can still be clicked, but users will receive an error message.</p>
+<p>Deleting the actual role behind an assignable role causes the assignable role place to become non-functional: the button will remain and can still be clicked, but users will receive an error message. In this case you can remove such a role via the command <code>removeRoleFromAssignableRolePlace</code>.</p>
 </div>
 <div class="paragraph">
 <p>Feature key: <code>assignableRole</code></p>
 </div>
 <div class="sect3">
-<h4 id="_commands_11">4.14.1. Commands</h4>
+<h4 id="_commands_11">4.15.1. Commands</h4>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Create a new assignable role place</dt>
+<dt class="hdlist1">Create a new ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2714,12 +2790,12 @@ A place can be disabled, which causes the buttons to become disabled. Such place
 </li>
 <li>
 <p>Description: Creates a new assignable role place with the key <code>name</code>. The <code>text</code> will be shown in the description of the first message.
-When the place is setup, it will be posted in the <code>channel</code>. If <code>type</code> is not provided, it will be <code>DEFAULT</code>. Possible values for are <code>booster</code> and <code>default</code>.</p>
+When the messages are created it will be posted towards the channel <code>channel</code>. If <code>type</code> is not provided, it will default to <code>DEFAULT</code>. Possible values for are <code>booster</code> and <code>default</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Add a role to an assignable role place</dt>
+<dt class="hdlist1">Add a role to an ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2727,13 +2803,13 @@ When the place is setup, it will be posted in the <code>channel</code>. If <code
 <p>Usage: <code>addRoleToAssignableRolePlace &lt;name&gt; &lt;role&gt; &lt;text&gt; [emote]</code></p>
 </li>
 <li>
-<p>Description: Adds to the assignable role place identified by <code>name</code> an additional assignable role. The <code>role</code> will be assigned when a member adds the reaction. The <code>text</code> will be the text of the button, and the optional <code>emote</code> will be used in the button.
-It is required that <code>emote</code> is usable by Abstracto.</p>
+<p>Description: Adds one role to the ARP identified by <code>name</code>. The <code>role</code> will be assigned when a member clicks the button. The <code>text</code> will be the text of the button, and the optional <code>emote</code> will be used as an emote in the button.
+It is required that <code>emote</code> is usable by the bot.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Create the assignable role place in discord</dt>
+<dt class="hdlist1">Create the ARP in Discord</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2741,12 +2817,12 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>setupAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Posts the message of the assignable role place identified by <code>name</code> to the configured channel in discord. This will delete the old message connected to this assignable role place, if there is any.</p>
+<p>Description: Posts the message of the ARP identified by <code>name</code> to the configured channel in discord. This will delete past message of this ARP (if any)</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Remove a role from an assignable role place</dt>
+<dt class="hdlist1">Remove a role from an ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2754,7 +2830,7 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>removeRoleFromAssignableRolePlace &lt;name&gt; &lt;role&gt;</code></p>
 </li>
 <li>
-<p>Description: Removes from the assignable role place identified by <code>name</code>, the button associated with the role <code>role</code>. If the role was deleted in the meantime, providing the role ID works as well.</p>
+<p>Description: Removes from the ARP identified by <code>name</code> the button associated with the role <code>role</code>. If the role was deleted in the meantime, providing the role ID works as well.</p>
 </li>
 </ul>
 </div>
@@ -2767,12 +2843,12 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>showAssignableRolePlaceConfig &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: This command displays the current configuration of assignable role place identified by <code>name</code>.</p>
+<p>Description: This command displays the current configuration of ARP identified by <code>name</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Move an assignable role place to another channel</dt>
+<dt class="hdlist1">Move an ARP to another channel</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2780,12 +2856,12 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>moveAssignableRolePlace &lt;name&gt; &lt;newChannel&gt;</code></p>
 </li>
 <li>
-<p>Description: Moves the assignable role place identified by <code>name</code> to be in <code>newChannel</code>. If the place is currently shown, this will immediately delete the message and create the place in the given <code>newChannel</code>.</p>
+<p>Description: Moves the ARP identified by <code>name</code> to be in <code>newChannel</code>. If the ARP has a message currently, this will immediately delete the message and create it in the given <code>newChannel</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Deactivate the assignable role place</dt>
+<dt class="hdlist1">Deactivate the ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2793,12 +2869,12 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>deactivateAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Deactivates the buttons of the assignable role place identified by <code>name</code>.</p>
+<p>Description: Deactivates the buttons of the ARP identified by <code>name</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Activate the assignable role place</dt>
+<dt class="hdlist1">Activate the ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2806,12 +2882,12 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>activateAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Activates the buttons of the assignable role place identified by <code>name</code> and enables the assignment of roles.</p>
+<p>Description: Activates the buttons of the ARP identified by <code>name</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Change configuration of assignable role place</dt>
+<dt class="hdlist1">Change configuration of ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2824,7 +2900,7 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Delete an assignable role place</dt>
+<dt class="hdlist1">Delete an ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2832,12 +2908,12 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>deleteAssignableRolePlace &lt;name&gt;</code></p>
 </li>
 <li>
-<p>Description: Completely deletes the assignable role place identified by <code>name</code>. This includes any trace in the database and the current message, if any.</p>
+<p>Description: Completely deletes the ARP identified by <code>name</code>. This includes any trace in the database and the current message, if any. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Change description text of assignable role place</dt>
+<dt class="hdlist1">Change description text of ARP</dt>
 <dd>
 <div class="ulist">
 <ul>
@@ -2845,7 +2921,7 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage <code>editAssignableRolePlaceText &lt;name&gt; &lt;newText&gt;</code></p>
 </li>
 <li>
-<p>Description: Changes the text which is shown in the message of the assignable role place identified by <code>name</code> to <code>newText</code>. This changes the message immediately.</p>
+<p>Description: Changes the text which is shown in the message of the ARP identified by <code>name</code> to <code>newText</code>. This changes the message immediately.</p>
 </li>
 </ul>
 </div>
@@ -2858,7 +2934,7 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>addAssignableRoleCondition &lt;name&gt; &lt;role&gt; &lt;conditionKey&gt; &lt;conditionValue&gt;</code></p>
 </li>
 <li>
-<p>Description: Creates a condition for the given assignable role identified by <code>role</code> for the assignable role place identified by <code>name</code>. There only exist one <code>conditionKey</code> right now, which is <code>min_level</code>. The given <code>conditionValue</code> for this condition must be a number between 1 and 150.</p>
+<p>Description: Creates a condition for the given assignable role identified by <code>role</code> for the ARP identified by <code>name</code>. There only exist one <code>conditionKey</code> right now, which is <code>min_level</code>. The given <code>conditionValue</code> for this condition must be a number between 1 and 150.</p>
 </li>
 </ul>
 </div>
@@ -2871,7 +2947,7 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 <p>Usage: <code>removeAssignableRoleCondition &lt;name&gt; &lt;role&gt; &lt;conditionKey&gt;</code></p>
 </li>
 <li>
-<p>Description: Removes the assignable role condition <code>conditionKey</code> for <code>role</code> in the assignable role place identified by <code>name</code>. There only exist one <code>conditionKey</code> right now, which is <code>min_level</code>.</p>
+<p>Description: Removes the assignable role condition <code>conditionKey</code> for <code>role</code> in the ARP identified by <code>name</code>. There only exist one <code>conditionKey</code> right now, which is <code>min_level</code>.</p>
 </li>
 </ul>
 </div>
@@ -2881,41 +2957,41 @@ It is required that <code>emote</code> is usable by Abstracto.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_statistic">4.15. Statistic</h3>
+<h3 id="_statistic">4.16. Statistic</h3>
 <div class="paragraph">
 <p>This component will contain multiple features, currently only emote tracking is available.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_emote_tracking">4.16. Emote tracking</h3>
+<h3 id="_emote_tracking">4.17. Emote tracking</h3>
 <div class="paragraph">
 <p>This feature is about tracking the usage of emotes from the server and external servers.
-The intention of this feature is to see what emotes are doing better than others and which emotes might be interesting to add to the server.</p>
+The intention of this feature is to see what emotes are doing better than others and which emotes might be interesting to add to the server or removed.</p>
 </div>
 <div class="paragraph">
 <p>Feature key: <code>emoteTracking</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_7">4.16.1. Feature modes</h4>
+<h4 id="_feature_modes_7">4.17.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>emoteAutoTrack</code></dt>
 <dd>
-<p>If this is enabled, emotes which are created within the server, are automatically stored and tracked. If they are renamed/deleted this will also be reflected automatically. Enabled by default.</p>
+<p>if enabled, emotes which are created within the server, are automatically stored and tracked. If they are renamed/deleted this will also be reflected automatically. Enabled by default.</p>
 </dd>
 <dt class="hdlist1"><code>externalEmotes</code></dt>
 <dd>
-<p>If this is enabled, every external tracked emote will be counted. It is also possible to track additional external emotes via the <code>trackEmote</code> command. Disabled by default.</p>
+<p>if enabled, every external tracked emote will be counted. It is also possible to track additional external emotes via the <code>trackEmote</code> command. Disabled by default.</p>
 </dd>
 <dt class="hdlist1"><code>autoTrackExternal</code></dt>
 <dd>
-<p>If this is enabled, every external emote which is used in a message by a server member will be automatically stored and tracked. <code>externalEmotes</code> needs to be enabled in order for this to function properly. Disabled by default.</p>
+<p>if enabled, every external emote which is used in a message by a server member will be automatically stored and tracked. <code>externalEmotes</code> needs to be enabled in order for this to function properly. Disabled by default.</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_12">4.16.2. Commands</h4>
+<h4 id="_commands_12">4.17.2. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Creating a newly tracked emote</dt>
@@ -2926,7 +3002,7 @@ The intention of this feature is to see what emotes are doing better than others
 <p>Usage: <code>trackEmote &lt;emote&gt;</code></p>
 </li>
 <li>
-<p>Description: The <code>enoteName</code> needs to be a valid usage of an emote. If this emote is part of the server, it will now be automatically tracked.
+<p>Description: The <code>emote</code> needs to be a valid usage of an emote. If the emote is part of the server, it will be tracked from now on.
 If the emote was tracked previously, it will be enabled again. For external emotes to be tracked this way, the feature mode <code>externalEmotes</code> needs to be enabled. The <code>emote</code> can either be a valid usage or the ID of an emote (it can only be an ID if it was previously tracked).</p>
 </li>
 </ul>
@@ -2969,7 +3045,7 @@ If there are no emotes of a group, there will be no message.</p>
 </li>
 <li>
 <p>Description: This command shows the amount each tracked emote from the server has been used overall. If a <code>period</code> is supplied, it will only show the amount of usages in that time period. If it is not provided, it will show the whole timeline.
-Beware that the amount of emotes is only tracked per day. For example, if it is 3PM UTC and you use <code>18h</code> as a timeperiod, it will also show the emote statistics for the day before.</p>
+Beware that the amount of emotes is only tracked per day. For example, if it is 3PM UTC and you use <code>18h</code> as a time period, it will also show the emote statistics for the complete previous day.</p>
 </li>
 </ul>
 </div>
@@ -3025,7 +3101,7 @@ A message containing the amount of emotes deleted and created is shown. If the f
 <p>Usage: <code>purgeEmoteStats &lt;emote&gt; [period]</code></p>
 </li>
 <li>
-<p>Description: This command removes any stored usages of <code>emote</code>. The <code>emote</code> can either be a valid usage or the ID of an emote. If <code>period</code> is given, only usages within this time period will be deleted, if it is not provided, the complete timeline will be deleted.</p>
+<p>Description: This command removes any stored usages of <code>emote</code>. The <code>emote</code> can either be a valid usage or the ID of an emote. If <code>period</code> is given, only usages within this time period will be deleted, if it is not provided, the complete timeline will be deleted. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -3038,7 +3114,7 @@ A message containing the amount of emotes deleted and created is shown. If the f
 <p>Usage: <code>deleteTrackedEmote &lt;emote&gt;</code></p>
 </li>
 <li>
-<p>Description: Deletes the tracked emote from the database including the usages. The <code>emote</code> can either be a valid usage or the ID of an emote.</p>
+<p>Description: Deletes the tracked emote from the database including the usages. The <code>emote</code> can either be a valid usage or the ID of an emote. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -3051,7 +3127,7 @@ A message containing the amount of emotes deleted and created is shown. If the f
 <p>Usage: <code>resetEmoteStats</code></p>
 </li>
 <li>
-<p>Description: This will delete all emote usages and tracked emotes in the database.</p>
+<p>Description: This will delete all emote usages and tracked emotes in the database. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -3091,7 +3167,7 @@ If the resulting file size is over the upload limit of the server, this command 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_reminders">4.17. Reminders</h3>
+<h3 id="_reminders">4.18. Reminders</h3>
 <div class="paragraph">
 <p>Provides the ability to schedule reminders.</p>
 </div>
@@ -3099,7 +3175,7 @@ If the resulting file size is over the upload limit of the server, this command 
 <p>Feature key: <code>remind</code></p>
 </div>
 <div class="sect3">
-<h4 id="_commands_13">4.17.1. Commands</h4>
+<h4 id="_commands_13">4.18.1. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Create a reminder</dt>
@@ -3126,7 +3202,7 @@ If the resulting file size is over the upload limit of the server, this command 
 <p>Usage <code>unRemind &lt;reminderId&gt;</code></p>
 </li>
 <li>
-<p>Description: Cancels this reminder and will cause this reminder to not be executed. Only possible for reminders started by you.</p>
+<p>Description: Cancels this reminder and will cause this reminder to not be executed. Only possible for reminders started by the user executing the command.</p>
 </li>
 </ul>
 </div>
@@ -3152,7 +3228,7 @@ If the resulting file size is over the upload limit of the server, this command 
 <p>Usage: <code>snooze &lt;reminderId&gt; &lt;duration&gt;</code></p>
 </li>
 <li>
-<p>Description: Schedules the reminder identified by <code>reminderId</code> to be triggered after <code>duration</code> again. It is only possible to do this for reminders which have already been executed. Only possible for reminders started by you.</p>
+<p>Description: Schedules the reminder identified by <code>reminderId</code> to be triggered after <code>duration</code> again. It is only possible to do this for reminders which have already been executed. Only possible for reminders started by the user executing the command.</p>
 </li>
 </ul>
 </div>
@@ -3162,7 +3238,7 @@ If the resulting file size is over the upload limit of the server, this command 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_starboard">4.18. Starboard</h3>
+<h3 id="_starboard">4.19. Starboard</h3>
 <div class="paragraph">
 <p>Provides the ability to track note worthy posts in a separate channel, identified by the post target <code>starboard</code>, because the pins within a channel are limited to 50.
 This feature works by users reacting to a message with the appropriate emote. By default this is <code>&#11088;</code>, but can be changed via the emote <code>star</code>.
@@ -3174,7 +3250,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Feature key: <code>starboard</code></p>
 </div>
 <div class="sect3">
-<h4 id="_emotes_5">4.18.1. Emotes</h4>
+<h4 id="_emotes_5">4.19.1. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3205,7 +3281,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_6">4.18.2. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_8">4.19.2. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>starLvl1</code> The amount of stars necessary to appear on the starboard. Default: 5</p>
 </div>
@@ -3218,9 +3294,12 @@ When the poster of the message reacts to the message with a star, this is not co
 <div class="paragraph">
 <p><code>starLvl4</code> The amount of stars necessary in order for the level 4 emote to be used in the starboard post. Default: 17</p>
 </div>
+<div class="paragraph">
+<p><code>starMaxDays</code> The amount of days after which reactions will be ignored: Default: 7</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_post_targets_11">4.18.3. Post targets</h4>
+<h4 id="_post_targets_12">4.19.3. Post targets</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>starboard</code></dt>
@@ -3231,7 +3310,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_14">4.18.4. Commands</h4>
+<h4 id="_commands_14">4.19.4. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Showing starboard statistics</dt>
@@ -3252,30 +3331,31 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_suggestions">4.19. Suggestions</h3>
+<h3 id="_suggestions">4.20. Suggestions</h3>
 <div class="paragraph">
-<p>This feature provides the ability for members to post suggestions containing text to the post target <code>suggestions</code>. These suggestions can then be accepted or denied by the moderators.</p>
+<p>This feature provides the ability for members to post suggestions containing text to the post target <code>suggestions</code>. These suggestions can then be accepted or denied by the moderators.
+An acceppted/vetoed/rejected suggestion will be deleted after two days (default configuration) from the database</p>
 </div>
 <div class="paragraph">
 <p>Feature key: <code>suggestion</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_8">4.19.1. Feature modes</h4>
+<h4 id="_feature_modes_8">4.20.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>suggestionReminder</code></dt>
 <dd>
-<p>If this is enabled, a message will be sent to the post target <code>suggestionReminder</code>, after the amount of days configured in <code>suggestionReminderDays</code>. Disabled by default.</p>
+<p>if enabled, a message will be sent to the post target <code>suggestionReminder</code>, after the amount of days configured in <code>suggestionReminderDays</code>. Disabled by default.</p>
 </dd>
 <dt class="hdlist1"><code>suggestionButton</code> </dt>
 <dd>
-<p>Use buttons instead of reactions for suggestions. Enabled by default.</p>
+<p>if enabled, use buttons instead of reactions for suggestions. Enabled by default.</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_targets_12">4.19.2. Post targets</h4>
+<h4 id="_post_targets_13">4.20.2. Post targets</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>suggestions</code></dt>
@@ -3290,7 +3370,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_emotes_6">4.19.3. Emotes</h4>
+<h4 id="_emotes_6">4.20.3. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3303,13 +3383,13 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_7">4.19.4. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_9">4.20.4. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>suggestionReminderDays</code> The amount of days in which the reminder, from feature mode <code>suggestionReminder</code>, should be posted in. Default: 7</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_15">4.19.5. Commands</h4>
+<h4 id="_commands_15">4.20.5. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Creating a suggestion</dt>
@@ -3320,7 +3400,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Usage: <code>suggest &lt;text&gt;</code></p>
 </li>
 <li>
-<p>Description: Posts the text to the <code>suggest</code> post target and places the emotes for up and down voting. If <code>suggestionReminder</code> is enabled, this will create a suggestion reminder.</p>
+<p>Description: Posts the text to the <code>suggest</code> post target and either adds emotes or buttons for voting. If <code>suggestionReminder</code> is enabled, this will create a suggestion reminder.</p>
 </li>
 </ul>
 </div>
@@ -3333,7 +3413,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Usage: <code>accept &lt;suggestionId&gt; [reason]</code></p>
 </li>
 <li>
-<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as accepted. The optional <code>reason</code> will be used in this re-post, if provided. This will cancel the suggestion reminder (if it exists)</p>
+<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as accepted. The optional <code>reason</code> will be used in this re-post, if provided. This will cancel the suggestion reminder (if it exists). This will also show the amount of votes received, but these are only counted when feature mode <code>suggestionButton</code> is enabled.</p>
 </li>
 <li>
 <p>Example: <code>accept 1 okay</code> in order to accept the suggestion <code>1</code> with the reason <code>okay</code></p>
@@ -3349,7 +3429,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Usage: <code>reject &lt;suggestionId&gt; [reason]</code></p>
 </li>
 <li>
-<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as denied. The optional <code>reason</code> will be used in this re-post, if provided. This will cancel the suggestion reminder (if it exists)</p>
+<p>Description: Re-posts the suggestion identified by <code>suggestionId</code> and marks the suggestion as denied. The optional <code>reason</code> will be used in this re-post, if provided. This will cancel the suggestion reminder (if it exists). This will also show the amount of votes received, but these are only counted when feature mode <code>suggestionButton</code> is enabled.</p>
 </li>
 <li>
 <p>Example: <code>deny 1 not okay</code> in order to reject the suggestion <code>1</code> with the reason <code>not okay</code></p>
@@ -3365,7 +3445,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Usage: <code>unSuggest &lt;suggestionId&gt;</code></p>
 </li>
 <li>
-<p>Description: This will delete the suggestion identified by <code>suggestionId</code> from the channel and the database, but this is only possible within a specified time range. This will cancel the suggestion reminder (if it exists)</p>
+<p>Description: This will delete the suggestion identified by <code>suggestionId</code> from the channel and the database, but this is only possible within a specified time range (1h by default). This will cancel the suggestion reminder (if it exists)</p>
 </li>
 </ul>
 </div>
@@ -3378,7 +3458,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Usage : <code>veto &lt;suggestion&gt; [reason]</code></p>
 </li>
 <li>
-<p>Description: This command will veto the suggestion, this means, it should be indicated that the suggestion was not rejected by votes, but because it was not acceptable on a fundamental level. This is basically just a different state of the suggestion. This will cancel the suggestion reminder (if it exists)</p>
+<p>Description: This command will veto the suggestion, this means, it should be indicated that the suggestion was not rejected by votes, but because it was not acceptable on a fundamental level. This is basically just a different state of the suggestion. This will cancel the suggestion reminder (if it exists). This will also show the amount of votes received, but these are only counted when feature mode <code>suggestionButton</code> is enabled.</p>
 </li>
 </ul>
 </div>
@@ -3388,7 +3468,7 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_miscellaneous">4.20. Miscellaneous</h3>
+<h3 id="_miscellaneous">4.21. Miscellaneous</h3>
 <div class="paragraph">
 <p>This feature provides some utility commands.</p>
 </div>
@@ -3396,7 +3476,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Feature key: <code>utility</code></p>
 </div>
 <div class="sect3">
-<h4 id="_commands_16">4.20.1. Commands</h4>
+<h4 id="_commands_16">4.21.1. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Retrieving the URL of an emote</dt>
@@ -3407,7 +3487,7 @@ When the poster of the message reacts to the message with a star, this is not co
 <p>Usage: <code>showEmote &lt;emote&gt;</code></p>
 </li>
 <li>
-<p>Description: Posts the name of the emote accompanied with the URL where the image of the emote is stored.</p>
+<p>Description: Posts the name of the emote accompanied with the URL where the image of the emote is available at.</p>
 </li>
 </ul>
 </div>
@@ -3469,9 +3549,28 @@ When the poster of the message reacts to the message with a star, this is not co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_link_embeds">4.21. Link embeds</h3>
+<h3 id="_link_embeds">4.22. Link embeds</h3>
+<div class="paragraph">
+<p>This feature enables the automatic embedding of messages containing a message link.
+If a message contains a link to a discord message this will create an embed containing the the message content. This supports image attachments, but not videos or files.
+A reaction/button is placed on the embedded message which can be used to delete this embed. Only the original author and the person creating the embed can delete the embed this way.</p>
+</div>
+<div class="paragraph">
+<p>Feature key: <code>linkEmbeds</code></p>
+</div>
 <div class="sect3">
-<h4 id="_emotes_7">4.21.1. Emotes</h4>
+<h4 id="_feature_modes_9">4.22.1. Feature modes</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>messageEmbedDeleteButton</code></dt>
+<dd>
+<p>if enabled, uses a button for removal instead of a reaction</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_emotes_7">4.22.2. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3479,18 +3578,10 @@ When the poster of the message reacts to the message with a star, this is not co
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>This feature enables the automatic embedding of messages containing a message link.
-If a message contains a link to a discord message this will create an embed containing the the message content. This supports image attachments, but not videos or files.
-A reaction is placed on the embedded message which can be used to delete this embed. Only the original author and the person creating the embed can delete the embed this way.</p>
-</div>
-<div class="paragraph">
-<p>Feature key: <code>linkEmbeds</code></p>
-</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_repost_detection_and_tracking">4.22. Repost detection and tracking</h3>
+<h3 id="_repost_detection_and_tracking">4.23. Repost detection and tracking</h3>
 <div class="paragraph">
 <p>This feature can be used to detect whether an image has been posted before on the server. Images are compared by the hash stored in the database, which makes it very strict.
 In order to calculate the hash, the image needs to be downloaded. It is possible to show a leaderboard of the most reposting users. Both of these features can be changed via feature modes.
@@ -3504,7 +3595,7 @@ For example if the repost is the second image in a message, a reaction represent
 <p>Feature key: <code>repostDetection</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_9">4.22.1. Feature modes</h4>
+<h4 id="_feature_modes_10">4.23.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>download</code></dt>
@@ -3519,7 +3610,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect3">
-<h4 id="_emotes_8">4.22.2. Emotes</h4>
+<h4 id="_emotes_8">4.23.2. Emotes</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3529,7 +3620,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect3">
-<h4 id="_commands_17">4.22.3. Commands</h4>
+<h4 id="_commands_17">4.23.3. Commands</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Remove stored image posts and reposts of whole server or specific member</dt>
@@ -3540,7 +3631,7 @@ For example if the repost is the second image in a message, a reaction represent
 <p>Usage: <code>purgeImagePosts [member]</code></p>
 </li>
 <li>
-<p>Description: If <code>member</code> is provided, this will delete all stored image hashes (and their reposts) from the database. If <code>member</code> is not provided, this will delete all stored image hashes (and their reposts) from the whole server.</p>
+<p>Description: If <code>member</code> is provided, this will delete all stored image hashes (and their reposts) from the database. If <code>member</code> is not provided, this will delete all stored image hashes (and their reposts) from the whole server. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -3553,7 +3644,7 @@ For example if the repost is the second image in a message, a reaction represent
 <p>Usage: <code>purgeReposts [member]</code></p>
 </li>
 <li>
-<p>Description: If <code>member</code> is provided, this will delete all reposts of the given member. If <code>member</code> is not provided, this will delete all reposts in the whole server.</p>
+<p>Description: If <code>member</code> is provided, this will delete all reposts of the given member. If <code>member</code> is not provided, this will delete all reposts in the whole server. Requires you to confirm the command.</p>
 </li>
 </ul>
 </div>
@@ -3618,7 +3709,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect2">
-<h3 id="_entertainment_commands">4.23. Entertainment commands</h3>
+<h3 id="_entertainment_commands">4.24. Entertainment commands</h3>
 <div class="paragraph">
 <p>This feature basically contains a few commands which can be used for entertainment purposes directly</p>
 </div>
@@ -3626,7 +3717,7 @@ For example if the repost is the second image in a message, a reaction represent
 <p>Feature key: <code>entertainment</code></p>
 </div>
 <div class="sect3">
-<h4 id="_relevant_system_configuration_8">4.23.1. Relevant system configuration</h4>
+<h4 id="_relevant_system_configuration_10">4.24.1. Relevant system configuration</h4>
 <div class="paragraph">
 <p><code>rouletteBullets</code> The amount of bullets the revolver for <code>roulette</code> can hold. Default: 6
 <code>rollDefaultHigh</code> The default sides of the die for <code>roll</code>. Default: 6</p>
@@ -3693,7 +3784,7 @@ For example if the repost is the second image in a message, a reaction represent
 <p>Usage: <code>mock &lt;text/message&gt;</code></p>
 </li>
 <li>
-<p>Description: Takes the <code>text</code> and prints the text with the characters with alternating upper and lower case. If no text is provided, this command requires that the command has been executed in a message which replies to another message. In this case the text to be mocked will be the content of the message which has been replied to.</p>
+<p>Description: Takes the <code>text</code> and prints the text with the characters with alternating upper and lower case. If no text is provided, this command requires that the command has been executed in a message which replies to another message. In this case the text to be mocked will be the content of the message which has been replied to. If both is provided, a replied message takes precedence.</p>
 </li>
 </ul>
 </div>
@@ -3716,7 +3807,7 @@ For example if the repost is the second image in a message, a reaction represent
 </div>
 </div>
 <div class="sect2">
-<h3 id="_voice_channel_context">4.24. Voice channel context</h3>
+<h3 id="_voice_channel_context">4.25. Voice channel context</h3>
 <div class="paragraph">
 <p>This feature provides the ability to show certain text channels for certain voice channels and enable voice channels to be used for chatting while in voice channels.</p>
 </div>
@@ -3757,18 +3848,18 @@ The voice channel can be provided as a parameter via a mention (type '#!' + voic
 </div>
 </div>
 <div class="sect2">
-<h3 id="_webservices">4.25. Webservices</h3>
+<h3 id="_webservices">4.26. Webservices</h3>
 <div class="paragraph">
 <p>Integrates different web APIs to be used via the bot.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_youtube">4.26. Youtube</h3>
+<h3 id="_youtube">4.27. Youtube</h3>
 <div class="paragraph">
 <p>Feature key: <code>youtube</code></p>
 </div>
 <div class="sect3">
-<h4 id="_feature_modes_10">4.26.1. Feature modes</h4>
+<h4 id="_feature_modes_11">4.27.1. Feature modes</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>videoDetails</code></dt>
@@ -3779,7 +3870,7 @@ The voice channel can be provided as a parameter via a mention (type '#!' + voic
 </div>
 </div>
 <div class="sect3">
-<h4 id="_command">4.26.2. Command</h4>
+<h4 id="_command">4.27.2. Command</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Search for a youtube video</dt>
@@ -3803,12 +3894,12 @@ The voice channel can be provided as a parameter via a mention (type '#!' + voic
 </div>
 </div>
 <div class="sect2">
-<h3 id="_urban_dictionary">4.27. Urban dictionary</h3>
+<h3 id="_urban_dictionary">4.28. Urban dictionary</h3>
 <div class="paragraph">
 <p>Feature key: <code>urban</code></p>
 </div>
 <div class="sect3">
-<h4 id="_command_2">4.27.1. Command</h4>
+<h4 id="_command_2">4.28.1. Command</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Search for an urban dictionary definition</dt>
@@ -3836,8 +3927,8 @@ The voice channel can be provided as a parameter via a mention (type '#!' + voic
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.3.8<br>
-Last updated 2021-09-05 23:58:41 UTC
+Version 1.3.9<br>
+Last updated 2021-10-25 21:35:13 UTC
 </div>
 </div>
 </body>
